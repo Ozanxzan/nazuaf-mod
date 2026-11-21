@@ -1,6 +1,7 @@
 # nazuaf-mod — Katalog MOD Android gabungan APKMody + ModYolo + AN1
 
 Prototipe lokal (belum deploy). Domain rencana: `mod.nazuaf.com`, repo rencana: `nazuaf-mod`.
+Live: https://nazuaf-mod.pages.dev (project Pages dibuat 21 Nov 2026).
 Template: `~/workspace/nazuaf-apps/` (morphe.nazuaf.com) — header, pencarian oval,
 tema yang sama. Data Morphe TIDAK dipakai.
 
