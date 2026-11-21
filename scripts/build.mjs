@@ -13,14 +13,16 @@ export async function buildSite(opts = {}) {
   const apps = data.apps || [];
   mkdirSync(outDir, { recursive: true });
   mkdirSync(join(outDir, 'apps'), { recursive: true });
-  const cssSrc = join(ROOT, 'public', 'assets', 'style.css');
+  // Aset statis di-commit di assets/ (bukan di public/ yang hasil build
+  // dan tidak ikut ke repo — kalau dari public/, Pages tidak punya CSS-nya).
+  const cssSrc = join(ROOT, 'assets', 'style.css');
   const cssDst = join(outDir, 'assets', 'style.css');
   if (existsSync(cssSrc) && cssSrc !== cssDst) {
     mkdirSync(join(outDir, 'assets'), { recursive: true });
     copyFileSync(cssSrc, cssDst);
   }
   // Placeholder ikon (dipakai kalau entri tidak punya ikon remote).
-  const phSrc = join(ROOT, 'public', 'assets', 'icon-placeholder.svg');
+  const phSrc = join(ROOT, 'assets', 'icon-placeholder.svg');
   if (existsSync(phSrc)) copyFileSync(phSrc, join(outDir, 'assets', 'icon-placeholder.svg'));
   writeFileSync(join(outDir, 'index.html'), renderIndex(apps, data.generated_at));
   const unknown = apps.filter((a) => a.type === 'unknown');
