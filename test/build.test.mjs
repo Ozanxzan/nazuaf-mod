@@ -42,6 +42,16 @@ test('renderIndex: tab Game/Aplikasi + pencarian per tab + badge server', () => 
   assert.ok(gamePanel.includes('Moneyland'));
 });
 
+test('renderIndex: pagination 100 per halaman di tiap tab', () => {
+  const many = Array.from({ length: 250 }, (_, i) => ({ ...app, slug: `game-${i}`, name: `Game ${i}` }));
+  const html = renderIndex(many, '2026-11-21T00:00:00Z');
+  assert.ok(html.includes('PAGE_SIZE = 100'));
+  assert.ok(html.includes('data-pager="game"'));
+  assert.ok(html.includes('data-pager="app"'));
+  assert.ok(html.includes('Sebelumnya') && html.includes('Berikutnya'));
+  assert.ok(html.includes('Halaman '));
+});
+
 test('buildSite menulis index + detail', async () => {
   const dir = mkdtempSync(join(tmpdir(), 'nazuaf-mod-build-'));
   const dataPath = join(dir, 'apps.json');

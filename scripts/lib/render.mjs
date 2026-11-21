@@ -38,6 +38,11 @@ export function renderIndex(apps, generatedAt) {
       <h2>${label} <span class="count">${list.length}</span></h2>
       <div class="apps-list" data-list="${id}">${list.map(card).join('')}</div>
       <p class="no-result" hidden>Tidak ada ${label.toLowerCase()} yang cocok. Coba kata kunci lain.</p>
+      <nav class="pager" data-pager="${id}" aria-label="Halaman ${label.toLowerCase()}">
+        <button class="pager-btn" data-page="prev" type="button">‹ Sebelumnya</button>
+        <span class="pager-info"></span>
+        <button class="pager-btn" data-page="next" type="button">Berikutnya ›</button>
+      </nav>
     </section>`;
   const body = `
     <section class="hero"><h1>Katalog MOD Android, gabungan APKMody + ModYolo + AN1.</h1><p>${apps.length} game &amp; aplikasi MOD dalam satu daftar — ${games.length} game, ${appl.length} aplikasi${unknown.length ? `, ${unknown.length} belum dikategorikan` : ''}. Di halaman detail, pilih server download-nya: Server 1 APKMody, Server 2 ModYolo, atau Server 3 AN1 — masing-masing dengan versi, ukuran, dan info MOD-nya sendiri.</p>
@@ -54,21 +59,37 @@ export function renderIndex(apps, generatedAt) {
       const q = document.getElementById('q');
       const headerQ = document.querySelector('.site-search input');
       let activeTab = 'game';
+      const PAGE_SIZE = 100;
+      const page = { game: 1, app: 1 };
       function applyFilter() {
         const needle = q.value.trim().toLowerCase();
         const panel = document.getElementById('tab-' + activeTab);
         const list = panel.querySelector('[data-list]');
         const noResult = panel.querySelector('.no-result');
-        let shown = 0;
+        const pager = panel.querySelector('[data-pager]');
+        const info = pager.querySelector('.pager-info');
+        const prevBtn = pager.querySelector('[data-page="prev"]');
+        const nextBtn = pager.querySelector('[data-page="next"]');
+        const matches = [];
         for (const card of list.children) {
-          const hit = !needle || card.dataset.search.includes(needle);
-          card.style.display = hit ? '' : 'none';
-          if (hit) shown++;
+          if (!needle || card.dataset.search.includes(needle)) matches.push(card);
         }
-        noResult.hidden = shown > 0;
+        const totalPages = Math.max(1, Math.ceil(matches.length / PAGE_SIZE));
+        if (page[activeTab] > totalPages) page[activeTab] = totalPages;
+        if (page[activeTab] < 1) page[activeTab] = 1;
+        const start = (page[activeTab] - 1) * PAGE_SIZE;
+        const end = Math.min(start + PAGE_SIZE, matches.length);
+        for (const card of list.children) card.style.display = 'none';
+        for (let i = start; i < end; i++) matches[i].style.display = '';
+        noResult.hidden = matches.length > 0;
+        info.textContent = matches.length === 0 ? 'Tidak ada hasil' : 'Halaman ' + page[activeTab] + ' dari ' + totalPages + ' — ' + (start + 1) + '–' + end + ' dari ' + matches.length;
+        prevBtn.disabled = page[activeTab] <= 1;
+        nextBtn.disabled = page[activeTab] >= totalPages;
+        pager.style.display = totalPages <= 1 && matches.length === 0 ? 'none' : '';
       }
       function setTab(tab) {
         activeTab = tab;
+        page[tab] = 1;
         document.querySelectorAll('.tab-btn').forEach((b) => {
           const on = b.dataset.tab === tab;
           b.classList.toggle('active', on);
@@ -78,12 +99,18 @@ export function renderIndex(apps, generatedAt) {
         history.replaceState(null, '', tab === 'game' ? location.pathname : location.pathname + '?tab=' + tab);
         applyFilter();
       }
-      q.addEventListener('input', () => { if (headerQ) headerQ.value = q.value; applyFilter(); });
-      if (headerQ) headerQ.addEventListener('input', () => { q.value = headerQ.value; applyFilter(); });
+      q.addEventListener('input', () => { if (headerQ) headerQ.value = q.value; page[activeTab] = 1; applyFilter(); });
+      if (headerQ) headerQ.addEventListener('input', () => { q.value = headerQ.value; page[activeTab] = 1; applyFilter(); });
+      document.querySelectorAll('[data-pager] [data-page]').forEach((b) => b.addEventListener('click', () => {
+        page[activeTab] += b.dataset.page === 'next' ? 1 : -1;
+        applyFilter();
+        document.getElementById('tab-' + activeTab).scrollIntoView({ block: 'start' });
+      }));
       document.querySelectorAll('.tab-btn').forEach((b) => b.addEventListener('click', () => setTab(b.dataset.tab)));
       const params = new URLSearchParams(location.search);
       if (params.get('tab') === 'app') setTab('app');
       else if (params.get('q')) { q.value = params.get('q'); if (headerQ) headerQ.value = params.get('q'); applyFilter(); }
+      else applyFilter();
     </script>`;
   return shell({ title: 'Katalog MOD Android — APKMody + ModYolo + AN1 — mod.nazuaf.com', desc: `Daftar ${apps.length} game & aplikasi MOD Android dari APKMody, ModYolo, dan AN1, pilih server download.`, body });
 }
