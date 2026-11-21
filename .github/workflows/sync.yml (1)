@@ -1,0 +1,37 @@
+name: Sync nazuaf-mod
+
+on:
+  schedule:
+    # UTC — sama dengan 00.00 / 08.00 / 16.00 WIB
+    - cron: '0 17,1,9 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: sync
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm test
+      # Lanjutkan scrape full dari checkpoint (data/servers/*.jsonl +
+      # data/progress.json ikut ter-commit, jadi tiap run hanya mengambil
+      # sisa + entri baru). APKMody lewat Google Translate proxy.
+      - run: node scripts/scrape-full.mjs --batch-size 500
+      - run: node scripts/merge-full.mjs
+      - run: node scripts/build.mjs
+      - name: Commit kalau ada perubahan data
+        run: |
+          git config user.name "muse-sync"
+          git config user.email "muse-sync@nazuaf.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "sync: update katalog MOD $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push
