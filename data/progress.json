@@ -1,0 +1,33 @@
+{
+  "an1": {
+    "total": 4301,
+    "ok": 4236,
+    "fail": 0,
+    "skipped_not_app": 65,
+    "fallback_wp": 0,
+    "batches": 10,
+    "done": 4301,
+    "last_batch_at": "2026-11-21T08:03:37.518Z"
+  },
+  "modyolo": {
+    "total": 22721,
+    "ok": 5000,
+    "fail": 0,
+    "skipped_not_app": 0,
+    "fallback_wp": 0,
+    "batches": 10,
+    "done": 5000,
+    "last_batch_at": "2026-11-21T08:18:17.177Z"
+  },
+  "apkmody": {
+    "total": 5681,
+    "ok": 0,
+    "fail": 0,
+    "skipped_not_app": 0,
+    "fallback_wp": 100,
+    "batches": 1,
+    "done": 100,
+    "last_batch_at": "2026-11-21T07:50:00.000Z",
+    "note": "sampel 100 terbaru (fallback WP, tanpa versi/ukuran) \u2014 full scrape via translate proxy dilanjutkan setelah live"
+  }
+}

@@ -1,0 +1,451 @@
+{
+  "scraped_at": "2026-11-21T07:43:08.130Z",
+  "counts": {
+    "apkmody": {
+      "source": "apkmody",
+      "sitemap_index": {
+        "sub_sitemaps": 17,
+        "post_sitemaps": 17,
+        "note": "index terverifikasi via crawler: 17 post-sitemap + page + category",
+        "direct_fetch": "gagal (fetch failed after 1 attempts for https://apkmody.com/sitemap.xml: fetch failed) — fallback WP API"
+      },
+      "wp_total_posts": 16053,
+      "en_detail_urls_in_sitemap_order": 5695,
+      "unique_en_slugs": 5681,
+      "en_games": 4064,
+      "en_apps": 1631,
+      "other_lang_duplicates": 10219,
+      "blog": 87,
+      "other": 52
+    },
+    "modyolo": {
+      "source": "modyolo",
+      "sitemap_index": {
+        "sub_sitemaps": 41,
+        "post_sitemaps": 23
+      },
+      "total_url_entries": 34076,
+      "detail_html_urls": 22740,
+      "taxonomy_urls": 11336,
+      "failed_sub_sitemaps": [],
+      "wp_total_posts": 22721
+    }
+  },
+  "sample": {
+    "target_per_source": 100,
+    "modyolo": {
+      "ok": 100,
+      "failed": 0,
+      "failures": []
+    },
+    "apkmody": {
+      "ok": 100,
+      "failed": 100,
+      "failures": [
+        {
+          "slug": "baby-game-for-2-3-4-year-old",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/baby-game-for-2-3-4-year-old: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/baby-game-for-2-3-4-year-old); fallback WP saja"
+        },
+        {
+          "slug": "nice-weather",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/apps/nice-weather: HTTP 403 for https://r.jina.ai/https://apkmody.com/apps/nice-weather); fallback WP saja"
+        },
+        {
+          "slug": "krispee-street",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/krispee-street: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/krispee-street); fallback WP saja"
+        },
+        {
+          "slug": "brainrot-tip-tap-challenge",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/brainrot-tip-tap-challenge: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/brainrot-tip-tap-challenge); fallback WP saja"
+        },
+        {
+          "slug": "train-miner-idle-railway-game",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/train-miner-idle-railway-game: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/train-miner-idle-railway-game); fallback WP saja"
+        },
+        {
+          "slug": "fau-g-domination-multiplayer",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/fau-g-domination-multiplayer: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/fau-g-domination-multiplayer); fallback WP saja"
+        },
+        {
+          "slug": "everyday-puzzles-mini-games",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/everyday-puzzles-mini-games: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/everyday-puzzles-mini-games); fallback WP saja"
+        },
+        {
+          "slug": "word-search-explorer",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/word-search-explorer: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/word-search-explorer); fallback WP saja"
+        },
+        {
+          "slug": "judgment-day-angel-of-god",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/judgment-day-angel-of-god: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/judgment-day-angel-of-god); fallback WP saja"
+        },
+        {
+          "slug": "skred-messenger",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/apps/skred-messenger: HTTP 403 for https://r.jina.ai/https://apkmody.com/apps/skred-messenger); fallback WP saja"
+        },
+        {
+          "slug": "europe-front-remastered",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/europe-front-remastered: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/europe-front-remastered); fallback WP saja"
+        },
+        {
+          "slug": "music-piano-7",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/music-piano-7: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/music-piano-7); fallback WP saja"
+        },
+        {
+          "slug": "taxi-car-simulator-evo",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/taxi-car-simulator-evo: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/taxi-car-simulator-evo); fallback WP saja"
+        },
+        {
+          "slug": "merge-cat-town",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/merge-cat-town: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/merge-cat-town); fallback WP saja"
+        },
+        {
+          "slug": "car-crash-premium-offline",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/car-crash-premium-offline: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/car-crash-premium-offline); fallback WP saja"
+        },
+        {
+          "slug": "silver-and-blood",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/silver-and-blood: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/silver-and-blood); fallback WP saja"
+        },
+        {
+          "slug": "chronomon-monster-farm",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/chronomon-monster-farm: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/chronomon-monster-farm); fallback WP saja"
+        },
+        {
+          "slug": "qblock",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/qblock: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/qblock); fallback WP saja"
+        },
+        {
+          "slug": "duo-mobile",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/apps/duo-mobile: HTTP 403 for https://r.jina.ai/https://apkmody.com/apps/duo-mobile); fallback WP saja"
+        },
+        {
+          "slug": "themekit",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/apps/themekit: HTTP 403 for https://r.jina.ai/https://apkmody.com/apps/themekit); fallback WP saja"
+        },
+        {
+          "slug": "crystal-of-atlan",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/crystal-of-atlan: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/crystal-of-atlan); fallback WP saja"
+        },
+        {
+          "slug": "espn",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/apps/espn: HTTP 403 for https://r.jina.ai/https://apkmody.com/apps/espn); fallback WP saja"
+        },
+        {
+          "slug": "seven-knights-rebirth",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/seven-knights-rebirth: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/seven-knights-rebirth); fallback WP saja"
+        },
+        {
+          "slug": "foretales",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/foretales: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/foretales); fallback WP saja"
+        },
+        {
+          "slug": "moon-vpn",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/apps/moon-vpn: HTTP 403 for https://r.jina.ai/https://apkmody.com/apps/moon-vpn); fallback WP saja"
+        },
+        {
+          "slug": "cozy-grove-camp-spirit",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/cozy-grove-camp-spirit: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/cozy-grove-camp-spirit); fallback WP saja"
+        },
+        {
+          "slug": "car-jam",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/car-jam: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/car-jam); fallback WP saja"
+        },
+        {
+          "slug": "monster-train",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/monster-train: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/monster-train); fallback WP saja"
+        },
+        {
+          "slug": "citycraft-explorers",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/citycraft-explorers: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/citycraft-explorers); fallback WP saja"
+        },
+        {
+          "slug": "obby-escape-prison-rat-dance",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/obby-escape-prison-rat-dance: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/obby-escape-prison-rat-dance); fallback WP saja"
+        },
+        {
+          "slug": "meme-bot-tung-sahur-chase-room",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/meme-bot-tung-sahur-chase-room: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/meme-bot-tung-sahur-chase-room); fallback WP saja"
+        },
+        {
+          "slug": "the-attack-squad",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/the-attack-squad: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/the-attack-squad); fallback WP saja"
+        },
+        {
+          "slug": "daily-pastimes",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/daily-pastimes: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/daily-pastimes); fallback WP saja"
+        },
+        {
+          "slug": "camo-sniper",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/camo-sniper: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/camo-sniper); fallback WP saja"
+        },
+        {
+          "slug": "abyssal-soul",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/abyssal-soul: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/abyssal-soul); fallback WP saja"
+        },
+        {
+          "slug": "the-superhero-league-2",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/the-superhero-league-2: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/the-superhero-league-2); fallback WP saja"
+        },
+        {
+          "slug": "games-tycoon-pro",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/games-tycoon-pro: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/games-tycoon-pro); fallback WP saja"
+        },
+        {
+          "slug": "xracing-story",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/xracing-story: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/xracing-story); fallback WP saja"
+        },
+        {
+          "slug": "the-rise-of-the-golden-idol",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/the-rise-of-the-golden-idol: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/the-rise-of-the-golden-idol); fallback WP saja"
+        },
+        {
+          "slug": "frameo",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/apps/frameo: HTTP 403 for https://r.jina.ai/https://apkmody.com/apps/frameo); fallback WP saja"
+        },
+        {
+          "slug": "merge-fellas",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/merge-fellas: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/merge-fellas); fallback WP saja"
+        },
+        {
+          "slug": "hello-kitty-friends-match",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/hello-kitty-friends-match: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/hello-kitty-friends-match); fallback WP saja"
+        },
+        {
+          "slug": "magnum3-0",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/magnum3-0: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/magnum3-0); fallback WP saja"
+        },
+        {
+          "slug": "alien-shooter-2-reloaded",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/alien-shooter-2-reloaded: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/alien-shooter-2-reloaded); fallback WP saja"
+        },
+        {
+          "slug": "tasty-travels-merge-game",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/tasty-travels-merge-game: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/tasty-travels-merge-game); fallback WP saja"
+        },
+        {
+          "slug": "dreamy-room",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/dreamy-room: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/dreamy-room); fallback WP saja"
+        },
+        {
+          "slug": "obby-parkour-escape",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/obby-parkour-escape: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/obby-parkour-escape); fallback WP saja"
+        },
+        {
+          "slug": "console-tycoon",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/console-tycoon: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/console-tycoon); fallback WP saja"
+        },
+        {
+          "slug": "mobile-legends-bang-bang-lite",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/mobile-legends-bang-bang-lite: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/mobile-legends-bang-bang-lite); fallback WP saja"
+        },
+        {
+          "slug": "planet-vpn-proxy",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/apps/planet-vpn-proxy: HTTP 403 for https://r.jina.ai/https://apkmody.com/apps/planet-vpn-proxy); fallback WP saja"
+        },
+        {
+          "slug": "widgetable",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/apps/widgetable: HTTP 403 for https://r.jina.ai/https://apkmody.com/apps/widgetable); fallback WP saja"
+        },
+        {
+          "slug": "moovit-your-transit-tracker",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/apps/moovit-your-transit-tracker: HTTP 403 for https://r.jina.ai/https://apkmody.com/apps/moovit-your-transit-tracker); fallback WP saja"
+        },
+        {
+          "slug": "car-driving-taxi-game",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/car-driving-taxi-game: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/car-driving-taxi-game); fallback WP saja"
+        },
+        {
+          "slug": "citrus-antivirus-security",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/apps/citrus-antivirus-security: HTTP 403 for https://r.jina.ai/https://apkmody.com/apps/citrus-antivirus-security); fallback WP saja"
+        },
+        {
+          "slug": "toilet-break-launcher",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/apps/toilet-break-launcher: HTTP 403 for https://r.jina.ai/https://apkmody.com/apps/toilet-break-launcher); fallback WP saja"
+        },
+        {
+          "slug": "magic-chess-go-go",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/magic-chess-go-go: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/magic-chess-go-go); fallback WP saja"
+        },
+        {
+          "slug": "truck-masters-world-simulator",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/truck-masters-world-simulator: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/truck-masters-world-simulator); fallback WP saja"
+        },
+        {
+          "slug": "horror-hunter-scary-escape",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/horror-hunter-scary-escape: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/horror-hunter-scary-escape); fallback WP saja"
+        },
+        {
+          "slug": "vpnly",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/apps/vpnly: HTTP 403 for https://r.jina.ai/https://apkmody.com/apps/vpnly); fallback WP saja"
+        },
+        {
+          "slug": "find-hidden-objects-spot-it",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/find-hidden-objects-spot-it: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/find-hidden-objects-spot-it); fallback WP saja"
+        },
+        {
+          "slug": "google-notebooklm",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/apps/google-notebooklm: HTTP 403 for https://r.jina.ai/https://apkmody.com/apps/google-notebooklm); fallback WP saja"
+        },
+        {
+          "slug": "shape-escape-block-puzzle",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/shape-escape-block-puzzle: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/shape-escape-block-puzzle); fallback WP saja"
+        },
+        {
+          "slug": "offroad-league-online",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/offroad-league-online: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/offroad-league-online); fallback WP saja"
+        },
+        {
+          "slug": "sakamoto-days",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/sakamoto-days: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/sakamoto-days); fallback WP saja"
+        },
+        {
+          "slug": "tattletail",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/tattletail: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/tattletail); fallback WP saja"
+        },
+        {
+          "slug": "dop-5-delete-one-part",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/dop-5-delete-one-part: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/dop-5-delete-one-part); fallback WP saja"
+        },
+        {
+          "slug": "gym-idle-clicker-fitness-hero",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/gym-idle-clicker-fitness-hero: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/gym-idle-clicker-fitness-hero); fallback WP saja"
+        },
+        {
+          "slug": "athena-blood-twins",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/athena-blood-twins: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/athena-blood-twins); fallback WP saja"
+        },
+        {
+          "slug": "satisfying-coloring",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/satisfying-coloring: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/satisfying-coloring); fallback WP saja"
+        },
+        {
+          "slug": "townsfolk",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/townsfolk: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/townsfolk); fallback WP saja"
+        },
+        {
+          "slug": "hero-of-the-kingdom-ii",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/hero-of-the-kingdom-ii: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/hero-of-the-kingdom-ii); fallback WP saja"
+        },
+        {
+          "slug": "bowblitz",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/bowblitz: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/bowblitz); fallback WP saja"
+        },
+        {
+          "slug": "frontline-truck-simulator",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/frontline-truck-simulator: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/frontline-truck-simulator); fallback WP saja"
+        },
+        {
+          "slug": "rapidtv",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/apps/rapidtv: HTTP 403 for https://r.jina.ai/https://apkmody.com/apps/rapidtv); fallback WP saja"
+        },
+        {
+          "slug": "rap-fame",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/apps/rap-fame: HTTP 403 for https://r.jina.ai/https://apkmody.com/apps/rap-fame); fallback WP saja"
+        },
+        {
+          "slug": "dirt-trackin-3",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/dirt-trackin-3: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/dirt-trackin-3); fallback WP saja"
+        },
+        {
+          "slug": "the-last-interstellar-traveler",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/the-last-interstellar-traveler: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/the-last-interstellar-traveler); fallback WP saja"
+        },
+        {
+          "slug": "bible-word-puzzle",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/bible-word-puzzle: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/bible-word-puzzle); fallback WP saja"
+        },
+        {
+          "slug": "reality",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/apps/reality: HTTP 403 for https://r.jina.ai/https://apkmody.com/apps/reality); fallback WP saja"
+        },
+        {
+          "slug": "sibling-adventure-puzzle-game",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/sibling-adventure-puzzle-game: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/sibling-adventure-puzzle-game); fallback WP saja"
+        },
+        {
+          "slug": "idle-airport-empire",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/idle-airport-empire: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/idle-airport-empire); fallback WP saja"
+        },
+        {
+          "slug": "merge-museum-art-history",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/merge-museum-art-history: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/merge-museum-art-history); fallback WP saja"
+        },
+        {
+          "slug": "manus-ai",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/apps/manus-ai: HTTP 403 for https://r.jina.ai/https://apkmody.com/apps/manus-ai); fallback WP saja"
+        },
+        {
+          "slug": "netshort",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/apps/netshort: HTTP 403 for https://r.jina.ai/https://apkmody.com/apps/netshort); fallback WP saja"
+        },
+        {
+          "slug": "implayer",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/apps/implayer: HTTP 403 for https://r.jina.ai/https://apkmody.com/apps/implayer); fallback WP saja"
+        },
+        {
+          "slug": "avalar-shadow-war-premium",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/avalar-shadow-war-premium: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/avalar-shadow-war-premium); fallback WP saja"
+        },
+        {
+          "slug": "coinbase",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/apps/coinbase: HTTP 403 for https://r.jina.ai/https://apkmody.com/apps/coinbase); fallback WP saja"
+        },
+        {
+          "slug": "naraka-bladepoint-mobile",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/naraka-bladepoint-mobile: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/naraka-bladepoint-mobile); fallback WP saja"
+        },
+        {
+          "slug": "nightmare-puzzles-the-unknown",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/nightmare-puzzles-the-unknown: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/nightmare-puzzles-the-unknown); fallback WP saja"
+        },
+        {
+          "slug": "adventure-of-white-chord",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/adventure-of-white-chord: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/adventure-of-white-chord); fallback WP saja"
+        },
+        {
+          "slug": "idle-zombie-survival-tycoon",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/idle-zombie-survival-tycoon: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/idle-zombie-survival-tycoon); fallback WP saja"
+        },
+        {
+          "slug": "dragonspear-nightmare-master",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/dragonspear-nightmare-master: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/dragonspear-nightmare-master); fallback WP saja"
+        },
+        {
+          "slug": "robbery-madness-2",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/robbery-madness-2: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/robbery-madness-2); fallback WP saja"
+        },
+        {
+          "slug": "big-brother-the-game",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/big-brother-the-game: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/big-brother-the-game); fallback WP saja"
+        },
+        {
+          "slug": "animals-coins-animal-run",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/animals-coins-animal-run: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/animals-coins-animal-run); fallback WP saja"
+        },
+        {
+          "slug": "color-block-combo-blast",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/color-block-combo-blast: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/color-block-combo-blast); fallback WP saja"
+        },
+        {
+          "slug": "threema",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/apps/threema: HTTP 403 for https://r.jina.ai/https://apkmody.com/apps/threema); fallback WP saja"
+        },
+        {
+          "slug": "hero-of-the-kingdom-iii",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/hero-of-the-kingdom-iii: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/hero-of-the-kingdom-iii); fallback WP saja"
+        },
+        {
+          "slug": "vampires-fall-2",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/vampires-fall-2: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/vampires-fall-2); fallback WP saja"
+        },
+        {
+          "slug": "destiny-rising",
+          "error": "jina gagal (fetch failed after 2 attempts for https://r.jina.ai/https://apkmody.com/games/destiny-rising: HTTP 403 for https://r.jina.ai/https://apkmody.com/games/destiny-rising); fallback WP saja"
+        }
+      ]
+    },
+    "merged_entries": 200,
+    "duplicates_merged": 0,
+    "skipped_invalid": []
+  }
+}

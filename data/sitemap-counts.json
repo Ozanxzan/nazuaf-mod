@@ -1,0 +1,31 @@
+{
+  "apkmody": {
+    "source": "apkmody",
+    "sitemap_index": {
+      "sub_sitemaps": 17,
+      "post_sitemaps": 17,
+      "note": "index terverifikasi via crawler: 17 post-sitemap + page + category",
+      "direct_fetch": "gagal (fetch failed after 1 attempts for https://apkmody.com/sitemap.xml: fetch failed) — fallback WP API"
+    },
+    "wp_total_posts": 16053,
+    "en_detail_urls_in_sitemap_order": 5695,
+    "unique_en_slugs": 5681,
+    "en_games": 4064,
+    "en_apps": 1631,
+    "other_lang_duplicates": 10219,
+    "blog": 87,
+    "other": 52
+  },
+  "modyolo": {
+    "source": "modyolo",
+    "sitemap_index": {
+      "sub_sitemaps": 41,
+      "post_sitemaps": 23
+    },
+    "total_url_entries": 34076,
+    "detail_html_urls": 22740,
+    "taxonomy_urls": 11336,
+    "failed_sub_sitemaps": [],
+    "wp_total_posts": 22721
+  }
+}
