@@ -156,7 +156,46 @@ export function renderDetailTemplate() {
           + '<div><h1>' + esc(a.name) + '</h1><p class="detail-meta">' + esc(a.type === 'game' ? 'Game' : 'Aplikasi') + (a.category ? ' · ' + esc(a.category) : '') + ' · v' + esc(a.version || '?') + ' · ' + esc(fmtDate(a.updated)) + '</p>'
           + '<p>' + esc(a.description || '') + '</p></div></section>'
           + '<section><h2>Pilih server download</h2><div class="servers">' + cards + '</div></section>'
-          + '<section><h2>Detail</h2><ul class="info">' + rowsHtml + '</ul></section>';
+          + '<section><h2>Detail</h2><ul class="info">' + rowsHtml + '</ul></section>'
+          + '<section id="recs"><h2>Rekomendasi</h2><p class="note">Memuat rekomendasi...</p></section>';
+      }
+      function renderRecs(a) {
+        fetch('/data/recs.json').then(function (r) { return r.json(); }).then(function (recs) {
+          var box = document.getElementById('recs');
+          if (!box) return;
+          var out = [];
+          var seen = {};
+          seen[a.slug] = true;
+          function pushFrom(list) {
+            list = list || [];
+            for (var i = 0; i < list.length; i++) {
+              if (out.length >= 8) break;
+              var c = list[i];
+              if (seen[c.slug]) continue;
+              seen[c.slug] = true;
+              out.push(c);
+            }
+          }
+          pushFrom(recs[a.type + '|' + (a.category || '')]);
+          if (out.length < 4) pushFrom(recs[a.type + '|__all']);
+          if (!out.length) { box.style.display = 'none'; return; }
+          var label = a.type === 'game' ? 'Game' : 'Aplikasi';
+          var html = '<h2>Rekomendasi</h2><p class="note">' + esc(label) + (a.category ? ' ' + esc(a.category) : '') + ' lainnya yang mungkin kamu suka.</p><div class="apps-list">';
+          for (var j = 0; j < out.length; j++) {
+            var c = out[j];
+            html += '<a class="app-card" href="/apps/' + esc(c.slug) + '/">'
+              + '<img class="app-icon" src="' + esc(c.icon || '/assets/icon-placeholder.svg') + '" alt="Ikon ' + esc(c.name) + '" width="56" height="56" loading="lazy">'
+              + '<span class="app-body"><span class="app-name">' + esc(c.name) + '</span>'
+              + '<span class="app-meta">' + (c.category ? esc(c.category) + ' · ' : '') + 'v' + esc(c.version || '?') + (c.size_mb ? ' · ' + esc(c.size_mb) + ' MB' : '') + '</span>'
+              + '<span class="app-date">' + esc(fmtDate(c.updated)) + ' · ' + c.sources.map(function (s) { return esc(LABEL[s]); }).join(', ') + '</span></span>'
+              + '<span class="app-get" aria-hidden="true">↓</span></a>';
+          }
+          html += '</div>';
+          box.innerHTML = html;
+        }).catch(function () {
+          var box = document.getElementById('recs');
+          if (box) box.style.display = 'none';
+        });
       }
       (function () {
         var parts = location.pathname.split('/').filter(Boolean);
@@ -176,6 +215,7 @@ export function renderDetailTemplate() {
             for (var i = 0; i < apps.length; i++) { if (apps[i].slug === slug) { found = apps[i]; break; } }
             if (!found) { fail('Entri "' + slug + '" tidak ada di katalog ini.'); return; }
             renderDetail(found);
+            renderRecs(found);
           });
         }).catch(function () { fail('Gagal memuat data katalog. Periksa koneksi lalu muat ulang halaman.'); });
       })();

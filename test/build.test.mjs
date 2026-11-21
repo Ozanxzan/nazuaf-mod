@@ -47,7 +47,7 @@ test('renderListing: 100 kartu per halaman + pager tautan + tab berupa tautan', 
   assert.ok(p2.includes('Halaman 2 dari 3'));
 });
 
-test('renderDetailTemplate: slug dari URL + ambil chunk JSON', () => {
+test('renderDetailTemplate: slug dari URL + ambil chunk JSON + rekomendasi', () => {
   const html = renderDetailTemplate();
   assert.ok(html.includes('/data/slugs.json'));
   assert.ok(html.includes('/data/chunks/'));
@@ -55,6 +55,8 @@ test('renderDetailTemplate: slug dari URL + ambil chunk JSON', () => {
   assert.ok(html.includes('Download di'));
   assert.ok(html.includes('Server '));
   assert.ok(html.includes('an1'));
+  assert.ok(html.includes('Rekomendasi'));
+  assert.ok(html.includes('/data/recs.json'));
 });
 
 test('renderSearchPage: indeks pencarian + parameter q', () => {
@@ -83,6 +85,11 @@ test('buildSite menulis listing + chunk + indeks + _redirects, tanpa halaman det
   assert.ok(existsSync(join(outDir, 'data', 'chunks', '000.json')));
   assert.ok(existsSync(join(outDir, 'data', 'slugs.json')));
   assert.ok(existsSync(join(outDir, 'data', 'search.json')));
+  assert.ok(existsSync(join(outDir, 'data', 'recs.json')));
+  const recs = JSON.parse(readFileSync(join(outDir, 'data', 'recs.json'), 'utf8'));
+  assert.equal(recs['game|Casual'].length, 8);
+  assert.equal(recs['game|__all'].length, 8);
+  assert.ok(recs['game|Casual'].every((c) => c.slug && c.name));
   // Tidak ada lagi halaman detail statis per entri.
   assert.ok(!existsSync(join(outDir, 'apps', 'game-0')));
   assert.equal(readFileSync(join(outDir, '_redirects'), 'utf8'), '/apps/* /detail/ 200\n');

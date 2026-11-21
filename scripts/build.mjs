@@ -9,6 +9,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync, copyFileSync, readd
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { renderListing, renderDetailTemplate, renderSearchPage, renderUnknown, PAGE_SIZE, CHUNK_SIZE, pageUrl } from './lib/render.mjs';
+import { buildRecs } from './lib/recs.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -75,6 +76,8 @@ export async function buildSite(opts = {}) {
     join(outDir, 'data', 'search.json'),
     JSON.stringify(apps.map((a) => ({ n: a.name, s: a.slug, t: a.type, c: a.category || '' }))),
   );
+  // Rekomendasi per kategori (maks 8, terbaru dulu) + fallback per tipe.
+  writeFileSync(join(outDir, 'data', 'recs.json'), JSON.stringify(buildRecs(apps)));
   writeHtml(outDir, 'cari/index.html', renderSearchPage(apps.length));
 
   // /apps/<slug>/ lama tetap jalan: tulis ulang ke template detail (200).
