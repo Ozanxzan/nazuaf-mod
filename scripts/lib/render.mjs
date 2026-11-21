@@ -1,5 +1,13 @@
 // Render HTML statis, tema sama seperti morphe.nazuaf.com:
 // header: logo + tombol "Blog nazuaf.com" + pencarian oval (flex sama lebar).
+//
+// Arsitektur (batas 20.000 file/deployment di Cloudflare Pages):
+// - Listing dipecah jadi halaman statis per 100 entri (Game 1..N, Aplikasi 1..N).
+// - Halaman detail TIDAK dibuat per entri lagi: satu template /detail/ yang
+//   dirender di browser dari chunk JSON (/data/chunks/NNN.json, 1.000 entri
+//   per file) + indeks slug (/data/slugs.json). URL lama /apps/<slug>/ tetap
+//   jalan lewat _redirects (/apps/* -> /detail/ 200).
+// - Pencarian global di /cari/ memakai indeks ringkas /data/search.json.
 export function esc(s) {
   return String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
@@ -13,18 +21,25 @@ export function formatDateId(iso) {
 
 const SOURCE_LABEL = { apkmody: 'APKMody', modyolo: 'ModYolo', an1: 'AN1' };
 const SERVER_NUM = { apkmody: 1, modyolo: 2, an1: 3 };
+export const PAGE_SIZE = 100;
+export const CHUNK_SIZE = 1000;
 
-function shell({ title, desc, body }) {
-  return `<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)}</title><meta name="description" content="${esc(desc)}"><link rel="stylesheet" href="/assets/style.css"></head><body><header class="site-header"><div class="wrap"><a class="brand" href="/"><span class="brand-mark">n</span><span class="brand-text">mod<span>.nazuaf.com</span></span></a><nav class="site-nav"><a href="https://nazuaf.com">Blog nazuaf.com</a><form class="site-search" action="/" method="get" role="search"><input type="search" name="q" placeholder="Cari game &amp; aplikasi MOD..." aria-label="Cari game dan aplikasi"><button type="submit" aria-label="Cari"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></nav></div></header><main class="wrap">${body}</main><footer class="site-footer"><div class="wrap"><p>Katalog ini hanya menampilkan daftar dan meneruskan unduhan ke halaman download APKMody / ModYolo / AN1. File APK tidak di-host di situs ini.</p><p><a href="https://nazuaf.com">nazuaf.com</a> — Teknologi, Informasi, dan Inspirasi Digital.</p></div></footer></body></html>`;
+export function pageUrl(type, page) {
+  if (type === 'game') return page <= 1 ? '/' : `/game/page/${page}/`;
+  return page <= 1 ? '/app/' : `/app/page/${page}/`;
 }
 
-export function renderIndex(apps, generatedAt) {
-  const games = apps.filter((a) => a.type === 'game');
-  const appl = apps.filter((a) => a.type === 'app');
-  const unknown = apps.filter((a) => a.type === 'unknown');
-  const card = (a) => {
-    const badges = a.sources.map((s) => `<span class="srv-badge">${esc(SOURCE_LABEL[s])}</span>`).join('');
-    return `
+export function chunkFileForIndex(idx) {
+  return `/data/chunks/${String(Math.floor(idx / CHUNK_SIZE)).padStart(3, '0')}.json`;
+}
+
+function shell({ title, desc, body }) {
+  return `<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)}</title><meta name="description" content="${esc(desc)}"><link rel="stylesheet" href="/assets/style.css"></head><body><header class="site-header"><div class="wrap"><a class="brand" href="/"><span class="brand-mark">n</span><span class="brand-text">mod<span>.nazuaf.com</span></span></a><nav class="site-nav"><a href="https://nazuaf.com">Blog nazuaf.com</a><form class="site-search" action="/cari/" method="get" role="search"><input type="search" name="q" placeholder="Cari game &amp; aplikasi MOD..." aria-label="Cari game dan aplikasi"><button type="submit" aria-label="Cari"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></nav></div></header><main class="wrap">${body}</main><footer class="site-footer"><div class="wrap"><p>Katalog ini hanya menampilkan daftar dan meneruskan unduhan ke halaman download APKMody / ModYolo / AN1. File APK tidak di-host di situs ini.</p><p><a href="https://nazuaf.com">nazuaf.com</a> — Teknologi, Informasi, dan Inspirasi Digital.</p></div></footer></body></html>`;
+}
+
+function card(a) {
+  const badges = a.sources.map((s) => `<span class="srv-badge">${esc(SOURCE_LABEL[s])}</span>`).join('');
+  return `
     <a class="app-card" href="/apps/${esc(a.slug)}/" data-search="${esc(`${a.name} ${a.category || ''} ${a.description || ''} ${a.servers.map((s) => s.mod_info || '').join(' ')}`.toLowerCase())}">
       <img class="app-icon" src="${esc(a.icon || '/assets/icon-placeholder.svg')}" alt="Ikon ${esc(a.name)}" width="56" height="56" loading="lazy">
       <span class="app-body"><span class="app-name">${esc(a.name)}</span>
@@ -32,87 +47,57 @@ export function renderIndex(apps, generatedAt) {
       <span class="app-date">${esc(formatDateId(a.updated))} · ${badges}</span></span>
       <span class="app-get" aria-hidden="true">↓</span>
     </a>`;
-  };
-  const tabSection = (id, list, label) => `
-    <section class="tab-panel" id="tab-${id}" ${id === 'game' ? '' : 'hidden'}>
-      <h2>${label} <span class="count">${list.length}</span></h2>
-      <div class="apps-list" data-list="${id}">${list.map(card).join('')}</div>
-      <p class="no-result" hidden>Tidak ada ${label.toLowerCase()} yang cocok. Coba kata kunci lain.</p>
-      <nav class="pager" data-pager="${id}" aria-label="Halaman ${label.toLowerCase()}">
-        <button class="pager-btn" data-page="prev" type="button">‹ Sebelumnya</button>
-        <span class="pager-info"></span>
-        <button class="pager-btn" data-page="next" type="button">Berikutnya ›</button>
-      </nav>
-    </section>`;
+}
+
+export function renderListing({ type, page, totalPages, items, counts, generatedAt }) {
+  const total = type === 'game' ? counts.game : counts.app;
+  const label = type === 'game' ? 'Game' : 'Aplikasi';
+  const start = (page - 1) * PAGE_SIZE;
+  const end = start + items.length;
+  const prev = page > 1
+    ? `<a class="pager-btn" href="${pageUrl(type, page - 1)}">‹ Sebelumnya</a>`
+    : `<span class="pager-btn" aria-disabled="true">‹ Sebelumnya</span>`;
+  const next = page < totalPages
+    ? `<a class="pager-btn" href="${pageUrl(type, page + 1)}">Berikutnya ›</a>`
+    : `<span class="pager-btn" aria-disabled="true">Berikutnya ›</span>`;
+  const title = page <= 1
+    ? 'Katalog MOD Android — APKMody + ModYolo + AN1 — mod.nazuaf.com'
+    : `Katalog MOD Android — ${label} (Halaman ${page}) — mod.nazuaf.com`;
   const body = `
-    <section class="hero"><h1>Katalog MOD Android, gabungan APKMody + ModYolo + AN1.</h1><p>${apps.length} game &amp; aplikasi MOD dalam satu daftar — ${games.length} game, ${appl.length} aplikasi${unknown.length ? `, ${unknown.length} belum dikategorikan` : ''}. Di halaman detail, pilih server download-nya: Server 1 APKMody, Server 2 ModYolo, atau Server 3 AN1 — masing-masing dengan versi, ukuran, dan info MOD-nya sendiri.</p>
+    <section class="hero"><h1>Katalog MOD Android, gabungan APKMody + ModYolo + AN1.</h1><p>${counts.game + counts.app} game &amp; aplikasi MOD dalam satu daftar — ${counts.game} game, ${counts.app} aplikasi${counts.unknown ? `, ${counts.unknown} belum dikategorikan` : ''}. Di halaman detail, pilih server download-nya: Server 1 APKMody, Server 2 ModYolo, atau Server 3 AN1 — masing-masing dengan versi, ukuran, dan info MOD-nya sendiri.</p>
     <p class="updated">Terakhir diperbarui: ${esc(formatDateId(generatedAt))}</p></section>
     <div class="tabs" role="tablist" aria-label="Jenis katalog">
-      <button class="tab-btn active" role="tab" data-tab="game" aria-selected="true">Game (${games.length})</button>
-      <button class="tab-btn" role="tab" data-tab="app" aria-selected="false">Aplikasi (${appl.length})</button>
+      <a class="tab-btn${type === 'game' ? ' active' : ''}" role="tab" href="/" aria-selected="${type === 'game' ? 'true' : 'false'}">Game (${counts.game})</a>
+      <a class="tab-btn${type === 'app' ? ' active' : ''}" role="tab" href="/app/" aria-selected="${type === 'app' ? 'true' : 'false'}">Aplikasi (${counts.app})</a>
     </div>
-    <input id="q" type="search" placeholder="Cari di tab ini..." aria-label="Cari game dan aplikasi">
-    ${tabSection('game', games, 'Game')}
-    ${tabSection('app', appl, 'Aplikasi')}
-    ${unknown.length ? `<p class="note"><a href="/unknown/">Belum dikategorikan (${unknown.length})</a> — entri yang tipenya tidak bisa ditentukan dari sumbernya, menunggu ditinjau.</p>` : ''}
+    <input id="q" type="search" placeholder="Cari di halaman ini..." aria-label="Cari game dan aplikasi">
+    <section class="tab-panel" id="tab-${type}">
+      <h2>${label} <span class="count">${total}</span></h2>
+      <div class="apps-list" data-list="${type}">${items.map(card).join('')}</div>
+      <p class="no-result" hidden>Tidak ada ${label.toLowerCase()} yang cocok di halaman ini. Coba kata kunci lain atau cari di <a href="/cari/">pencarian global</a>.</p>
+      <nav class="pager" aria-label="Halaman ${label.toLowerCase()}">
+        ${prev}
+        <span class="pager-info">Halaman ${page} dari ${totalPages} — ${items.length ? `${start + 1}–${end}` : '0'} dari ${total}</span>
+        ${next}
+      </nav>
+    </section>
+    ${type === 'game' && page === 1 && counts.unknown ? `<p class="note"><a href="/unknown/">Belum dikategorikan (${counts.unknown})</a> — entri yang tipenya tidak bisa ditentukan dari sumbernya, menunggu ditinjau.</p>` : ''}
     <script>
       const q = document.getElementById('q');
-      const headerQ = document.querySelector('.site-search input');
-      let activeTab = 'game';
-      const PAGE_SIZE = 100;
-      const page = { game: 1, app: 1 };
-      function applyFilter() {
+      q.addEventListener('input', () => {
         const needle = q.value.trim().toLowerCase();
-        const panel = document.getElementById('tab-' + activeTab);
-        const list = panel.querySelector('[data-list]');
-        const noResult = panel.querySelector('.no-result');
-        const pager = panel.querySelector('[data-pager]');
-        const info = pager.querySelector('.pager-info');
-        const prevBtn = pager.querySelector('[data-page="prev"]');
-        const nextBtn = pager.querySelector('[data-page="next"]');
-        const matches = [];
-        for (const card of list.children) {
-          if (!needle || card.dataset.search.includes(needle)) matches.push(card);
+        const list = document.querySelector('[data-list]');
+        const noResult = document.querySelector('.no-result');
+        let shown = 0;
+        for (const el of list.children) {
+          const hit = !needle || el.dataset.search.includes(needle);
+          el.style.display = hit ? '' : 'none';
+          if (hit) shown++;
         }
-        const totalPages = Math.max(1, Math.ceil(matches.length / PAGE_SIZE));
-        if (page[activeTab] > totalPages) page[activeTab] = totalPages;
-        if (page[activeTab] < 1) page[activeTab] = 1;
-        const start = (page[activeTab] - 1) * PAGE_SIZE;
-        const end = Math.min(start + PAGE_SIZE, matches.length);
-        for (const card of list.children) card.style.display = 'none';
-        for (let i = start; i < end; i++) matches[i].style.display = '';
-        noResult.hidden = matches.length > 0;
-        info.textContent = matches.length === 0 ? 'Tidak ada hasil' : 'Halaman ' + page[activeTab] + ' dari ' + totalPages + ' — ' + (start + 1) + '–' + end + ' dari ' + matches.length;
-        prevBtn.disabled = page[activeTab] <= 1;
-        nextBtn.disabled = page[activeTab] >= totalPages;
-        pager.style.display = totalPages <= 1 && matches.length === 0 ? 'none' : '';
-      }
-      function setTab(tab) {
-        activeTab = tab;
-        page[tab] = 1;
-        document.querySelectorAll('.tab-btn').forEach((b) => {
-          const on = b.dataset.tab === tab;
-          b.classList.toggle('active', on);
-          b.setAttribute('aria-selected', on ? 'true' : 'false');
-        });
-        document.querySelectorAll('.tab-panel').forEach((p) => { p.hidden = p.id !== 'tab-' + tab; });
-        history.replaceState(null, '', tab === 'game' ? location.pathname : location.pathname + '?tab=' + tab);
-        applyFilter();
-      }
-      q.addEventListener('input', () => { if (headerQ) headerQ.value = q.value; page[activeTab] = 1; applyFilter(); });
-      if (headerQ) headerQ.addEventListener('input', () => { q.value = headerQ.value; page[activeTab] = 1; applyFilter(); });
-      document.querySelectorAll('[data-pager] [data-page]').forEach((b) => b.addEventListener('click', () => {
-        page[activeTab] += b.dataset.page === 'next' ? 1 : -1;
-        applyFilter();
-        document.getElementById('tab-' + activeTab).scrollIntoView({ block: 'start' });
-      }));
-      document.querySelectorAll('.tab-btn').forEach((b) => b.addEventListener('click', () => setTab(b.dataset.tab)));
-      const params = new URLSearchParams(location.search);
-      if (params.get('tab') === 'app') setTab('app');
-      else if (params.get('q')) { q.value = params.get('q'); if (headerQ) headerQ.value = params.get('q'); applyFilter(); }
-      else applyFilter();
+        noResult.hidden = shown > 0;
+      });
     </script>`;
-  return shell({ title: 'Katalog MOD Android — APKMody + ModYolo + AN1 — mod.nazuaf.com', desc: `Daftar ${apps.length} game & aplikasi MOD Android dari APKMody, ModYolo, dan AN1, pilih server download.`, body });
+  return shell({ title, desc: `Daftar ${total} ${label.toLowerCase()} MOD Android dari APKMody, ModYolo, dan AN1, pilih server download.`, body });
 }
 
 export function renderUnknown(apps, generatedAt) {
@@ -125,37 +110,117 @@ export function renderUnknown(apps, generatedAt) {
   return shell({ title: 'Belum dikategorikan — mod.nazuaf.com', desc: 'Entri katalog yang tipenya belum bisa ditentukan.', body });
 }
 
-export function renderDetail(app) {
-  const serverCards = app.servers.map((s) => `
-    <article class="server-card">
-      <h3>Server ${SERVER_NUM[s.source] || '?'} — ${esc(SOURCE_LABEL[s.source])}</h3>
-      <ul class="info">
-        <li><span>Versi</span><span>${s.version ? `v${esc(s.version)}` : '—'}</span></li>
-        <li><span>Ukuran</span><span>${s.size_mb ? `${esc(s.size_mb)} MB` : '—'}</span></li>
-        <li><span>Info MOD</span><span>${esc(s.mod_info || '—')}</span></li>
-        <li><span>Diperbarui</span><span>${esc(formatDateId(s.updated))}</span></li>
-        ${s.developer ? `<li><span>Developer</span><span>${esc(s.developer)}</span></li>` : ''}
-      </ul>
-      <a class="btn-download" href="${esc(s.download_url)}" target="_blank" rel="noopener nofollow">Download di ${esc(SOURCE_LABEL[s.source])}${s.size_mb ? ` (${esc(s.size_mb)} MB)` : ''}</a>
-      <p class="note">Tautan diteruskan ke halaman download ${esc(SOURCE_LABEL[s.source])} (<a href="${esc(s.url)}" target="_blank" rel="noopener nofollow">lihat sumber</a>). File tidak di-host di situs ini.</p>
-    </article>`).join('');
-  const rows = [
-    ['Tipe', app.type === 'game' ? 'Game' : app.type === 'app' ? 'Aplikasi' : 'Belum dikategorikan'],
-    ['Kategori', app.category],
-    ['Package', app.package_name],
-    ['Server tersedia', app.sources.map((s) => SOURCE_LABEL[s]).join(' + ')],
-    ['Diperbarui', formatDateId(app.updated)],
-    ['Perlu ditinjau', app.needs_review ? 'Ya — digabung dari beberapa server hanya berdasarkan nama (tanpa package name)' : null],
-  ].filter(([, v]) => v);
-  const rowsHtml = rows.map(([k, v]) => `<li><span>${esc(k)}</span><span>${esc(v)}</span></li>`).join('');
+// Template halaman detail dinamis: slug dibaca dari URL /apps/<slug>/,
+// datanya diambil dari /data/slugs.json (binary search) + chunk JSON.
+// (Skrip di bawah sengaja tanpa template literal bersarang.)
+export function renderDetailTemplate() {
   const body = `
-    <nav class="crumbs"><a href="/">Semua Game &amp; Aplikasi</a> / ${esc(app.name)}</nav>
-    <section class="detail-head">
-      <img class="detail-icon" src="${esc(app.icon || '/assets/icon-placeholder.svg')}" alt="Ikon ${esc(app.name)}" width="96" height="96">
-      <div><h1>${esc(app.name)}</h1><p class="detail-meta">${esc(app.type === 'game' ? 'Game' : 'Aplikasi')}${app.category ? ` · ${esc(app.category)}` : ''} · v${esc(app.version || '?')} · ${esc(formatDateId(app.updated))}</p>
-      <p>${esc(app.description || '')}</p></div>
-    </section>
-    <section><h2>Pilih server download</h2><div class="servers">${serverCards}</div></section>
-    <section><h2>Detail</h2><ul class="info">${rowsHtml}</ul></section>`;
-  return shell({ title: `${app.name} v${app.version || ''} MOD — mod.nazuaf.com`, desc: app.description || `${app.name} MOD APK dari APKMody dan ModYolo.`, body });
+    <div id="detail"><p class="note">Memuat detail...</p></div>
+    <script>
+      var LABEL = { apkmody: 'APKMody', modyolo: 'ModYolo', an1: 'AN1' };
+      var NUM = { apkmody: 1, modyolo: 2, an1: 3 };
+      var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
+      function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+      function fmtDate(iso) {
+        if (!iso) return '—';
+        var p = iso.slice(0, 10).split('-');
+        return parseInt(p[2], 10) + ' ' + MONTHS[parseInt(p[1], 10) - 1] + ' ' + p[0];
+      }
+      function fail(msg) {
+        document.getElementById('detail').innerHTML = '<nav class="crumbs"><a href="/">Semua Game &amp; Aplikasi</a></nav><section class="hero"><h1>Tidak ditemukan</h1><p>' + esc(msg) + '</p><p><a href="/">Kembali ke katalog</a> atau coba <a href="/cari/">pencarian</a>.</p></section>';
+      }
+      function renderDetail(a) {
+        var cards = a.servers.map(function (s) {
+          return '<article class="server-card"><h3>Server ' + (NUM[s.source] || '?') + ' — ' + esc(LABEL[s.source]) + '</h3><ul class="info">'
+            + '<li><span>Versi</span><span>' + (s.version ? 'v' + esc(s.version) : '—') + '</span></li>'
+            + '<li><span>Ukuran</span><span>' + (s.size_mb ? esc(s.size_mb) + ' MB' : '—') + '</span></li>'
+            + '<li><span>Info MOD</span><span>' + esc(s.mod_info || '—') + '</span></li>'
+            + '<li><span>Diperbarui</span><span>' + esc(fmtDate(s.updated)) + '</span></li>'
+            + (s.developer ? '<li><span>Developer</span><span>' + esc(s.developer) + '</span></li>' : '')
+            + '</ul><a class="btn-download" href="' + esc(s.download_url) + '" target="_blank" rel="noopener nofollow">Download di ' + esc(LABEL[s.source]) + (s.size_mb ? ' (' + esc(s.size_mb) + ' MB)' : '') + '</a>'
+            + '<p class="note">Tautan diteruskan ke halaman download ' + esc(LABEL[s.source]) + ' (<a href="' + esc(s.url) + '" target="_blank" rel="noopener nofollow">lihat sumber</a>). File tidak di-host di situs ini.</p></article>';
+        }).join('');
+        var rows = [
+          ['Tipe', a.type === 'game' ? 'Game' : a.type === 'app' ? 'Aplikasi' : 'Belum dikategorikan'],
+          ['Kategori', a.category],
+          ['Package', a.package_name],
+          ['Server tersedia', a.sources.map(function (s) { return LABEL[s]; }).join(' + ')],
+          ['Diperbarui', fmtDate(a.updated)],
+          ['Perlu ditinjau', a.needs_review ? 'Ya — digabung dari beberapa server hanya berdasarkan nama (tanpa package name)' : null],
+        ].filter(function (r) { return r[1]; });
+        var rowsHtml = rows.map(function (r) { return '<li><span>' + esc(r[0]) + '</span><span>' + esc(r[1]) + '</span></li>'; }).join('');
+        document.title = a.name + ' v' + (a.version || '') + ' MOD — mod.nazuaf.com';
+        document.getElementById('detail').innerHTML =
+          '<nav class="crumbs"><a href="/">Semua Game &amp; Aplikasi</a> / ' + esc(a.name) + '</nav>'
+          + '<section class="detail-head"><img class="detail-icon" src="' + esc(a.icon || '/assets/icon-placeholder.svg') + '" alt="Ikon ' + esc(a.name) + '" width="96" height="96">'
+          + '<div><h1>' + esc(a.name) + '</h1><p class="detail-meta">' + esc(a.type === 'game' ? 'Game' : 'Aplikasi') + (a.category ? ' · ' + esc(a.category) : '') + ' · v' + esc(a.version || '?') + ' · ' + esc(fmtDate(a.updated)) + '</p>'
+          + '<p>' + esc(a.description || '') + '</p></div></section>'
+          + '<section><h2>Pilih server download</h2><div class="servers">' + cards + '</div></section>'
+          + '<section><h2>Detail</h2><ul class="info">' + rowsHtml + '</ul></section>';
+      }
+      (function () {
+        var parts = location.pathname.split('/').filter(Boolean);
+        var slug = parts.length >= 2 && parts[0] === 'apps' ? parts[1] : '';
+        if (!slug) { fail('Tidak ada game atau aplikasi yang dipilih.'); return; }
+        fetch('/data/slugs.json').then(function (r) { return r.json(); }).then(function (slugs) {
+          var lo = 0, hi = slugs.length - 1, idx = -1;
+          while (lo <= hi) {
+            var mid = (lo + hi) >> 1;
+            if (slugs[mid] === slug) { idx = mid; break; }
+            if (slugs[mid] < slug) lo = mid + 1; else hi = mid - 1;
+          }
+          if (idx < 0) { fail('Entri "' + slug + '" tidak ada di katalog ini.'); return; }
+          var chunk = String(Math.floor(idx / 1000)).padStart(3, '0');
+          return fetch('/data/chunks/' + chunk + '.json').then(function (r) { return r.json(); }).then(function (apps) {
+            var found = null;
+            for (var i = 0; i < apps.length; i++) { if (apps[i].slug === slug) { found = apps[i]; break; } }
+            if (!found) { fail('Entri "' + slug + '" tidak ada di katalog ini.'); return; }
+            renderDetail(found);
+          });
+        }).catch(function () { fail('Gagal memuat data katalog. Periksa koneksi lalu muat ulang halaman.'); });
+      })();
+    </script>`;
+  return shell({ title: 'Detail MOD — mod.nazuaf.com', desc: 'Detail game dan aplikasi MOD Android dari APKMody, ModYolo, dan AN1, pilih server download.', body });
+}
+
+// Halaman pencarian global: memakai indeks ringkas /data/search.json.
+export function renderSearchPage(total) {
+  const body = `
+    <section class="hero"><h1>Cari game &amp; aplikasi MOD</h1><p>Mencari di seluruh katalog (${total} entri), bukan hanya halaman ini.</p></section>
+    <form class="site-search" action="/cari/" method="get" role="search" style="margin-bottom:16px"><input id="q" type="search" name="q" placeholder="Cari game &amp; aplikasi MOD..." aria-label="Cari game dan aplikasi" style="flex:1"><button type="submit" aria-label="Cari">Cari</button></form>
+    <p class="note" id="search-info"></p>
+    <div class="apps-list" id="results"></div>
+    <p class="no-result" id="no-result" hidden>Tidak ada yang cocok. Coba kata kunci lain.</p>
+    <script>
+      var params = new URLSearchParams(location.search);
+      var q = (params.get('q') || '').trim();
+      var input = document.getElementById('q');
+      input.value = q;
+      var info = document.getElementById('search-info');
+      var list = document.getElementById('results');
+      var noResult = document.getElementById('no-result');
+      function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+      if (!q) { info.textContent = 'Ketik kata kunci di atas untuk mencari.'; }
+      else {
+        info.textContent = 'Mencari "' + q + '"...';
+        fetch('/data/search.json').then(function (r) { return r.json(); }).then(function (idx) {
+          var needle = q.toLowerCase();
+          var hits = [];
+          for (var i = 0; i < idx.length; i++) {
+            var e = idx[i];
+            if ((e.n + ' ' + (e.c || '')).toLowerCase().indexOf(needle) >= 0) hits.push(e);
+          }
+          var shown = hits.slice(0, 100);
+          info.textContent = hits.length === 0 ? '' : 'Menampilkan ' + shown.length + ' dari ' + hits.length + ' hasil untuk "' + q + '"' + (hits.length > 100 ? ' — persempit kata kunci untuk hasil lebih tepat.' : '');
+          noResult.hidden = hits.length > 0;
+          var html = '';
+          for (var j = 0; j < shown.length; j++) {
+            var h = shown[j];
+            html += '<a class="app-card" href="/apps/' + esc(h.s) + '/"><span class="app-body"><span class="app-name">' + esc(h.n) + '</span><span class="app-meta">' + esc(h.t === 'game' ? 'Game' : 'Aplikasi') + (h.c ? ' · ' + esc(h.c) : '') + '</span></span><span class="app-get" aria-hidden="true">↓</span></a>';
+          }
+          list.innerHTML = html;
+        }).catch(function () { info.textContent = 'Gagal memuat indeks pencarian. Periksa koneksi lalu muat ulang halaman.'; });
+      }
+    </script>`;
+  return shell({ title: 'Cari — mod.nazuaf.com', desc: 'Cari game dan aplikasi MOD Android di seluruh katalog mod.nazuaf.com.', body });
 }

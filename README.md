@@ -120,7 +120,7 @@ semua kecuali `/wp-admin/`. AN1 melarang `/engine/go.php` dan
 npm run scrape   # hitung sitemap + ambil 100 terbaru per sumber → data/apps.json (sampel)
 npm run scrape:full  # full katalog, resumable per batch (lihat di bawah)
 npm run merge:full   # gabung data/servers/*.jsonl → data/apps.json
-npm run build    # data/apps.json → public/ (index + /apps/<slug>/ + /unknown/)
+npm run build    # data/apps.json → public/ (listing per 100 + detail dinamis, lihat di bawah)
 npm test         # node --test test/*.test.mjs
 # Lihat lokal: npx serve public  atau  python3 -m http.server -d public
 ```
@@ -132,6 +132,18 @@ Snapshot live pertama (21 Nov 2026, 16.18 WIB): **9.222 entri**
 ModYolo 5.000/22.721 ok + APKMody sampel 100 (fallback WP, tanpa
 versi/ukuran). Tes 19/19 lolos, build 3,3 dtk, `public/` 46 MB
 (index.html 8,0 MB, 9.222 halaman detail). Full scrape dilanjutkan
+
+## Batas file Cloudflare Pages (22 Nov 2026)
+
+Katalog full 30.776 entri TIDAK bisa di-deploy sebagai satu halaman
+detail per entri: Pages menolak deployment di atas 20.000 file (dan
+25 MB per file). Karena itu build sekarang menghasilkan:
+- Listing statis per 100 entri: `/` + `/game/page/N/`, `/app/` + `/app/page/N/`
+- Detail dinamis: satu template `/detail/` + `_redirects` (`/apps/* /detail/ 200`,
+  jadi URL lama `/apps/<slug>/` tetap jalan) + chunk JSON `/data/chunks/NNN.json`
+  (1.000 entri/file) + indeks slug `/data/slugs.json` (binary search di browser)
+- Pencarian global `/cari/` memakai indeks ringkas `/data/search.json`
+- Total ~350 file untuk 30.780 entri (build lokal 3,8 dtk, file terbesar 2,4 MB).
 setelah live — lihat "Lanjutkan full scrape" di bawah.
 
 ### 1. Buat repo GitHub (Zan, dari HP — Brave)

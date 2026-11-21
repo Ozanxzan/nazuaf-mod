@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { parseAn1Detail } from '../scripts/lib/parse-an1.mjs';
 import { parseApkmodyHtml, translateProxyUrl } from '../scripts/lib/parse-apkmody-html.mjs';
-import { renderIndex, renderDetail, renderUnknown } from '../scripts/lib/render.mjs';
+import { renderListing, renderDetailTemplate, renderUnknown } from '../scripts/lib/render.mjs';
 import { mergeServers } from '../scripts/lib/merge.mjs';
 
 test('parseAn1Detail: title + spec + download + kategori', () => {
@@ -54,25 +54,26 @@ const gameApp = {
 const toolApp = { ...gameApp, slug: 'one-hand-control', name: 'One Hand Control', type: 'app', category: 'Tools', version: '1.4.1', size_mb: 13.8, servers: [{ source: 'modyolo', version: '1.4.1', size_mb: 13.8, size_raw: '13.8M', mod_info: 'Pro Unlocked', genre: 'Tools', developer: 'Nir Paniri', updated: '2026-11-21', url: 'https://modyolo.com/one-hand-control.html', download_url: 'https://modyolo.com/download/one-hand-control-617566', wp_id: 617566 }], sources: ['modyolo'] };
 const unknownApp = { ...gameApp, slug: 'mystery', name: 'Mystery', type: 'unknown', version: null, size_mb: null };
 
-test('renderIndex: 2 tab terpisah, pencarian hanya di tab aktif, unknown tidak di tab', () => {
-  const html = renderIndex([gameApp, toolApp, unknownApp], '2026-11-21T00:00:00Z');
-  assert.ok(html.includes('data-tab="game"'));
-  assert.ok(html.includes('data-tab="app"'));
-  assert.ok(html.includes('Game (1)'));
-  assert.ok(html.includes('Aplikasi (1)'));
-  // Unknown tidak masuk ke panel tab mana pun, hanya tautan peninjau.
-  assert.ok(html.includes('/unknown/'));
-  assert.ok(html.includes('Belum dikategorikan (1)'));
-  const gamePanel = html.split('id="tab-game"')[1].split('id="tab-app"')[0];
-  assert.ok(gamePanel.includes('Real Boxing 2'));
-  assert.ok(!gamePanel.includes('One Hand Control'));
-  assert.ok(!gamePanel.includes('Mystery'));
+test('renderListing: 2 tipe terpisah, unknown tidak di tab', () => {
+  const gameHtml = renderListing({ type: 'game', page: 1, totalPages: 1, items: [gameApp], counts: { game: 1, app: 1, unknown: 1 }, generatedAt: '2026-11-21T00:00:00Z' });
+  assert.ok(gameHtml.includes('Game (1)'));
+  assert.ok(gameHtml.includes('Aplikasi (1)'));
+  assert.ok(gameHtml.includes('Real Boxing 2'));
+  assert.ok(!gameHtml.includes('One Hand Control'));
+  assert.ok(!gameHtml.includes('Mystery'));
+  assert.ok(gameHtml.includes('/unknown/'));
+  assert.ok(gameHtml.includes('Belum dikategorikan (1)'));
+  const appHtml = renderListing({ type: 'app', page: 1, totalPages: 1, items: [toolApp], counts: { game: 1, app: 1, unknown: 1 }, generatedAt: '2026-11-21T00:00:00Z' });
+  assert.ok(appHtml.includes('One Hand Control'));
+  assert.ok(!appHtml.includes('Real Boxing 2'));
 });
 
-test('renderDetail: Server 3 — AN1', () => {
-  const html = renderDetail(gameApp);
-  assert.ok(html.includes('Server 3 — AN1'));
-  assert.ok(html.includes('https://an1.com/file_6881-dw.html'));
+test('renderDetailTemplate: memuat Server AN1 dari chunk', () => {
+  const html = renderDetailTemplate();
+  assert.ok(html.includes('/data/slugs.json'));
+  assert.ok(html.includes("LABEL"));
+  assert.ok(html.includes('an1'));
+  assert.ok(html.includes('Download di'));
 });
 
 test('renderUnknown: daftar peninjau', () => {
