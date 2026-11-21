@@ -6,7 +6,7 @@
 // Hasil: data/servers/<source>.jsonl (append per batch, 1 baris = 1 detail).
 // Progres: data/progress.json (diperbarui tiap batch; jalankan ulang untuk lanjut).
 // Jangan jalankan 2 proses scraper sekaligus untuk sumber yang sama.
-import { readFileSync, writeFileSync, mkdirSync, existsSync, appendFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, appendFileSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { fetchText, runPool, sleep } from './lib/fetch.mjs';
@@ -110,14 +110,35 @@ export async function buildTargets(source) {
   throw new Error(`sumber tidak dikenal: ${source}`);
 }
 
-function loadDone(source) {
-  const file = join(SERVERS_DIR, `${source}.jsonl`);
+// Slug yang dianggap selesai dari satu file JSONL. fallback-wp BUKAN
+// selesai: datanya cuma nama + tanggal (versi/ukuran/info MOD kosong
+// karena Translate proxy kena rate-limit saat itu). Slug itu harus
+// dicoba lagi di run berikutnya — merge sudah memilih baris yang paling
+// lengkap kalau ada duplikat dari sumber yang sama.
+export function loadDoneFromFile(file) {
   const done = new Set();
   if (existsSync(file)) {
     for (const line of readFileSync(file, 'utf8').split('\n').filter(Boolean)) {
-      try { const j = JSON.parse(line); if (j.slug) done.add(j.slug); } catch { /* abaikan */ }
+      try {
+        const j = JSON.parse(line);
+        if (j.slug && j.status !== 'fallback-wp') done.add(j.slug);
+      } catch { /* abaikan */ }
     }
   }
+  return done;
+}
+
+function loadDone(source) {
+  const done = new Set();
+  // File utama + file backfill (mis. apkmody-retry.jsonl): baris OK di
+  // file backfill juga berarti slug itu sudah selesai, jangan scrape ulang.
+  const files = [join(SERVERS_DIR, `${source}.jsonl`)];
+  if (existsSync(SERVERS_DIR)) {
+    for (const f of readdirSync(SERVERS_DIR)) {
+      if (f.startsWith(`${source}-`) && f.endsWith('.jsonl')) files.push(join(SERVERS_DIR, f));
+    }
+  }
+  for (const f of files) for (const s of loadDoneFromFile(f)) done.add(s);
   return done;
 }
 
@@ -130,7 +151,7 @@ function saveProgress(p) {
   writeFileSync(join(ROOT, 'data', 'progress.json'), JSON.stringify(p, null, 2) + '\n');
 }
 
-async function fetchApkmodyDetail(t) {
+export async function fetchApkmodyDetail(t) {
   const wpPost = { id: t.wp_id, slug: t.slug, link: t.url, modified: t.modified, title: { rendered: t.title || t.slug } };
   try {
     const html = await fetchText(translateProxyUrl(t.url), { retries: 2, timeoutMs: 45000 });
