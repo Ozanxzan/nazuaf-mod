@@ -24,8 +24,10 @@ jobs:
       - run: npm test
       # Lanjutkan scrape full dari checkpoint (data/servers/*.jsonl +
       # data/progress.json ikut ter-commit, jadi tiap run hanya mengambil
-      # sisa + entri baru). APKMody lewat Google Translate proxy.
-      - run: node scripts/scrape-full.mjs --batch-size 500
+      # sisa + entri baru). --rebuild-targets membangun ulang daftar target
+      # dari sitemap tiap run, supaya entri BARU dari sumber ikut ketemu.
+      # APKMody lewat Google Translate proxy.
+      - run: node scripts/scrape-full.mjs --batch-size 500 --rebuild-targets
       - run: node scripts/merge-full.mjs
       - run: node scripts/build.mjs
       - name: Commit kalau ada perubahan data
