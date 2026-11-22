@@ -1,34 +1,34 @@
 {
   "an1": {
-    "total": 4302,
-    "ok": 9473,
+    "total": 4296,
+    "ok": 10475,
     "fail": 0,
     "skipped_not_app": 130,
     "fallback_wp": 0,
-    "batches": 21,
-    "done": 9603,
-    "last_batch_at": "2026-11-22T07:56:32.763Z",
-    "refreshBucket": 1
+    "batches": 24,
+    "done": 10605,
+    "last_batch_at": "2026-11-22T17:02:36.154Z",
+    "refreshBucket": 2
   },
   "modyolo": {
     "total": 22721,
-    "ok": 27954,
+    "ok": 27959,
     "fail": 2,
     "skipped_not_app": 0,
     "fallback_wp": 0,
-    "batches": 57,
-    "done": 27956,
-    "last_batch_at": "2026-11-22T07:57:15.652Z"
+    "batches": 58,
+    "done": 27961,
+    "last_batch_at": "2026-11-22T17:02:52.952Z"
   },
   "apkmody": {
-    "total": 5679,
-    "ok": 7289,
+    "total": 5683,
+    "ok": 8422,
     "fail": 0,
     "skipped_not_app": 0,
-    "fallback_wp": 4470,
-    "batches": 17,
-    "done": 11759,
-    "last_batch_at": "2026-11-22T08:37:22.458Z",
+    "fallback_wp": 5107,
+    "batches": 20,
+    "done": 13529,
+    "last_batch_at": "2026-11-22T17:29:56.326Z",
     "note": "sampel 100 terbaru (fallback WP, tanpa versi/ukuran) — full scrape via translate proxy dilanjutkan setelah live"
   }
 }
