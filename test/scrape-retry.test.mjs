@@ -3,22 +3,39 @@ import assert from 'node:assert/strict';
 import { mkdtempSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { loadDoneFromFile } from '../scripts/scrape-full.mjs';
+import { loadDoneFromFile, isTargetNewer } from '../scripts/scrape-full.mjs';
 import { mergeServers } from '../scripts/lib/merge.mjs';
 
-test('loadDoneFromFile: fallback-wp tidak dihitung selesai', () => {
+test('loadDoneFromFile: Map slug->catatan, fallback-wp menghapus, baris terakhir menang', () => {
   const dir = mkdtempSync(join(tmpdir(), 'nazuaf-mod-done-'));
   const file = join(dir, 'apkmody.jsonl');
   writeFileSync(file, [
-    JSON.stringify({ slug: 'a', url: 'https://apkmody.com/apps/a', status: 'ok', entry: { name: 'A' } }),
+    JSON.stringify({ slug: 'a', url: 'https://apkmody.com/apps/a', status: 'ok', entry: { name: 'A', updated: '2026-11-01' } }),
     JSON.stringify({ slug: 'b', url: 'https://apkmody.com/apps/b', status: 'fallback-wp', entry: { name: 'B' } }),
     JSON.stringify({ slug: 'c', url: 'https://apkmody.com/apps/c', status: 'ok-jina', entry: { name: 'C' } }),
     JSON.stringify({ slug: 'd', url: 'https://apkmody.com/apps/d', status: 'skip-not-app' }),
+    JSON.stringify({ slug: 'a', url: 'https://apkmody.com/apps/a', status: 'fallback-wp', entry: { name: 'A' } }),
+    JSON.stringify({ slug: 'b', url: 'https://apkmody.com/apps/b', status: 'ok', entry: { name: 'B', updated: '2026-11-20' } }),
     'baris rusak',
   ].join('\n') + '\n');
   const done = loadDoneFromFile(file);
-  assert.deepEqual([...done].sort(), ['a', 'c', 'd']);
-  assert.ok(!done.has('b'));
+  assert.equal(done.size, 3); // b, c, d — a terhapus oleh fallback terakhirnya
+  assert.ok(!done.has('a'));
+  assert.equal(done.get('b').status, 'ok');
+  assert.equal(done.get('b').updated, '2026-11-20');
+  assert.equal(done.get('c').status, 'ok-jina');
+  assert.equal(done.get('d').status, 'skip-not-app');
+});
+
+test('isTargetNewer: bandingkan modified sumber vs tersimpan', () => {
+  assert.equal(isTargetNewer({ modified: '2026-11-22T10:00:00' }, { updated: '2026-11-21' }), true);
+  assert.equal(isTargetNewer({ modified: '2026-11-21T10:00:00' }, { updated: '2026-11-21' }), false); // tanggal sama
+  assert.equal(isTargetNewer({ modified: '2026-11-20T10:00:00' }, { updated: '2026-11-21' }), false);
+  assert.equal(isTargetNewer({ modified: '2026-11-21T15:00:00' }, { updated: '2026-11-21T10:00:00' }), true); // hari sama, detik beda
+  assert.equal(isTargetNewer({ modified: '2026-11-21T09:00:00' }, { updated: '2026-11-21T10:00:00' }), false);
+  assert.equal(isTargetNewer({}, { updated: '2026-11-21' }), false); // tanpa modified (AN1)
+  assert.equal(isTargetNewer({ modified: '2026-11-22' }, null), false);
+  assert.equal(isTargetNewer({ modified: '2026-11-22' }, {}), false);
 });
 
 test('mergeServers: duplikat sumber sama memakai baris paling lengkap', () => {

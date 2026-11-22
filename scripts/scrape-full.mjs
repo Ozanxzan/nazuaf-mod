@@ -59,12 +59,20 @@ export async function buildTargets(source) {
     const subs = [...index.matchAll(/<loc>(https:\/\/modyolo\.com\/post-sitemap\d*\.xml)<\/loc>/g)].map((m) => m[1]);
     const results = await runPool(subs, async (u) => {
       const xml = await fetchText(u, { retries: 2 });
-      return [...xml.matchAll(/<url>\s*<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+      return [...xml.matchAll(/<url>\s*<loc>([^<]+)<\/loc>\s*(?:<lastmod>([^<]+)<\/lastmod>)?/g)].map((m) => ({ url: m[1], modified: m[2] || null }));
     }, 6, 100);
     const all = [];
     for (const r of results) if (r.ok) all.push(...r.value);
-    const detail = [...new Set(all.filter((u) => /^https:\/\/modyolo\.com\/[^/]+\.html$/.test(u)))];
-    const targets = detail.map((url) => ({ slug: url.split('/').filter(Boolean).pop().replace(/\.html$/, ''), url }));
+    const seen = new Map();
+    for (const t of all) {
+      if (!/^https:\/\/modyolo\.com\/[^/]+\.html$/.test(t.url)) continue;
+      if (!seen.has(t.url)) seen.set(t.url, t);
+    }
+    const targets = [...seen.values()].map(({ url, modified }) => ({
+      slug: url.split('/').filter(Boolean).pop().replace(/\.html$/, ''),
+      url,
+      ...(modified ? { modified } : {}),
+    }));
     writeFileSync(join(TARGETS_DIR, 'modyolo.json'), JSON.stringify(targets, null, 2));
     return targets;
   }
@@ -110,18 +118,32 @@ export async function buildTargets(source) {
   throw new Error(`sumber tidak dikenal: ${source}`);
 }
 
-// Slug yang dianggap selesai dari satu file JSONL. fallback-wp BUKAN
-// selesai: datanya cuma nama + tanggal (versi/ukuran/info MOD kosong
-// karena Translate proxy kena rate-limit saat itu). Slug itu harus
-// dicoba lagi di run berikutnya — merge sudah memilih baris yang paling
-// lengkap kalau ada duplikat dari sumber yang sama.
+// Apakah target di sumber lebih baru dari yang tersimpan? Bandingkan
+// tanggal modified sumber (WP API APKMody / lastmod sitemap ModYolo)
+// dengan yang tersimpan. Kalau yang tersimpan masih tanggal saja
+// (baris lama), bandingkan tanggal; kalau sudah datetime lengkap,
+// bandingkan sampai detik — jadi update di hari yang sama pun ketahuan.
+export function isTargetNewer(target, stored) {
+  if (!target?.modified || !stored?.updated) return false;
+  const a = String(target.modified), b = String(stored.updated);
+  if (b.length <= 10) return a.slice(0, 10) > b.slice(0, 10);
+  return a > b;
+}
+
+// Status selesai per slug dari satu file JSONL. Baris terakhir yang
+// menang (file bersifat append-only): fallback-wp MENGHAPUS slug dari
+// selesai — datanya cuma nama + tanggal, harus dicoba lagi di run
+// berikutnya. Merge sudah memilih baris paling lengkap kalau ada
+// duplikat dari sumber yang sama.
 export function loadDoneFromFile(file) {
-  const done = new Set();
+  const done = new Map();
   if (existsSync(file)) {
     for (const line of readFileSync(file, 'utf8').split('\n').filter(Boolean)) {
       try {
         const j = JSON.parse(line);
-        if (j.slug && j.status !== 'fallback-wp') done.add(j.slug);
+        if (!j.slug) continue;
+        if (j.status === 'fallback-wp') { done.delete(j.slug); continue; }
+        done.set(j.slug, { status: j.status, updated: j.modified || j.entry?.updated || null });
       } catch { /* abaikan */ }
     }
   }
@@ -129,16 +151,17 @@ export function loadDoneFromFile(file) {
 }
 
 function loadDone(source) {
-  const done = new Set();
-  // File utama + file backfill (mis. apkmody-retry.jsonl): baris OK di
-  // file backfill juga berarti slug itu sudah selesai, jangan scrape ulang.
-  const files = [join(SERVERS_DIR, `${source}.jsonl`)];
+  const done = new Map();
+  // File backfill (mis. apkmody-retry.jsonl) dulu, file utama terakhir:
+  // file utama di-append tiap run, jadi barisnya yang paling baru.
+  const files = [];
   if (existsSync(SERVERS_DIR)) {
     for (const f of readdirSync(SERVERS_DIR)) {
       if (f.startsWith(`${source}-`) && f.endsWith('.jsonl')) files.push(join(SERVERS_DIR, f));
     }
   }
-  for (const f of files) for (const s of loadDoneFromFile(f)) done.add(s);
+  files.push(join(SERVERS_DIR, `${source}.jsonl`));
+  for (const f of files) for (const [slug, rec] of loadDoneFromFile(f)) done.set(slug, rec);
   return done;
 }
 
@@ -189,8 +212,17 @@ export async function runFull(opts = {}) {
       targets = await buildTargets(source);
     }
     const done = loadDone(source);
-    const remaining = targets.filter((t) => !done.has(t.slug));
-    console.log(`[${source}] target ${targets.length}, sudah ${done.size}, sisa ${remaining.length}`);
+    // Sisa = entri baru + entri gagal kemarin (fallback) + entri yang
+    // di sumbernya ada update versi (modified lebih baru dari tersimpan).
+    // Entri lama yang tidak berubah tetap dilewati — tidak di-fetch ulang.
+    let nNew = 0, nUpdate = 0;
+    const remaining = targets.filter((t) => {
+      const s = done.get(t.slug);
+      if (!s) { nNew++; return true; }
+      if (isTargetNewer(t, s)) { nUpdate++; return true; }
+      return false;
+    });
+    console.log(`[${source}] target ${targets.length}, sudah ${done.size}, sisa ${remaining.length} (baru ${nNew}, update versi ${nUpdate})`);
     const state = progress[source] || (progress[source] = { total: targets.length, ok: 0, fail: 0, skipped_not_app: 0, fallback_wp: 0, batches: 0 });
     state.total = targets.length;
     let batches = 0;
@@ -213,12 +245,16 @@ export async function runFull(opts = {}) {
       const lines = [];
       results.forEach((r, i) => {
         const t = batch[i];
-        if (!r.ok) { fail++; lines.push(JSON.stringify({ slug: t.slug, url: t.url, status: 'fail', error: String(r.error?.message || r.error).slice(0, 300) })); return; }
+        // Simpan modified sumber di baris JSONL supaya run berikutnya
+        // bisa membandingkan update versi sampai ketelitian detik.
+        const mod = t.modified ? { modified: t.modified } : {};
+        if (!r.ok) { fail++; lines.push(JSON.stringify({ slug: t.slug, url: t.url, status: 'fail', error: String(r.error?.message || r.error).slice(0, 300), ...mod })); return; }
         const v = r.value;
-        if (v.status === 'skip-not-app') { skip++; lines.push(JSON.stringify({ slug: t.slug, url: t.url, status: 'skip-not-app' })); return; }
+        if (v.status === 'skip-not-app') { skip++; lines.push(JSON.stringify({ slug: t.slug, url: t.url, status: 'skip-not-app', ...mod })); return; }
         if (v.status === 'fallback-wp') fb++;
-        if (!v.entry?.name) { fail++; lines.push(JSON.stringify({ slug: t.slug, url: t.url, status: 'fail', error: 'parse: nama kosong' })); return; }
+        if (!v.entry?.name) { fail++; lines.push(JSON.stringify({ slug: t.slug, url: t.url, status: 'fail', error: 'parse: nama kosong', ...mod })); return; }
         ok++;
+        lines.push(JSON.stringify({ slug: t.slug, url: t.url, status: v.status, entry: v.entry, ...(v.error ? { error: v.error } : {}), ...mod }));
         lines.push(JSON.stringify({ slug: t.slug, url: t.url, status: v.status, entry: v.entry, ...(v.error ? { error: v.error } : {}) }));
       });
       appendFileSync(join(SERVERS_DIR, `${source}.jsonl`), lines.join('\n') + '\n');
