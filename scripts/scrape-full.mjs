@@ -118,6 +118,25 @@ export async function buildTargets(source) {
   throw new Error(`sumber tidak dikenal: ${source}`);
 }
 
+// Refresh bergilir AN1: AN1 tidak menyediakan sinyal tanggal (RSS mati,
+// sitemap tanpa lastmod, listing tanpa versi/tanggal), jadi update versi
+// hanya ketahuan dengan membuka halaman detailnya. Tiap run mengambil
+// giliran N entri berikutnya (urut slug, stabil) untuk di-scrape ulang;
+// entri yang sudah dicatat bukan-aplikasi dilewati. Satu putaran penuh =
+// ceil(total / perRun) run.
+export const AN1_REFRESH_PER_RUN = 1000;
+
+export function pickRefreshSlice(targets, done, bucket, perRun = AN1_REFRESH_PER_RUN) {
+  const pool = targets
+    .filter((t) => done.get(t.slug)?.status !== 'skip-not-app')
+    .slice()
+    .sort((a, b) => (a.slug < b.slug ? -1 : a.slug > b.slug ? 1 : 0));
+  const totalBuckets = Math.max(1, Math.ceil(pool.length / perRun));
+  const b = ((bucket || 0) % totalBuckets + totalBuckets) % totalBuckets;
+  const slice = pool.slice(b * perRun, (b + 1) * perRun);
+  return { slice, nextBucket: (b + 1) % totalBuckets, totalBuckets };
+}
+
 // Apakah target di sumber lebih baru dari yang tersimpan? Bandingkan
 // tanggal modified sumber (WP API APKMody / lastmod sitemap ModYolo)
 // dengan yang tersimpan. Kalau yang tersimpan masih tanggal saja
@@ -212,6 +231,8 @@ export async function runFull(opts = {}) {
       targets = await buildTargets(source);
     }
     const done = loadDone(source);
+    const state = progress[source] || (progress[source] = { total: targets.length, ok: 0, fail: 0, skipped_not_app: 0, fallback_wp: 0, batches: 0 });
+    state.total = targets.length;
     // Sisa = entri baru + entri gagal kemarin (fallback) + entri yang
     // di sumbernya ada update versi (modified lebih baru dari tersimpan).
     // Entri lama yang tidak berubah tetap dilewati — tidak di-fetch ulang.
@@ -222,9 +243,18 @@ export async function runFull(opts = {}) {
       if (isTargetNewer(t, s)) { nUpdate++; return true; }
       return false;
     });
-    console.log(`[${source}] target ${targets.length}, sudah ${done.size}, sisa ${remaining.length} (baru ${nNew}, update versi ${nUpdate})`);
-    const state = progress[source] || (progress[source] = { total: targets.length, ok: 0, fail: 0, skipped_not_app: 0, fallback_wp: 0, batches: 0 });
-    state.total = targets.length;
+    // AN1: tidak ada sinyal tanggal, jadi tiap run refresh bergilir
+    // 1.000 entri berikutnya (di luar yang sudah masuk sisa) supaya
+    // versinya tidak basi. Putaran penuh ~5 run (±2 hari).
+    let nRefresh = 0;
+    let nextBucket = null;
+    if (source === 'an1') {
+      const r = pickRefreshSlice(targets, done, state.refreshBucket);
+      nextBucket = r.nextBucket;
+      const have = new Set(remaining.map((t) => t.slug));
+      for (const t of r.slice) if (!have.has(t.slug)) { remaining.push(t); nRefresh++; }
+    }
+    console.log(`[${source}] target ${targets.length}, sudah ${done.size}, sisa ${remaining.length} (baru ${nNew}, update versi ${nUpdate}, refresh AN1 ${nRefresh})`);
     let batches = 0;
     while (remaining.length > 0 && batches < maxBatches) {
       const batch = remaining.splice(0, batchSize);
@@ -255,7 +285,6 @@ export async function runFull(opts = {}) {
         if (!v.entry?.name) { fail++; lines.push(JSON.stringify({ slug: t.slug, url: t.url, status: 'fail', error: 'parse: nama kosong', ...mod })); return; }
         ok++;
         lines.push(JSON.stringify({ slug: t.slug, url: t.url, status: v.status, entry: v.entry, ...(v.error ? { error: v.error } : {}), ...mod }));
-        lines.push(JSON.stringify({ slug: t.slug, url: t.url, status: v.status, entry: v.entry, ...(v.error ? { error: v.error } : {}) }));
       });
       appendFileSync(join(SERVERS_DIR, `${source}.jsonl`), lines.join('\n') + '\n');
       state.ok += ok; state.fail += fail; state.skipped_not_app += skip; state.fallback_wp += fb;
@@ -266,6 +295,9 @@ export async function runFull(opts = {}) {
       console.log(`[${source}] batch ${state.batches}: ok ${ok}, gagal ${fail}, bukan-app ${skip}, fallback-wp ${fb} — progres ${state.done}/${state.total} (${((Date.now() - t0) / 1000).toFixed(0)} dtk)`);
       await sleep(1000);
     }
+    // Giliran refresh AN1 baru maju kalau run ini selesai — kalau proses
+    // mati di tengah, run berikutnya mengulang giliran yang sama.
+    if (nextBucket !== null) state.refreshBucket = nextBucket;
     summary[source] = { ...state };
   }
   saveProgress(progress);

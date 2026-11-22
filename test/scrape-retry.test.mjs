@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdtempSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { loadDoneFromFile, isTargetNewer } from '../scripts/scrape-full.mjs';
+import { loadDoneFromFile, isTargetNewer, pickRefreshSlice, AN1_REFRESH_PER_RUN } from '../scripts/scrape-full.mjs';
 import { mergeServers } from '../scripts/lib/merge.mjs';
 
 test('loadDoneFromFile: Map slug->catatan, fallback-wp menghapus, baris terakhir menang', () => {
@@ -25,6 +25,25 @@ test('loadDoneFromFile: Map slug->catatan, fallback-wp menghapus, baris terakhir
   assert.equal(done.get('b').updated, '2026-11-20');
   assert.equal(done.get('c').status, 'ok-jina');
   assert.equal(done.get('d').status, 'skip-not-app');
+});
+
+test('pickRefreshSlice: giliran 1.000, urut slug, lewati bukan-aplikasi, berputar', () => {
+  assert.equal(AN1_REFRESH_PER_RUN, 1000);
+  const targets = Array.from({ length: 10 }, (_, i) => ({ slug: `g${i}`, url: `https://an1.com/${i}-g${i}.html` }));
+  const done = new Map([['g3', { status: 'skip-not-app', updated: null }]]);
+  const r0 = pickRefreshSlice(targets, done, 0, 4);
+  assert.deepEqual(r0.slice.map((t) => t.slug), ['g0', 'g1', 'g2', 'g4']); // g3 dilewati
+  assert.equal(r0.nextBucket, 1);
+  assert.equal(r0.totalBuckets, 3); // 9 entri / 4
+  const r1 = pickRefreshSlice(targets, done, 1, 4);
+  assert.deepEqual(r1.slice.map((t) => t.slug), ['g5', 'g6', 'g7', 'g8']);
+  const r2 = pickRefreshSlice(targets, done, 2, 4);
+  assert.deepEqual(r2.slice.map((t) => t.slug), ['g9']);
+  assert.equal(r2.nextBucket, 0); // kembali ke awal
+  const rBig = pickRefreshSlice(targets, done, 0, 1000);
+  assert.equal(rBig.slice.length, 9);
+  assert.equal(rBig.totalBuckets, 1);
+  assert.equal(rBig.nextBucket, 0);
 });
 
 test('isTargetNewer: bandingkan modified sumber vs tersimpan', () => {
