@@ -49,7 +49,7 @@ function card(a) {
     </a>`;
 }
 
-export function renderListing({ type, page, totalPages, items, counts, generatedAt }) {
+export function renderListing({ type, page, totalPages, items, counts, generatedAt, popularCount = 0 }) {
   const total = type === 'game' ? counts.game : counts.app;
   const label = type === 'game' ? 'Game' : 'Aplikasi';
   const start = (page - 1) * PAGE_SIZE;
@@ -73,6 +73,7 @@ export function renderListing({ type, page, totalPages, items, counts, generated
     <input id="q" type="search" placeholder="Cari di halaman ini..." aria-label="Cari game dan aplikasi">
     <section class="tab-panel" id="tab-${type}">
       <h2>${label} <span class="count">${total}</span></h2>
+      ${page === 1 && popularCount > 0 ? `<p class="note">${popularCount} ${label.toLowerCase()} populer ditampilkan dulu — halaman berikutnya menampilkan seluruh katalog.</p>` : ''}
       <div class="apps-list" data-list="${type}">${items.map(card).join('')}</div>
       <p class="no-result" hidden>Tidak ada ${label.toLowerCase()} yang cocok di halaman ini. Coba kata kunci lain atau cari di <a href="/cari/">pencarian global</a>.</p>
       <nav class="pager" aria-label="Halaman ${label.toLowerCase()}">

@@ -240,3 +240,11 @@ diulang dari awal.
   (langkahnya ada di "Deploy ke live" di atas — Zan yang membuat repo +
   workflow, Muse push file).
 - Ikon masih hotlink ke server sumber (lihat catatan Kimi di atas).
+
+## Halaman awal: 100 populer dulu (23 Nov 2026)
+
+- Permintaan Zan: daftar di awal halaman harus game dan aplikasi populer saja — 100 game + 100 aplikasi populer ditampilkan dulu.
+- Data katalog tidak punya angka popularitas (unduhan/rating), jadi daftar populer adalah kurasi judul terkenal (`data/popular.json`: 100 slug game + 100 slug app, mis. Minecraft, GTA San Andreas, PUBG, Spotify, TikTok, Instagram) — dibuat dengan `make-popular.mjs` (kurasi + isi sisa dari entri multi-sumber), lalu diverifikasi semua slug ada dan tipenya benar.
+- `scripts/lib/popular.mjs` (`loadPopular` + `orderForListing`) + `scripts/build.mjs`: hanya listing halaman 1 yang diurutkan populer dulu; halaman 2+ sisanya urut abjad. Urutan master (`apps`, chunk JSON, `slugs.json`) tetap urut slug karena halaman detail memakai binary search di `slugs.json`.
+- `scripts/lib/render.mjs`: halaman 1 menampilkan catatan "100 game/aplikasi populer ditampilkan dulu — halaman berikutnya menampilkan seluruh katalog."
+- Mengubah daftar: edit `data/popular.json` (slug harus ada di katalog; slug yang hilang dilewati otomatis) lalu push — Pages rebuild otomatis. Tes: `test/popular.test.mjs` (33/33 lolos).

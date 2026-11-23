@@ -10,6 +10,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { renderListing, renderDetailTemplate, renderSearchPage, renderUnknown, PAGE_SIZE, CHUNK_SIZE, pageUrl } from './lib/render.mjs';
 import { buildRecs } from './lib/recs.mjs';
+import { loadPopular, orderForListing } from './lib/popular.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -46,8 +47,16 @@ export async function buildSite(opts = {}) {
   const phSrc = join(ROOT, 'assets', 'icon-placeholder.svg');
   if (existsSync(phSrc)) copyFileSync(phSrc, join(outDir, 'assets', 'icon-placeholder.svg'));
 
-  const games = apps.filter((a) => a.type === 'game');
-  const appl = apps.filter((a) => a.type === 'app');
+  // Halaman 1 tiap tab: 100 populer dulu (data/popular.json), halaman 2+
+  // sisanya urut abjad. Urutan master `apps` (chunk + slugs.json) tetap
+  // urut slug — halaman detail memakai binary search di slugs.json.
+  const popular = loadPopular(join(dirname(dataPath), 'popular.json'));
+  const games = orderForListing(apps.filter((a) => a.type === 'game'), popular.game);
+  const appl = orderForListing(apps.filter((a) => a.type === 'app'), popular.app);
+  const popularShown = {
+    game: popular.game.filter((s) => games.some((a) => a.slug === s)).length,
+    app: popular.app.filter((s) => appl.some((a) => a.slug === s)).length,
+  };
   const unknown = apps.filter((a) => a.type === 'unknown');
   const counts = { game: games.length, app: appl.length, unknown: unknown.length };
 
@@ -57,7 +66,7 @@ export async function buildSite(opts = {}) {
     for (let page = 1; page <= totalPages; page++) {
       const items = list.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
       const rel = pageUrl(type, page) === '/' ? 'index.html' : pageUrl(type, page).replace(/^\//, '') + 'index.html';
-      writeHtml(outDir, rel, renderListing({ type, page, totalPages, items, counts, generatedAt: data.generated_at }));
+      writeHtml(outDir, rel, renderListing({ type, page, totalPages, items, counts, generatedAt: data.generated_at, popularCount: page === 1 ? popularShown[type] : 0 }));
     }
   }
   writeHtml(outDir, 'unknown/index.html', renderUnknown(unknown, data.generated_at));
