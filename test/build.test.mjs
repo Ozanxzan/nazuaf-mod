@@ -42,6 +42,8 @@ test('renderListing: 100 kartu per halaman + pager tautan + tab berupa tautan', 
   assert.ok(html.includes('APKMody') && html.includes('ModYolo'));
   assert.ok(html.includes('/apps/game-0/'));
   assert.ok(html.includes('action="/cari/"')); // pencarian header ke halaman cari
+  assert.ok(html.includes('id="toTop"')); // tombol melayang lompat ke atas
+  assert.ok(html.includes("scrollTo({top:0,behavior:'smooth'})"));
   const p2 = renderListing({ type: 'game', page: 2, totalPages: 3, items: many.slice(100, 200), counts, generatedAt: '2026-11-21T00:00:00Z' });
   assert.ok(p2.includes('href="/"')); // Sebelumnya kembali ke hal. 1
   assert.ok(p2.includes('Halaman 2 dari 3'));
@@ -57,6 +59,7 @@ test('renderDetailTemplate: slug dari URL + ambil chunk JSON + rekomendasi', () 
   assert.ok(html.includes('an1'));
   assert.ok(html.includes('Rekomendasi'));
   assert.ok(html.includes('/data/recs.json'));
+  assert.ok(html.includes('id="toTop"')); // tombol lompat ke atas juga di halaman detail
 });
 
 test('renderSearchPage: indeks pencarian + parameter q', () => {
@@ -64,6 +67,7 @@ test('renderSearchPage: indeks pencarian + parameter q', () => {
   assert.ok(html.includes('/data/search.json'));
   assert.ok(html.includes('30776 entri'));
   assert.ok(html.includes("params.get('q')"));
+  assert.ok(html.includes('id="toTop"')); // tombol lompat ke atas juga di halaman cari
 });
 
 test('buildSite menulis listing + chunk + indeks + _redirects, tanpa halaman detail per entri', async () => {
