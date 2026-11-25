@@ -19625,11 +19625,6 @@
     "modified": "2026-02-23T13:14:06+00:00"
   },
   {
-    "slug": "battle-field-simulator",
-    "url": "https://modyolo.com/battle-field-simulator.html",
-    "modified": "2026-02-23T13:14:59+00:00"
-  },
-  {
     "slug": "batting-girl-idle-2",
     "url": "https://modyolo.com/batting-girl-idle-2.html",
     "modified": "2026-02-23T13:17:13+00:00"
@@ -94860,11 +94855,6 @@
     "modified": "2026-11-11T22:41:44+00:00"
   },
   {
-    "slug": "football-manager-27-mobile",
-    "url": "https://modyolo.com/football-manager-27-mobile.html",
-    "modified": "2026-11-12T01:36:32+00:00"
-  },
-  {
     "slug": "yahoo-sports",
     "url": "https://modyolo.com/yahoo-sports.html",
     "modified": "2026-11-12T01:54:27+00:00"
@@ -100288,11 +100278,6 @@
     "slug": "the-almost-gone",
     "url": "https://modyolo.com/the-almost-gone.html",
     "modified": "2026-11-16T03:57:26+00:00"
-  },
-  {
-    "slug": "zlibrary",
-    "url": "https://modyolo.com/zlibrary.html",
-    "modified": "2026-11-16T03:57:43+00:00"
   },
   {
     "slug": "aimegen",
@@ -107170,11 +107155,6 @@
     "modified": "2026-11-19T12:10:16+00:00"
   },
   {
-    "slug": "royal-match",
-    "url": "https://modyolo.com/royal-match.html",
-    "modified": "2026-11-19T12:11:04+00:00"
-  },
-  {
     "slug": "idle-daycare-tycoon",
     "url": "https://modyolo.com/idle-daycare-tycoon.html",
     "modified": "2026-11-19T21:24:21+00:00"
@@ -112585,21 +112565,6 @@
     "modified": "2026-11-24T03:54:09+00:00"
   },
   {
-    "slug": "twitter",
-    "url": "https://modyolo.com/twitter.html",
-    "modified": "2026-11-24T03:54:37+00:00"
-  },
-  {
-    "slug": "xp-hero",
-    "url": "https://modyolo.com/xp-hero.html",
-    "modified": "2026-11-24T03:55:33+00:00"
-  },
-  {
-    "slug": "glow-fashion-idol",
-    "url": "https://modyolo.com/glow-fashion-idol.html",
-    "modified": "2026-11-24T03:56:34+00:00"
-  },
-  {
     "slug": "butcher-hero-hooknchew-rpg",
     "url": "https://modyolo.com/butcher-hero-hooknchew-rpg.html",
     "modified": "2026-11-24T03:57:11+00:00"
@@ -112858,11 +112823,6 @@
     "slug": "proccd-retro-digital-camera",
     "url": "https://modyolo.com/proccd-retro-digital-camera.html",
     "modified": "2026-11-24T04:23:51+00:00"
-  },
-  {
-    "slug": "reface",
-    "url": "https://modyolo.com/reface.html",
-    "modified": "2026-11-24T04:24:15+00:00"
   },
   {
     "slug": "last-z-survival-shooter",
@@ -113778,5 +113738,45 @@
     "slug": "perfect-grind",
     "url": "https://modyolo.com/perfect-grind.html",
     "modified": "2026-11-24T10:01:32+00:00"
+  },
+  {
+    "slug": "football-manager-27-mobile",
+    "url": "https://modyolo.com/football-manager-27-mobile.html",
+    "modified": "2026-11-24T11:37:25+00:00"
+  },
+  {
+    "slug": "glow-fashion-idol",
+    "url": "https://modyolo.com/glow-fashion-idol.html",
+    "modified": "2026-11-24T11:39:13+00:00"
+  },
+  {
+    "slug": "reface",
+    "url": "https://modyolo.com/reface.html",
+    "modified": "2026-11-24T11:40:23+00:00"
+  },
+  {
+    "slug": "twitter",
+    "url": "https://modyolo.com/twitter.html",
+    "modified": "2026-11-24T11:41:37+00:00"
+  },
+  {
+    "slug": "xp-hero",
+    "url": "https://modyolo.com/xp-hero.html",
+    "modified": "2026-11-24T11:48:22+00:00"
+  },
+  {
+    "slug": "royal-match",
+    "url": "https://modyolo.com/royal-match.html",
+    "modified": "2026-11-24T11:49:02+00:00"
+  },
+  {
+    "slug": "zlibrary",
+    "url": "https://modyolo.com/zlibrary.html",
+    "modified": "2026-11-24T16:35:05+00:00"
+  },
+  {
+    "slug": "battle-field-simulator",
+    "url": "https://modyolo.com/battle-field-simulator.html",
+    "modified": "2026-11-24T19:34:00+00:00"
   }
 ]
