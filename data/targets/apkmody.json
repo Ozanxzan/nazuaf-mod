@@ -1,5 +1,705 @@
 [
   {
+    "slug": "toontap",
+    "url": "https://apkmody.com/apps/toontap",
+    "wp_id": 25659,
+    "modified": "2026-11-27T02:25:24",
+    "title": "ToonTap"
+  },
+  {
+    "slug": "sanitarium",
+    "url": "https://apkmody.com/games/sanitarium",
+    "wp_id": 25641,
+    "modified": "2026-11-27T02:24:55",
+    "title": "Sanitarium"
+  },
+  {
+    "slug": "the-counterfeit-bank-simulator",
+    "url": "https://apkmody.com/games/the-counterfeit-bank-simulator",
+    "wp_id": 25636,
+    "modified": "2026-11-27T02:24:21",
+    "title": "The Counterfeit Bank Simulator"
+  },
+  {
+    "slug": "the-seven-deadly-sins",
+    "url": "https://apkmody.com/games/the-seven-deadly-sins",
+    "wp_id": 25616,
+    "modified": "2026-11-27T02:23:47",
+    "title": "The Seven Deadly Sins"
+  },
+  {
+    "slug": "death-palette",
+    "url": "https://apkmody.com/games/death-palette",
+    "wp_id": 25606,
+    "modified": "2026-11-27T02:23:14",
+    "title": "Death Palette"
+  },
+  {
+    "slug": "homo-machina",
+    "url": "https://apkmody.com/games/homo-machina",
+    "wp_id": 25595,
+    "modified": "2026-11-27T02:22:44",
+    "title": "Homo Machina"
+  },
+  {
+    "slug": "aarik-and-the-ruined-kingdom",
+    "url": "https://apkmody.com/games/aarik-and-the-ruined-kingdom",
+    "wp_id": 25586,
+    "modified": "2026-11-27T02:21:59",
+    "title": "Aarik And The Ruined Kingdom"
+  },
+  {
+    "slug": "out-there-edition",
+    "url": "https://apkmody.com/games/out-there-edition",
+    "wp_id": 25556,
+    "modified": "2026-11-27T02:21:40",
+    "title": "Out There: Ω Edition"
+  },
+  {
+    "slug": "monster-diy-mix-beats",
+    "url": "https://apkmody.com/games/monster-diy-mix-beats",
+    "wp_id": 25534,
+    "modified": "2026-11-27T02:21:04",
+    "title": "Monster DIY: Mix Beats"
+  },
+  {
+    "slug": "pocket-rogues-ultimate",
+    "url": "https://apkmody.com/games/pocket-rogues-ultimate",
+    "wp_id": 25525,
+    "modified": "2026-11-27T02:17:37",
+    "title": "Pocket Rogues: Ultimate"
+  },
+  {
+    "slug": "the-trail",
+    "url": "https://apkmody.com/games/the-trail",
+    "wp_id": 25651,
+    "modified": "2026-11-27T02:17:06",
+    "title": "The Trail"
+  },
+  {
+    "slug": "criminal-case-supernatural",
+    "url": "https://apkmody.com/games/criminal-case-supernatural",
+    "wp_id": 25640,
+    "modified": "2026-11-27T02:16:45",
+    "title": "Criminal Case: Supernatural"
+  },
+  {
+    "slug": "street-fighter-iv-champion-edition",
+    "url": "https://apkmody.com/games/street-fighter-iv-champion-edition",
+    "wp_id": 25628,
+    "modified": "2026-11-27T02:16:23",
+    "title": "Street Fighter IV Champion Edition"
+  },
+  {
+    "slug": "blend-photos",
+    "url": "https://apkmody.com/apps/blend-photos",
+    "wp_id": 25609,
+    "modified": "2026-11-27T02:16:05",
+    "title": "Blend Photos"
+  },
+  {
+    "slug": "train-crisis-plus",
+    "url": "https://apkmody.com/games/train-crisis-plus",
+    "wp_id": 25603,
+    "modified": "2026-11-27T02:15:47",
+    "title": "Train Crisis Plus"
+  },
+  {
+    "slug": "drive-world",
+    "url": "https://apkmody.com/games/drive-world",
+    "wp_id": 25592,
+    "modified": "2026-11-27T02:15:26",
+    "title": "Drive World"
+  },
+  {
+    "slug": "football-club-manager-2025",
+    "url": "https://apkmody.com/games/football-club-manager-2025",
+    "wp_id": 25577,
+    "modified": "2026-11-27T02:15:06",
+    "title": "FC Manager 26"
+  },
+  {
+    "slug": "summoners-war-rush",
+    "url": "https://apkmody.com/games/summoners-war-rush",
+    "wp_id": 25552,
+    "modified": "2026-11-27T02:14:47",
+    "title": "Summoners War: Rush"
+  },
+  {
+    "slug": "pinterest",
+    "url": "https://apkmody.com/apps/pinterest",
+    "wp_id": 25536,
+    "modified": "2026-11-27T02:14:27",
+    "title": "Pinterest"
+  },
+  {
+    "slug": "bubbu-mimmi-world",
+    "url": "https://apkmody.com/games/bubbu-mimmi-world",
+    "wp_id": 25518,
+    "modified": "2026-11-27T02:14:09",
+    "title": "Bubbu &amp; Mimmi World"
+  },
+  {
+    "slug": "paths-beatrices-adventure",
+    "url": "https://apkmody.com/games/paths-beatrices-adventure",
+    "wp_id": 25809,
+    "modified": "2026-11-27T01:56:57",
+    "title": "Paths: Beatrice&#8217;s Adventure"
+  },
+  {
+    "slug": "arcane-quest-legends-2-offline",
+    "url": "https://apkmody.com/games/arcane-quest-legends-2-offline",
+    "wp_id": 25796,
+    "modified": "2026-11-27T01:56:39",
+    "title": "Arcane Quest Legends 2 Offline"
+  },
+  {
+    "slug": "skill-test-online",
+    "url": "https://apkmody.com/games/skill-test-online",
+    "wp_id": 25787,
+    "modified": "2026-11-27T01:56:18",
+    "title": "Skill Test: Online"
+  },
+  {
+    "slug": "the-baby-in-yellow",
+    "url": "https://apkmody.com/games/the-baby-in-yellow",
+    "wp_id": 25756,
+    "modified": "2026-11-27T01:55:55",
+    "title": "The Baby In Yellow"
+  },
+  {
+    "slug": "disney-frozen-adventures",
+    "url": "https://apkmody.com/games/disney-frozen-adventures",
+    "wp_id": 25742,
+    "modified": "2026-11-27T01:55:36",
+    "title": "Disney Frozen Adventures"
+  },
+  {
+    "slug": "pixel-4d",
+    "url": "https://apkmody.com/apps/pixel-4d",
+    "wp_id": 25719,
+    "modified": "2026-11-27T01:55:19",
+    "title": "Pixel 4D"
+  },
+  {
+    "slug": "all-video-downloader-v",
+    "url": "https://apkmody.com/apps/all-video-downloader-v",
+    "wp_id": 25708,
+    "modified": "2026-11-27T01:54:55",
+    "title": "All Video Downloader &#8211; V"
+  },
+  {
+    "slug": "flight-simulator-advanced",
+    "url": "https://apkmody.com/games/flight-simulator-advanced",
+    "wp_id": 25701,
+    "modified": "2026-11-27T01:54:19",
+    "title": "Flight Simulator Advanced"
+  },
+  {
+    "slug": "triple-match-3d",
+    "url": "https://apkmody.com/games/triple-match-3d",
+    "wp_id": 25690,
+    "modified": "2026-11-27T01:53:57",
+    "title": "Triple Match 3D"
+  },
+  {
+    "slug": "jurassic-survival",
+    "url": "https://apkmody.com/games/jurassic-survival",
+    "wp_id": 25664,
+    "modified": "2026-11-27T01:53:23",
+    "title": "Jurassic Survival"
+  },
+  {
+    "slug": "among-gods",
+    "url": "https://apkmody.com/games/among-gods",
+    "wp_id": 25791,
+    "modified": "2026-11-27T01:51:31",
+    "title": "Among Gods!"
+  },
+  {
+    "slug": "guncho",
+    "url": "https://apkmody.com/games/guncho",
+    "wp_id": 25752,
+    "modified": "2026-11-27T01:51:14",
+    "title": "Guncho"
+  },
+  {
+    "slug": "idle-pocket-planet",
+    "url": "https://apkmody.com/games/idle-pocket-planet",
+    "wp_id": 25745,
+    "modified": "2026-11-27T01:50:54",
+    "title": "Idle Pocket Planet"
+  },
+  {
+    "slug": "young-detective-the-mutation",
+    "url": "https://apkmody.com/games/young-detective-the-mutation",
+    "wp_id": 25739,
+    "modified": "2026-11-27T01:50:28",
+    "title": "Young Detective: The Mutation"
+  },
+  {
+    "slug": "cpm-garage",
+    "url": "https://apkmody.com/games/cpm-garage",
+    "wp_id": 25726,
+    "modified": "2026-11-27T01:50:00",
+    "title": "CPM Garage"
+  },
+  {
+    "slug": "torerowa",
+    "url": "https://apkmody.com/games/torerowa",
+    "wp_id": 25716,
+    "modified": "2026-11-27T01:49:41",
+    "title": "TOREROWA"
+  },
+  {
+    "slug": "gunbrick-reloaded",
+    "url": "https://apkmody.com/games/gunbrick-reloaded",
+    "wp_id": 25706,
+    "modified": "2026-11-27T01:48:28",
+    "title": "Gunbrick: Reloaded"
+  },
+  {
+    "slug": "king-of-dragon-pass",
+    "url": "https://apkmody.com/games/king-of-dragon-pass",
+    "wp_id": 25696,
+    "modified": "2026-11-27T01:48:10",
+    "title": "King of Dragon Pass"
+  },
+  {
+    "slug": "unforeseen-incidents",
+    "url": "https://apkmody.com/games/unforeseen-incidents",
+    "wp_id": 25674,
+    "modified": "2026-11-27T01:47:51",
+    "title": "Unforeseen Incidents"
+  },
+  {
+    "slug": "hotties-merge",
+    "url": "https://apkmody.com/games/hotties-merge",
+    "wp_id": 25670,
+    "modified": "2026-11-27T01:47:34",
+    "title": "Hotties Merge"
+  },
+  {
+    "slug": "cat-chaos-prankster",
+    "url": "https://apkmody.com/games/cat-chaos-prankster",
+    "wp_id": 25926,
+    "modified": "2026-11-27T01:32:24",
+    "title": "Cat Chaos: Prankster"
+  },
+  {
+    "slug": "inside-out-thought-bubbles",
+    "url": "https://apkmody.com/games/inside-out-thought-bubbles",
+    "wp_id": 25826,
+    "modified": "2026-11-27T01:30:13",
+    "title": "Inside Out Thought Bubbles"
+  },
+  {
+    "slug": "hevy",
+    "url": "https://apkmody.com/apps/hevy",
+    "wp_id": 25939,
+    "modified": "2026-11-27T01:27:59",
+    "title": "Hevy"
+  },
+  {
+    "slug": "siralim-ultimate",
+    "url": "https://apkmody.com/games/siralim-ultimate",
+    "wp_id": 25914,
+    "modified": "2026-11-27T01:27:04",
+    "title": "Siralim Ultimate"
+  },
+  {
+    "slug": "driving-school-simulator-2025",
+    "url": "https://apkmody.com/games/driving-school-simulator-2025",
+    "wp_id": 25901,
+    "modified": "2026-11-27T01:26:47",
+    "title": "Driving School Simulator 2025"
+  },
+  {
+    "slug": "konsui-fighter",
+    "url": "https://apkmody.com/games/konsui-fighter",
+    "wp_id": 25875,
+    "modified": "2026-11-27T01:26:27",
+    "title": "KONSUI FIGHTER"
+  },
+  {
+    "slug": "gubbins",
+    "url": "https://apkmody.com/games/gubbins",
+    "wp_id": 25870,
+    "modified": "2026-11-27T01:26:06",
+    "title": "GUBBINS"
+  },
+  {
+    "slug": "abalon",
+    "url": "https://apkmody.com/games/abalon",
+    "wp_id": 25859,
+    "modified": "2026-11-27T01:25:47",
+    "title": "Abalon"
+  },
+  {
+    "slug": "project-breach-2",
+    "url": "https://apkmody.com/games/project-breach-2",
+    "wp_id": 25843,
+    "modified": "2026-11-27T01:25:28",
+    "title": "Project Breach 2"
+  },
+  {
+    "slug": "crying-suns",
+    "url": "https://apkmody.com/games/crying-suns",
+    "wp_id": 25823,
+    "modified": "2026-11-27T01:24:36",
+    "title": "Crying Suns"
+  },
+  {
+    "slug": "tactical-ops",
+    "url": "https://apkmody.com/games/tactical-ops",
+    "wp_id": 25930,
+    "modified": "2026-11-27T01:24:06",
+    "title": "Tactical OPS"
+  },
+  {
+    "slug": "tile-tales-pirate",
+    "url": "https://apkmody.com/games/tile-tales-pirate",
+    "wp_id": 25919,
+    "modified": "2026-11-27T01:23:44",
+    "title": "Tile Tales: Pirate"
+  },
+  {
+    "slug": "cat-quest",
+    "url": "https://apkmody.com/games/cat-quest",
+    "wp_id": 25911,
+    "modified": "2026-11-27T01:23:22",
+    "title": "Cat Quest"
+  },
+  {
+    "slug": "zombie-highway-2",
+    "url": "https://apkmody.com/games/zombie-highway-2",
+    "wp_id": 25894,
+    "modified": "2026-11-27T01:22:43",
+    "title": "Zombie Highway 2"
+  },
+  {
+    "slug": "drivers-highway-hero",
+    "url": "https://apkmody.com/games/drivers-highway-hero",
+    "wp_id": 25874,
+    "modified": "2026-11-27T01:22:14",
+    "title": "Drivers: Highway Hero"
+  },
+  {
+    "slug": "the-bards-tale",
+    "url": "https://apkmody.com/games/the-bards-tale",
+    "wp_id": 25863,
+    "modified": "2026-11-27T01:21:53",
+    "title": "The Bard&#8217;s Tale"
+  },
+  {
+    "slug": "agar-io",
+    "url": "https://apkmody.com/games/agar-io",
+    "wp_id": 25847,
+    "modified": "2026-11-27T01:21:35",
+    "title": "Agar.io"
+  },
+  {
+    "slug": "professor-doctor-jetpack",
+    "url": "https://apkmody.com/games/professor-doctor-jetpack",
+    "wp_id": 25837,
+    "modified": "2026-11-27T01:21:16",
+    "title": "Professor Doctor Jetpack"
+  },
+  {
+    "slug": "umagic",
+    "url": "https://apkmody.com/apps/umagic",
+    "wp_id": 25833,
+    "modified": "2026-11-27T01:20:55",
+    "title": "Umagic"
+  },
+  {
+    "slug": "starbrew-cafe",
+    "url": "https://apkmody.com/games/starbrew-cafe",
+    "wp_id": 25817,
+    "modified": "2026-11-27T01:20:36",
+    "title": "Starbrew Cafe"
+  },
+  {
+    "slug": "guitar-tuner",
+    "url": "https://apkmody.com/apps/guitar-tuner",
+    "wp_id": 26058,
+    "modified": "2026-11-27T01:11:14",
+    "title": "Guitar Tuner"
+  },
+  {
+    "slug": "hero-of-the-kingdom-tales-3",
+    "url": "https://apkmody.com/games/hero-of-the-kingdom-tales-3",
+    "wp_id": 26106,
+    "modified": "2026-11-27T01:03:47",
+    "title": "Hero of the Kingdom: Tales 3"
+  },
+  {
+    "slug": "hero-of-the-kingdom-tales-1",
+    "url": "https://apkmody.com/games/hero-of-the-kingdom-tales-1",
+    "wp_id": 26099,
+    "modified": "2026-11-27T01:03:33",
+    "title": "Hero of the Kingdom: Tales 1"
+  },
+  {
+    "slug": "herond-browser",
+    "url": "https://apkmody.com/apps/herond-browser",
+    "wp_id": 26080,
+    "modified": "2026-11-27T01:03:14",
+    "title": "Herond Browser"
+  },
+  {
+    "slug": "dw-contacts",
+    "url": "https://apkmody.com/apps/dw-contacts",
+    "wp_id": 26046,
+    "modified": "2026-11-27T01:02:27",
+    "title": "DW Contacts"
+  },
+  {
+    "slug": "killapps",
+    "url": "https://apkmody.com/apps/killapps",
+    "wp_id": 26036,
+    "modified": "2026-11-27T01:02:08",
+    "title": "KillApps"
+  },
+  {
+    "slug": "musicline",
+    "url": "https://apkmody.com/apps/musicline",
+    "wp_id": 26021,
+    "modified": "2026-11-27T01:01:47",
+    "title": "musicLine"
+  },
+  {
+    "slug": "seaside-escape",
+    "url": "https://apkmody.com/games/seaside-escape",
+    "wp_id": 26008,
+    "modified": "2026-11-27T01:01:21",
+    "title": "Seaside Escape"
+  },
+  {
+    "slug": "swift-backup",
+    "url": "https://apkmody.com/apps/swift-backup",
+    "wp_id": 25998,
+    "modified": "2026-11-27T01:01:02",
+    "title": "Swift Backup"
+  },
+  {
+    "slug": "superhero",
+    "url": "https://apkmody.com/games/superhero",
+    "wp_id": 25971,
+    "modified": "2026-11-27T01:00:46",
+    "title": "Superhero: Battle for Justice"
+  },
+  {
+    "slug": "hero-of-the-kingdom-tales-2",
+    "url": "https://apkmody.com/games/hero-of-the-kingdom-tales-2",
+    "wp_id": 26103,
+    "modified": "2026-11-27T00:59:51",
+    "title": "Hero of the Kingdom: Tales 2"
+  },
+  {
+    "slug": "cyclers",
+    "url": "https://apkmody.com/apps/cyclers",
+    "wp_id": 26083,
+    "modified": "2026-11-27T00:59:32",
+    "title": "Cyclers"
+  },
+  {
+    "slug": "yazio",
+    "url": "https://apkmody.com/apps/yazio",
+    "wp_id": 26067,
+    "modified": "2026-11-27T00:59:14",
+    "title": "YAZIO"
+  },
+  {
+    "slug": "turnip-boy-robs-a-bank",
+    "url": "https://apkmody.com/games/turnip-boy-robs-a-bank",
+    "wp_id": 26057,
+    "modified": "2026-11-27T00:58:55",
+    "title": "Turnip Boy Robs a Bank"
+  },
+  {
+    "slug": "genie",
+    "url": "https://apkmody.com/apps/genie",
+    "wp_id": 26041,
+    "modified": "2026-11-27T00:58:36",
+    "title": "Genie"
+  },
+  {
+    "slug": "habitica",
+    "url": "https://apkmody.com/apps/habitica",
+    "wp_id": 26032,
+    "modified": "2026-11-27T00:57:55",
+    "title": "Habitica"
+  },
+  {
+    "slug": "happy-citizens",
+    "url": "https://apkmody.com/games/happy-citizens",
+    "wp_id": 26009,
+    "modified": "2026-11-27T00:57:39",
+    "title": "Happy Citizens"
+  },
+  {
+    "slug": "powerlust-action-rpg-offline",
+    "url": "https://apkmody.com/games/powerlust-action-rpg-offline",
+    "wp_id": 26003,
+    "modified": "2026-11-27T00:57:23",
+    "title": "Powerlust: Action RPG Offline"
+  },
+  {
+    "slug": "toca-boca-world",
+    "url": "https://apkmody.com/games/toca-boca-world",
+    "wp_id": 25980,
+    "modified": "2026-11-27T00:57:04",
+    "title": "Toca Boca World"
+  },
+  {
+    "slug": "dragon-legend-z-lite",
+    "url": "https://apkmody.com/games/dragon-legend-z-lite",
+    "wp_id": 25968,
+    "modified": "2026-11-27T00:56:46",
+    "title": "Dragon Legend Z Lite"
+  },
+  {
+    "slug": "meadowfell",
+    "url": "https://apkmody.com/games/meadowfell",
+    "wp_id": 26278,
+    "modified": "2026-11-27T00:33:30",
+    "title": "Meadowfell"
+  },
+  {
+    "slug": "dqm-the-dark-prince",
+    "url": "https://apkmody.com/games/dqm-the-dark-prince",
+    "wp_id": 26252,
+    "modified": "2026-11-27T00:33:13",
+    "title": "DQM: The Dark Prince"
+  },
+  {
+    "slug": "tower-destiny-survive",
+    "url": "https://apkmody.com/games/tower-destiny-survive",
+    "wp_id": 26231,
+    "modified": "2026-11-27T00:32:57",
+    "title": "Tower Destiny Survive"
+  },
+  {
+    "slug": "fx-file-explorer",
+    "url": "https://apkmody.com/apps/fx-file-explorer",
+    "wp_id": 26212,
+    "modified": "2026-11-27T00:32:41",
+    "title": "FX File Explorer"
+  },
+  {
+    "slug": "lemon8",
+    "url": "https://apkmody.com/apps/lemon8",
+    "wp_id": 26201,
+    "modified": "2026-11-27T00:32:24",
+    "title": "Lemon8"
+  },
+  {
+    "slug": "hot-wheels-unlimited",
+    "url": "https://apkmody.com/games/hot-wheels-unlimited",
+    "wp_id": 26189,
+    "modified": "2026-11-27T00:32:06",
+    "title": "Hot Wheels Unlimited"
+  },
+  {
+    "slug": "bright-memory-infinite",
+    "url": "https://apkmody.com/games/bright-memory-infinite",
+    "wp_id": 26172,
+    "modified": "2026-11-27T00:31:48",
+    "title": "Bright Memory: Infinite"
+  },
+  {
+    "slug": "legend-fighter",
+    "url": "https://apkmody.com/games/legend-fighter",
+    "wp_id": 26157,
+    "modified": "2026-11-27T00:31:30",
+    "title": "Legend Fighter"
+  },
+  {
+    "slug": "heros-adventure",
+    "url": "https://apkmody.com/games/heros-adventure",
+    "wp_id": 26153,
+    "modified": "2026-11-27T00:31:14",
+    "title": "Hero&#8217;s Adventure"
+  },
+  {
+    "slug": "muay-thai-fitness-workout",
+    "url": "https://apkmody.com/apps/muay-thai-fitness-workout",
+    "wp_id": 26109,
+    "modified": "2026-11-27T00:30:56",
+    "title": "Muay Thai Fitness &amp; Workout"
+  },
+  {
+    "slug": "hardcore-leveling-warrior",
+    "url": "https://apkmody.com/games/hardcore-leveling-warrior",
+    "wp_id": 26282,
+    "modified": "2026-11-27T00:28:29",
+    "title": "Hardcore Leveling Warrior"
+  },
+  {
+    "slug": "kovoclak",
+    "url": "https://apkmody.com/games/kovoclak",
+    "wp_id": 26256,
+    "modified": "2026-11-27T00:28:08",
+    "title": "Kovoclak"
+  },
+  {
+    "slug": "suicide-guy-the-lost-dreams",
+    "url": "https://apkmody.com/games/suicide-guy-the-lost-dreams",
+    "wp_id": 26235,
+    "modified": "2026-11-27T00:27:51",
+    "title": "Suicide Guy: The Lost Dreams"
+  },
+  {
+    "slug": "shincraft-speed-awakens",
+    "url": "https://apkmody.com/games/shincraft-speed-awakens",
+    "wp_id": 26220,
+    "modified": "2026-11-27T00:27:33",
+    "title": "ShinCraft: Speed Awakens"
+  },
+  {
+    "slug": "magellantv-documentaries",
+    "url": "https://apkmody.com/apps/magellantv-documentaries",
+    "wp_id": 26207,
+    "modified": "2026-11-27T00:27:12",
+    "title": "MagellanTV Documentaries"
+  },
+  {
+    "slug": "isle-of-arrows",
+    "url": "https://apkmody.com/games/isle-of-arrows",
+    "wp_id": 26194,
+    "modified": "2026-11-27T00:26:51",
+    "title": "Isle of Arrows"
+  },
+  {
+    "slug": "idle-mining-factory-tycoon",
+    "url": "https://apkmody.com/games/idle-mining-factory-tycoon",
+    "wp_id": 26180,
+    "modified": "2026-11-27T00:26:30",
+    "title": "Idle Mining Factory Tycoon"
+  },
+  {
+    "slug": "draconian-conquest-of-dawnbird",
+    "url": "https://apkmody.com/games/draconian-conquest-of-dawnbird",
+    "wp_id": 26163,
+    "modified": "2026-11-27T00:25:51",
+    "title": "Draconian:Conquest of Dawnbird"
+  },
+  {
+    "slug": "crafto",
+    "url": "https://apkmody.com/apps/crafto",
+    "wp_id": 26132,
+    "modified": "2026-11-27T00:23:03",
+    "title": "Crafto"
+  },
+  {
+    "slug": "summarify",
+    "url": "https://apkmody.com/apps/summarify",
+    "wp_id": 26115,
+    "modified": "2026-11-27T00:22:35",
+    "title": "Summarify"
+  },
+  {
     "slug": "evocreo-2",
     "url": "https://apkmody.com/games/evocreo-2",
     "wp_id": 26439,
@@ -840,13 +1540,6 @@
     "title": "RapidTV"
   },
   {
-    "slug": "calengoo",
-    "url": "https://apkmody.com/apps/calengoo",
-    "wp_id": 465,
-    "modified": "2026-11-25T15:45:34",
-    "title": "CalenGoo"
-  },
-  {
     "slug": "oh-private-web-browser",
     "url": "https://apkmody.com/apps/oh-private-web-browser",
     "wp_id": 29880,
@@ -901,13 +1594,6 @@
     "wp_id": 802,
     "modified": "2026-11-25T15:40:09",
     "title": "Amazon Prime Video"
-  },
-  {
-    "slug": "pinterest",
-    "url": "https://apkmody.com/apps/pinterest",
-    "wp_id": 25536,
-    "modified": "2026-11-23T15:04:15",
-    "title": "Pinterest"
   },
   {
     "slug": "brainrot-tip-tap-challenge",
@@ -2324,13 +3010,6 @@
     "title": "Psiphon Pro"
   },
   {
-    "slug": "magellantv-documentaries",
-    "url": "https://apkmody.com/apps/magellantv-documentaries",
-    "wp_id": 26207,
-    "modified": "2026-11-22T11:28:34",
-    "title": "MagellanTV Documentaries"
-  },
-  {
     "slug": "shazam",
     "url": "https://apkmody.com/apps/shazam",
     "wp_id": 4514,
@@ -2525,6 +3204,13 @@
     "wp_id": 28678,
     "modified": "2026-11-20T19:51:11",
     "title": "Everyday Puzzles: Mini Games"
+  },
+  {
+    "slug": "word-search-explorer",
+    "url": "https://apkmody.com/games/word-search-explorer",
+    "wp_id": 28668,
+    "modified": "2026-11-20T19:50:52",
+    "title": "Word Search Explorer"
   },
   {
     "slug": "judgment-day-angel-of-god",
@@ -4646,13 +5332,6 @@
     "wp_id": 9830,
     "modified": "2026-11-19T15:54:03",
     "title": "EasyCut"
-  },
-  {
-    "slug": "hevy",
-    "url": "https://apkmody.com/apps/hevy",
-    "wp_id": 25939,
-    "modified": "2026-11-19T15:53:12",
-    "title": "Hevy"
   },
   {
     "slug": "can-you-escape-the-collection",
@@ -7924,6 +8603,13 @@
     "title": "Wild Cards"
   },
   {
+    "slug": "chillquarium",
+    "url": "https://apkmody.com/games/chillquarium",
+    "wp_id": 102729,
+    "modified": "2026-11-16T16:24:36",
+    "title": "Chillquarium"
+  },
+  {
     "slug": "zombie-hill-racing",
     "url": "https://apkmody.com/games/zombie-hill-racing",
     "wp_id": 102258,
@@ -10162,13 +10848,6 @@
     "wp_id": 8460,
     "modified": "2026-11-11T16:50:46",
     "title": "JibJab"
-  },
-  {
-    "slug": "carinfo",
-    "url": "https://apkmody.com/apps/carinfo",
-    "wp_id": 16191,
-    "modified": "2026-11-11T16:50:14",
-    "title": "CarInfo"
   },
   {
     "slug": "lifesum",
@@ -13202,13 +13881,6 @@
     "title": "Flat Equalizer"
   },
   {
-    "slug": "toca-boca-world",
-    "url": "https://apkmody.com/games/toca-boca-world",
-    "wp_id": 25980,
-    "modified": "2026-11-01T21:22:46",
-    "title": "Toca Boca World"
-  },
-  {
     "slug": "elite-auto-brazil-wheelie",
     "url": "https://apkmody.com/games/elite-auto-brazil-wheelie",
     "wp_id": 118734,
@@ -13720,13 +14392,6 @@
     "title": "ZOMBIE FIRE 3D"
   },
   {
-    "slug": "tower-destiny-survive",
-    "url": "https://apkmody.com/games/tower-destiny-survive",
-    "wp_id": 26231,
-    "modified": "2026-10-08T18:14:44",
-    "title": "Tower Destiny Survive"
-  },
-  {
     "slug": "shadow-slayer-demon-hunter",
     "url": "https://apkmody.com/games/shadow-slayer-demon-hunter",
     "wp_id": 11615,
@@ -13921,13 +14586,6 @@
     "wp_id": 7921,
     "modified": "2026-10-05T17:14:29",
     "title": "Lark Player"
-  },
-  {
-    "slug": "downhill-racer",
-    "url": "https://apkmody.com/games/downhill-racer",
-    "wp_id": 121254,
-    "modified": "2026-10-05T17:10:15",
-    "title": "Downhill Racer"
   },
   {
     "slug": "always-on-display-xpath",
@@ -14446,6 +15104,13 @@
     "wp_id": 123016,
     "modified": "2026-09-30T02:21:33",
     "title": "SprechenAI: Learn German A1-C2"
+  },
+  {
+    "slug": "periodic-table-2026-chemistry",
+    "url": "https://apkmody.com/apps/periodic-table-2026-chemistry",
+    "wp_id": 123010,
+    "modified": "2026-09-30T02:12:40",
+    "title": "Periodic Table 2026: Chemistry"
   },
   {
     "slug": "prison-escape-simulator-3d",
@@ -16072,6 +16737,13 @@
     "title": "Vikings: Empire"
   },
   {
+    "slug": "neuphoria",
+    "url": "https://apkmody.com/games/neuphoria",
+    "wp_id": 17702,
+    "modified": "2026-09-25T00:07:24",
+    "title": "Neuphoria"
+  },
+  {
     "slug": "fortias-saga-action-adventure",
     "url": "https://apkmody.com/games/fortias-saga-action-adventure",
     "wp_id": 17705,
@@ -16287,6 +16959,13 @@
     "wp_id": 17408,
     "modified": "2026-09-24T23:38:43",
     "title": "Forest Golf Planner"
+  },
+  {
+    "slug": "love-is-in-small-things",
+    "url": "https://apkmody.com/games/love-is-in-small-things",
+    "wp_id": 17422,
+    "modified": "2026-09-24T23:38:02",
+    "title": "Love is in small things"
   },
   {
     "slug": "minitruck-simulator-vietnam",
@@ -18543,6 +19222,13 @@
     "title": "Killer Bean Unleashed"
   },
   {
+    "slug": "ship-simulator-boat-game",
+    "url": "https://apkmody.com/games/ship-simulator-boat-game",
+    "wp_id": 15790,
+    "modified": "2026-09-21T23:56:47",
+    "title": "Ship Simulator: Boat Game"
+  },
+  {
     "slug": "solar-smash",
     "url": "https://apkmody.com/games/solar-smash",
     "wp_id": 15796,
@@ -20158,13 +20844,6 @@
     "wp_id": 14643,
     "modified": "2026-09-18T23:27:38",
     "title": "Bio Ops 3D"
-  },
-  {
-    "slug": "talkie-soulful-ai",
-    "url": "https://apkmody.com/games/talkie-soulful-ai",
-    "wp_id": 14650,
-    "modified": "2026-09-18T23:25:20",
-    "title": "Talkie: Soulful AI"
   },
   {
     "slug": "storybeat",
@@ -21854,6 +22533,13 @@
     "title": "Paper Bride 3 Unresolved Love"
   },
   {
+    "slug": "spider-fighter-2",
+    "url": "https://apkmody.com/games/spider-fighter-2",
+    "wp_id": 11193,
+    "modified": "2026-09-16T22:35:55",
+    "title": "Spider Fighter 2"
+  },
+  {
     "slug": "my-playhome-hospital",
     "url": "https://apkmody.com/games/my-playhome-hospital",
     "wp_id": 11212,
@@ -22106,18 +22792,18 @@
     "title": "AccuWeather"
   },
   {
-    "slug": "mrlucky88",
-    "url": "https://apkmody.com/games/mrlucky88",
-    "wp_id": 120387,
-    "modified": "2026-09-16T16:48:10",
-    "title": "Mrlucky88"
-  },
-  {
     "slug": "carta-4d",
     "url": "https://apkmody.com/games/carta-4d",
     "wp_id": 120389,
     "modified": "2026-09-16T16:48:10",
     "title": "Carta 4D"
+  },
+  {
+    "slug": "mrlucky88",
+    "url": "https://apkmody.com/games/mrlucky88",
+    "wp_id": 120387,
+    "modified": "2026-09-16T16:48:10",
+    "title": "Mrlucky88"
   },
   {
     "slug": "crown99",
@@ -23268,6 +23954,13 @@
     "title": "Akinator VIP"
   },
   {
+    "slug": "european-war-5-empire",
+    "url": "https://apkmody.com/games/european-war-5-empire",
+    "wp_id": 9985,
+    "modified": "2026-09-14T22:32:48",
+    "title": "European War 5: Empire"
+  },
+  {
     "slug": "european-war-6-1914",
     "url": "https://apkmody.com/games/european-war-6-1914",
     "wp_id": 9989,
@@ -23674,13 +24367,6 @@
     "title": "Baseball Star"
   },
   {
-    "slug": "superhero",
-    "url": "https://apkmody.com/games/superhero",
-    "wp_id": 25971,
-    "modified": "2026-09-13T17:26:34",
-    "title": "Superhero: Battle for Justice"
-  },
-  {
     "slug": "rubiks-match-3",
     "url": "https://apkmody.com/games/rubiks-match-3",
     "wp_id": 23561,
@@ -23947,6 +24633,13 @@
     "title": "Binaural Beats Brainwaves"
   },
   {
+    "slug": "3c-battery-manager",
+    "url": "https://apkmody.com/apps/3c-battery-manager",
+    "wp_id": 118740,
+    "modified": "2026-09-12T18:59:24",
+    "title": "3C Battery Manager"
+  },
+  {
     "slug": "anime-girls-clown-horror",
     "url": "https://apkmody.com/games/anime-girls-clown-horror",
     "wp_id": 22664,
@@ -24169,13 +24862,6 @@
     "wp_id": 119714,
     "modified": "2026-09-10T21:50:14",
     "title": "AR Ruler App: Tape Measure Cam"
-  },
-  {
-    "slug": "video-player-all-format",
-    "url": "https://apkmody.com/apps/video-player-all-format",
-    "wp_id": 119716,
-    "modified": "2026-09-10T21:49:20",
-    "title": "Video Player All Format"
   },
   {
     "slug": "clone-app-parallel-dual-space",
@@ -24773,6 +25459,13 @@
     "title": "Music Player Offline &#038; MP3"
   },
   {
+    "slug": "ai-translate-photo-translator",
+    "url": "https://apkmody.com/apps/ai-translate-photo-translator",
+    "wp_id": 118742,
+    "modified": "2026-09-05T16:46:24",
+    "title": "AI Translate Photo Translator"
+  },
+  {
     "slug": "cover-fire",
     "url": "https://apkmody.com/games/cover-fire",
     "wp_id": 12412,
@@ -24799,13 +25492,6 @@
     "wp_id": 118967,
     "modified": "2026-09-05T00:15:29",
     "title": "Tadoku: Learn Japanese Reading"
-  },
-  {
-    "slug": "virtual-master-android-clone",
-    "url": "https://apkmody.com/apps/virtual-master-android-clone",
-    "wp_id": 119030,
-    "modified": "2026-09-05T00:11:47",
-    "title": "Virtual Master &#8211; Android Clone"
   },
   {
     "slug": "stretch-exercises-flex-fit",
@@ -25494,25 +26180,11 @@
     "title": "Ludo Club"
   },
   {
-    "slug": "arcane-quest-legends-2-offline",
-    "url": "https://apkmody.com/games/arcane-quest-legends-2-offline",
-    "wp_id": 25796,
-    "modified": "2026-06-01T10:09:23",
-    "title": "Arcane Quest Legends 2 Offline"
-  },
-  {
     "slug": "crush-crush",
     "url": "https://apkmody.com/games/crush-crush",
     "wp_id": 13479,
     "modified": "2026-05-31T17:13:46",
     "title": "Crush Crush"
-  },
-  {
-    "slug": "jurassic-survival",
-    "url": "https://apkmody.com/games/jurassic-survival",
-    "wp_id": 25664,
-    "modified": "2026-05-31T12:51:52",
-    "title": "Jurassic Survival"
   },
   {
     "slug": "turboprop-flight-simulator-3d",
@@ -25571,13 +26243,6 @@
     "title": "Dead Zombie Shooter: Survival"
   },
   {
-    "slug": "skill-test-online",
-    "url": "https://apkmody.com/games/skill-test-online",
-    "wp_id": 25787,
-    "modified": "2026-05-30T09:35:40",
-    "title": "Skill Test: Online"
-  },
-  {
     "slug": "chrome-valley-customs",
     "url": "https://apkmody.com/games/chrome-valley-customs",
     "wp_id": 12949,
@@ -25599,13 +26264,6 @@
     "title": "Shadow of Death: Dark Knight"
   },
   {
-    "slug": "hot-wheels-unlimited",
-    "url": "https://apkmody.com/games/hot-wheels-unlimited",
-    "wp_id": 26189,
-    "modified": "2026-05-26T13:23:21",
-    "title": "Hot Wheels Unlimited"
-  },
-  {
     "slug": "legend-of-survivors",
     "url": "https://apkmody.com/games/legend-of-survivors",
     "wp_id": 24285,
@@ -25618,13 +26276,6 @@
     "wp_id": 18768,
     "modified": "2026-05-24T14:10:16",
     "title": "The Wanderer"
-  },
-  {
-    "slug": "legend-fighter",
-    "url": "https://apkmody.com/games/legend-fighter",
-    "wp_id": 26157,
-    "modified": "2026-05-24T14:09:10",
-    "title": "Legend Fighter"
   },
   {
     "slug": "dark-riddle",
@@ -25697,13 +26348,6 @@
     "title": "iScanner"
   },
   {
-    "slug": "lemon8",
-    "url": "https://apkmody.com/apps/lemon8",
-    "wp_id": 26201,
-    "modified": "2026-05-07T15:07:22",
-    "title": "Lemon8"
-  },
-  {
     "slug": "match-masters",
     "url": "https://apkmody.com/games/match-masters",
     "wp_id": 7075,
@@ -25716,27 +26360,6 @@
     "wp_id": 25480,
     "modified": "2026-05-07T13:20:55",
     "title": "AIFoto"
-  },
-  {
-    "slug": "starbrew-cafe",
-    "url": "https://apkmody.com/games/starbrew-cafe",
-    "wp_id": 25817,
-    "modified": "2026-05-07T10:52:19",
-    "title": "Starbrew Cafe"
-  },
-  {
-    "slug": "abalon",
-    "url": "https://apkmody.com/games/abalon",
-    "wp_id": 25859,
-    "modified": "2026-05-07T10:51:23",
-    "title": "Abalon"
-  },
-  {
-    "slug": "death-palette",
-    "url": "https://apkmody.com/games/death-palette",
-    "wp_id": 25606,
-    "modified": "2026-05-07T10:50:46",
-    "title": "Death Palette"
   },
   {
     "slug": "temu",
@@ -25963,13 +26586,6 @@
     "title": "Bing"
   },
   {
-    "slug": "yazio",
-    "url": "https://apkmody.com/apps/yazio",
-    "wp_id": 26067,
-    "modified": "2026-05-06T13:27:40",
-    "title": "YAZIO"
-  },
-  {
     "slug": "kingdom-guard",
     "url": "https://apkmody.com/games/kingdom-guard",
     "wp_id": 18629,
@@ -26124,25 +26740,11 @@
     "title": "AppBlock"
   },
   {
-    "slug": "shincraft-speed-awakens",
-    "url": "https://apkmody.com/games/shincraft-speed-awakens",
-    "wp_id": 26220,
-    "modified": "2026-05-05T14:33:46",
-    "title": "ShinCraft: Speed Awakens"
-  },
-  {
     "slug": "girls-tale-idle-action-rpg",
     "url": "https://apkmody.com/games/girls-tale-idle-action-rpg",
     "wp_id": 17562,
     "modified": "2026-05-05T12:51:05",
     "title": "Girls Tale: Idle Action RPG"
-  },
-  {
-    "slug": "crafto",
-    "url": "https://apkmody.com/apps/crafto",
-    "wp_id": 26132,
-    "modified": "2026-05-05T12:48:42",
-    "title": "Crafto"
   },
   {
     "slug": "boostone",
@@ -26166,13 +26768,6 @@
     "title": "Adobe Express"
   },
   {
-    "slug": "tactical-ops",
-    "url": "https://apkmody.com/games/tactical-ops",
-    "wp_id": 25930,
-    "modified": "2026-05-05T08:32:45",
-    "title": "Tactical OPS"
-  },
-  {
     "slug": "cashew",
     "url": "https://apkmody.com/apps/cashew",
     "wp_id": 22772,
@@ -26185,13 +26780,6 @@
     "wp_id": 6064,
     "modified": "2026-05-05T03:10:24",
     "title": "Busuu"
-  },
-  {
-    "slug": "triple-match-3d",
-    "url": "https://apkmody.com/games/triple-match-3d",
-    "wp_id": 25690,
-    "modified": "2026-05-05T02:12:20",
-    "title": "Triple Match 3D"
   },
   {
     "slug": "threads",
@@ -26404,20 +26992,6 @@
     "title": "Replika"
   },
   {
-    "slug": "drive-world",
-    "url": "https://apkmody.com/games/drive-world",
-    "wp_id": 25592,
-    "modified": "2026-05-01T15:12:16",
-    "title": "Drive World"
-  },
-  {
-    "slug": "musicline",
-    "url": "https://apkmody.com/apps/musicline",
-    "wp_id": 26021,
-    "modified": "2026-05-01T15:03:07",
-    "title": "musicLine"
-  },
-  {
     "slug": "paradigm-reboot",
     "url": "https://apkmody.com/games/paradigm-reboot",
     "wp_id": 8759,
@@ -26472,13 +27046,6 @@
     "wp_id": 5779,
     "modified": "2026-05-01T02:11:44",
     "title": "Harry Potter: Puzzles &#038; Spells"
-  },
-  {
-    "slug": "umagic",
-    "url": "https://apkmody.com/apps/umagic",
-    "wp_id": 25833,
-    "modified": "2026-04-30T21:48:29",
-    "title": "Umagic"
   },
   {
     "slug": "criminal-russia-3d",
@@ -26614,13 +27181,6 @@
     "title": "The Wall Street Journal"
   },
   {
-    "slug": "seaside-escape",
-    "url": "https://apkmody.com/games/seaside-escape",
-    "wp_id": 26008,
-    "modified": "2026-04-29T19:45:24",
-    "title": "Seaside Escape"
-  },
-  {
     "slug": "state-of-survival",
     "url": "https://apkmody.com/games/state-of-survival",
     "wp_id": 12057,
@@ -26691,13 +27251,6 @@
     "title": "Pyramid Quest"
   },
   {
-    "slug": "happy-citizens",
-    "url": "https://apkmody.com/games/happy-citizens",
-    "wp_id": 26009,
-    "modified": "2026-04-29T12:51:54",
-    "title": "Happy Citizens"
-  },
-  {
     "slug": "forest",
     "url": "https://apkmody.com/apps/forest",
     "wp_id": 5213,
@@ -26717,13 +27270,6 @@
     "wp_id": 18853,
     "modified": "2026-04-29T08:04:15",
     "title": "Only You Are Here"
-  },
-  {
-    "slug": "habitica",
-    "url": "https://apkmody.com/apps/habitica",
-    "wp_id": 26032,
-    "modified": "2026-04-29T04:19:10",
-    "title": "Habitica"
   },
   {
     "slug": "colorfy",
@@ -26780,13 +27326,6 @@
     "wp_id": 12257,
     "modified": "2026-04-28T19:36:05",
     "title": "Drawing Desk"
-  },
-  {
-    "slug": "agar-io",
-    "url": "https://apkmody.com/games/agar-io",
-    "wp_id": 25847,
-    "modified": "2026-04-28T16:03:35",
-    "title": "Agar.io"
   },
   {
     "slug": "dicast-rules-of-chaos",
@@ -26927,13 +27466,6 @@
     "wp_id": 20500,
     "modified": "2026-04-27T17:50:45",
     "title": "Resortopia"
-  },
-  {
-    "slug": "cyclers",
-    "url": "https://apkmody.com/apps/cyclers",
-    "wp_id": 26083,
-    "modified": "2026-04-26T18:46:35",
-    "title": "Cyclers"
   },
   {
     "slug": "zen-match",
@@ -27132,13 +27664,6 @@
     "title": "Firefight"
   },
   {
-    "slug": "the-seven-deadly-sins",
-    "url": "https://apkmody.com/games/the-seven-deadly-sins",
-    "wp_id": 25616,
-    "modified": "2026-04-24T09:05:18",
-    "title": "The Seven Deadly Sins"
-  },
-  {
     "slug": "ghost-hunter-idle",
     "url": "https://apkmody.com/games/ghost-hunter-idle",
     "wp_id": 19900,
@@ -27207,13 +27732,6 @@
     "wp_id": 11989,
     "modified": "2026-04-23T20:35:02",
     "title": "Drivevo"
-  },
-  {
-    "slug": "cpm-garage",
-    "url": "https://apkmody.com/games/cpm-garage",
-    "wp_id": 25726,
-    "modified": "2026-04-23T20:26:27",
-    "title": "CPM Garage"
   },
   {
     "slug": "raven-2",
@@ -27291,13 +27809,6 @@
     "wp_id": 5148,
     "modified": "2026-04-23T11:05:13",
     "title": "Old Movies Hollywood Classics"
-  },
-  {
-    "slug": "hardcore-leveling-warrior",
-    "url": "https://apkmody.com/games/hardcore-leveling-warrior",
-    "wp_id": 26282,
-    "modified": "2026-04-23T10:36:43",
-    "title": "Hardcore Leveling Warrior"
   },
   {
     "slug": "farlight-84",
@@ -27622,13 +28133,6 @@
     "title": "Pyramid Solitaire Saga"
   },
   {
-    "slug": "football-club-manager-2025",
-    "url": "https://apkmody.com/games/football-club-manager-2025",
-    "wp_id": 25577,
-    "modified": "2026-04-20T20:30:34",
-    "title": "FC Manager 26"
-  },
-  {
     "slug": "neighbours-from-hell-season-2",
     "url": "https://apkmody.com/games/neighbours-from-hell-season-2",
     "wp_id": 13185,
@@ -27641,13 +28145,6 @@
     "wp_id": 19247,
     "modified": "2026-04-20T20:22:35",
     "title": "Forklift Extreme Simulator"
-  },
-  {
-    "slug": "toontap",
-    "url": "https://apkmody.com/apps/toontap",
-    "wp_id": 25659,
-    "modified": "2026-04-20T19:01:25",
-    "title": "ToonTap"
   },
   {
     "slug": "minigame-party-pocket-edition",
@@ -27888,13 +28385,6 @@
     "title": "Friendly Social Browser"
   },
   {
-    "slug": "bubbu-mimmi-world",
-    "url": "https://apkmody.com/games/bubbu-mimmi-world",
-    "wp_id": 25518,
-    "modified": "2026-04-17T01:15:37",
-    "title": "Bubbu &amp; Mimmi World"
-  },
-  {
     "slug": "world-war-heroes",
     "url": "https://apkmody.com/games/world-war-heroes",
     "wp_id": 8730,
@@ -28007,13 +28497,6 @@
     "title": "BetterSleep"
   },
   {
-    "slug": "summarify",
-    "url": "https://apkmody.com/apps/summarify",
-    "wp_id": 26115,
-    "modified": "2026-04-15T20:59:36",
-    "title": "Summarify"
-  },
-  {
     "slug": "tuning-club-online-2",
     "url": "https://apkmody.com/games/tuning-club-online-2",
     "wp_id": 7405,
@@ -28047,13 +28530,6 @@
     "wp_id": 12465,
     "modified": "2026-04-15T16:56:55",
     "title": "Whiteout Survival"
-  },
-  {
-    "slug": "heros-adventure",
-    "url": "https://apkmody.com/games/heros-adventure",
-    "wp_id": 26153,
-    "modified": "2026-04-15T16:39:25",
-    "title": "Hero&#8217;s Adventure"
   },
   {
     "slug": "roku",
@@ -28119,13 +28595,6 @@
     "title": "Frozen City"
   },
   {
-    "slug": "genie",
-    "url": "https://apkmody.com/apps/genie",
-    "wp_id": 26041,
-    "modified": "2026-04-14T18:09:17",
-    "title": "Genie"
-  },
-  {
     "slug": "klondike-adventures",
     "url": "https://apkmody.com/games/klondike-adventures",
     "wp_id": 24367,
@@ -28173,13 +28642,6 @@
     "wp_id": 7260,
     "modified": "2026-04-13T17:03:10",
     "title": "Myths of Moonrise"
-  },
-  {
-    "slug": "summoners-war-rush",
-    "url": "https://apkmody.com/games/summoners-war-rush",
-    "wp_id": 25552,
-    "modified": "2026-04-13T16:28:13",
-    "title": "Summoners War: Rush"
   },
   {
     "slug": "death-park",
@@ -28231,13 +28693,6 @@
     "title": "Auto Text"
   },
   {
-    "slug": "pixel-4d",
-    "url": "https://apkmody.com/apps/pixel-4d",
-    "wp_id": 25719,
-    "modified": "2026-04-11T15:17:03",
-    "title": "Pixel 4D"
-  },
-  {
     "slug": "happy-color",
     "url": "https://apkmody.com/games/happy-color",
     "wp_id": 19809,
@@ -28271,13 +28726,6 @@
     "wp_id": 11955,
     "modified": "2026-04-10T20:49:25",
     "title": "SpongeBob: Krusty Cook-Off"
-  },
-  {
-    "slug": "dw-contacts",
-    "url": "https://apkmody.com/apps/dw-contacts",
-    "wp_id": 26046,
-    "modified": "2026-04-10T20:31:41",
-    "title": "DW Contacts"
   },
   {
     "slug": "rise-of-kingdoms",
@@ -28322,13 +28770,6 @@
     "title": "BLUE LOCK PWC"
   },
   {
-    "slug": "fx-file-explorer",
-    "url": "https://apkmody.com/apps/fx-file-explorer",
-    "wp_id": 26212,
-    "modified": "2026-04-10T00:56:06",
-    "title": "FX File Explorer"
-  },
-  {
     "slug": "fancy-pants-adventures",
     "url": "https://apkmody.com/games/fancy-pants-adventures",
     "wp_id": 13046,
@@ -28348,20 +28789,6 @@
     "wp_id": 7939,
     "modified": "2026-04-09T19:38:22",
     "title": "Eternal Evolution"
-  },
-  {
-    "slug": "herond-browser",
-    "url": "https://apkmody.com/apps/herond-browser",
-    "wp_id": 26080,
-    "modified": "2026-04-09T14:47:54",
-    "title": "Herond Browser"
-  },
-  {
-    "slug": "powerlust-action-rpg-offline",
-    "url": "https://apkmody.com/games/powerlust-action-rpg-offline",
-    "wp_id": 26003,
-    "modified": "2026-04-09T09:31:23",
-    "title": "Powerlust: Action RPG Offline"
   },
   {
     "slug": "talkatone",
@@ -28483,20 +28910,6 @@
     "title": "Property Brothers Home Design"
   },
   {
-    "slug": "killapps",
-    "url": "https://apkmody.com/apps/killapps",
-    "wp_id": 26036,
-    "modified": "2026-04-07T17:14:47",
-    "title": "KillApps"
-  },
-  {
-    "slug": "meadowfell",
-    "url": "https://apkmody.com/games/meadowfell",
-    "wp_id": 26278,
-    "modified": "2026-04-07T10:46:11",
-    "title": "Meadowfell"
-  },
-  {
     "slug": "dungeon-knight",
     "url": "https://apkmody.com/games/dungeon-knight",
     "wp_id": 13077,
@@ -28579,13 +28992,6 @@
     "wp_id": 5802,
     "modified": "2026-04-04T07:29:38",
     "title": "Woodoku"
-  },
-  {
-    "slug": "pocket-rogues-ultimate",
-    "url": "https://apkmody.com/games/pocket-rogues-ultimate",
-    "wp_id": 25525,
-    "modified": "2026-04-03T23:31:55",
-    "title": "Pocket Rogues: Ultimate"
   },
   {
     "slug": "zombie-defense-war-z-survival",
@@ -28980,13 +29386,6 @@
     "title": "Harvest Town"
   },
   {
-    "slug": "all-video-downloader-v",
-    "url": "https://apkmody.com/apps/all-video-downloader-v",
-    "wp_id": 25708,
-    "modified": "2026-03-23T11:03:21",
-    "title": "All Video Downloader &#8211; V"
-  },
-  {
     "slug": "nimo-tv",
     "url": "https://apkmody.com/apps/nimo-tv",
     "wp_id": 6198,
@@ -29006,13 +29405,6 @@
     "wp_id": 25382,
     "modified": "2026-03-23T08:08:43",
     "title": "Codenames"
-  },
-  {
-    "slug": "out-there-edition",
-    "url": "https://apkmody.com/games/out-there-edition",
-    "wp_id": 25556,
-    "modified": "2026-03-21T17:36:26",
-    "title": "Out There: Ω Edition"
   },
   {
     "slug": "gaia-gps",
@@ -29400,13 +29792,6 @@
     "title": "Stickman Warriors"
   },
   {
-    "slug": "swift-backup",
-    "url": "https://apkmody.com/apps/swift-backup",
-    "wp_id": 25998,
-    "modified": "2026-03-07T17:35:28",
-    "title": "Swift Backup"
-  },
-  {
     "slug": "save-the-pets",
     "url": "https://apkmody.com/games/save-the-pets",
     "wp_id": 8928,
@@ -29461,13 +29846,6 @@
     "wp_id": 23071,
     "modified": "2026-03-05T00:06:33",
     "title": "Ghost Invasion: Idle Hunter"
-  },
-  {
-    "slug": "the-baby-in-yellow",
-    "url": "https://apkmody.com/games/the-baby-in-yellow",
-    "wp_id": 25756,
-    "modified": "2026-03-04T20:48:23",
-    "title": "The Baby In Yellow"
   },
   {
     "slug": "castmix-podcast-and-radio",
@@ -29610,25 +29988,11 @@
     "title": "Tomb Raider Reloaded"
   },
   {
-    "slug": "dragon-legend-z-lite",
-    "url": "https://apkmody.com/games/dragon-legend-z-lite",
-    "wp_id": 25968,
-    "modified": "2026-02-26T14:45:38",
-    "title": "Dragon Legend Z Lite"
-  },
-  {
     "slug": "tegra",
     "url": "https://apkmody.com/games/tegra",
     "wp_id": 9408,
     "modified": "2026-02-25T21:18:03",
     "title": "TEGRA"
-  },
-  {
-    "slug": "flight-simulator-advanced",
-    "url": "https://apkmody.com/games/flight-simulator-advanced",
-    "wp_id": 25701,
-    "modified": "2026-02-25T08:53:59",
-    "title": "Flight Simulator Advanced"
   },
   {
     "slug": "legend-of-the-skyfish-2",
@@ -29643,13 +30007,6 @@
     "wp_id": 22973,
     "modified": "2026-02-24T14:07:48",
     "title": "Restaurant Simulator 3D Bar"
-  },
-  {
-    "slug": "torerowa",
-    "url": "https://apkmody.com/games/torerowa",
-    "wp_id": 25716,
-    "modified": "2026-02-24T13:06:17",
-    "title": "TOREROWA"
   },
   {
     "slug": "cat-fred-evil-pet",
@@ -29925,13 +30282,6 @@
     "title": "Morecast"
   },
   {
-    "slug": "disney-frozen-adventures",
-    "url": "https://apkmody.com/games/disney-frozen-adventures",
-    "wp_id": 25742,
-    "modified": "2026-02-02T17:49:14",
-    "title": "Disney Frozen Adventures"
-  },
-  {
     "slug": "funny-fighters-battle-royale",
     "url": "https://apkmody.com/games/funny-fighters-battle-royale",
     "wp_id": 13102,
@@ -29995,13 +30345,6 @@
     "title": "Steel And Flesh 2"
   },
   {
-    "slug": "blend-photos",
-    "url": "https://apkmody.com/apps/blend-photos",
-    "wp_id": 25609,
-    "modified": "2026-01-28T15:52:49",
-    "title": "Blend Photos"
-  },
-  {
     "slug": "havenless",
     "url": "https://apkmody.com/games/havenless",
     "wp_id": 19516,
@@ -30042,13 +30385,6 @@
     "wp_id": 5994,
     "modified": "2026-01-27T09:19:19",
     "title": "TuneIn Pro"
-  },
-  {
-    "slug": "bright-memory-infinite",
-    "url": "https://apkmody.com/games/bright-memory-infinite",
-    "wp_id": 26172,
-    "modified": "2026-01-27T09:15:14",
-    "title": "Bright Memory: Infinite"
   },
   {
     "slug": "ai-note-taker",
@@ -30350,13 +30686,6 @@
     "wp_id": 6903,
     "modified": "2026-01-06T20:27:20",
     "title": "RAR"
-  },
-  {
-    "slug": "project-breach-2",
-    "url": "https://apkmody.com/games/project-breach-2",
-    "wp_id": 25843,
-    "modified": "2026-01-06T15:19:45",
-    "title": "Project Breach 2"
   },
   {
     "slug": "headless-knight-idle-rpg",
@@ -30667,13 +30996,6 @@
     "title": "Ultimate Bowmasters"
   },
   {
-    "slug": "idle-mining-factory-tycoon",
-    "url": "https://apkmody.com/games/idle-mining-factory-tycoon",
-    "wp_id": 26180,
-    "modified": "2025-12-04T15:35:53",
-    "title": "Idle Mining Factory Tycoon"
-  },
-  {
     "slug": "pro-wrestler-story",
     "url": "https://apkmody.com/games/pro-wrestler-story",
     "wp_id": 24318,
@@ -30751,13 +31073,6 @@
     "title": "A Diary Of Darkness"
   },
   {
-    "slug": "young-detective-the-mutation",
-    "url": "https://apkmody.com/games/young-detective-the-mutation",
-    "wp_id": 25739,
-    "modified": "2025-11-29T17:37:29",
-    "title": "Young Detective: The Mutation"
-  },
-  {
     "slug": "door-kickers",
     "url": "https://apkmody.com/games/door-kickers",
     "wp_id": 11827,
@@ -30812,13 +31127,6 @@
     "wp_id": 24664,
     "modified": "2025-11-27T08:32:15",
     "title": "STARSEED: Asnia Trigger"
-  },
-  {
-    "slug": "aarik-and-the-ruined-kingdom",
-    "url": "https://apkmody.com/games/aarik-and-the-ruined-kingdom",
-    "wp_id": 25586,
-    "modified": "2025-11-25T21:16:53",
-    "title": "Aarik And The Ruined Kingdom"
   },
   {
     "slug": "mr-meat-2-prison-break",
@@ -31192,13 +31500,6 @@
     "title": "Beholder 2"
   },
   {
-    "slug": "idle-pocket-planet",
-    "url": "https://apkmody.com/games/idle-pocket-planet",
-    "wp_id": 25745,
-    "modified": "2025-11-01T09:28:51",
-    "title": "Idle Pocket Planet"
-  },
-  {
     "slug": "immortal-wars-battler-rpg",
     "url": "https://apkmody.com/games/immortal-wars-battler-rpg",
     "wp_id": 16851,
@@ -31351,13 +31652,6 @@
     "wp_id": 11335,
     "modified": "2025-10-28T17:16:26",
     "title": "Jewel Vampire Castle"
-  },
-  {
-    "slug": "professor-doctor-jetpack",
-    "url": "https://apkmody.com/games/professor-doctor-jetpack",
-    "wp_id": 25837,
-    "modified": "2025-10-28T08:31:39",
-    "title": "Professor Doctor Jetpack"
   },
   {
     "slug": "mars-mars",
@@ -31542,13 +31836,6 @@
     "title": "Slime Labs 3"
   },
   {
-    "slug": "driving-school-simulator-2025",
-    "url": "https://apkmody.com/games/driving-school-simulator-2025",
-    "wp_id": 25901,
-    "modified": "2025-10-21T14:16:38",
-    "title": "Driving School Simulator 2025"
-  },
-  {
     "slug": "animal-shelter-simulator",
     "url": "https://apkmody.com/games/animal-shelter-simulator",
     "wp_id": 19028,
@@ -31689,13 +31976,6 @@
     "title": "Raft Survival: Desert Nomad"
   },
   {
-    "slug": "guncho",
-    "url": "https://apkmody.com/games/guncho",
-    "wp_id": 25752,
-    "modified": "2025-10-15T14:43:06",
-    "title": "Guncho"
-  },
-  {
     "slug": "vendir-plague-of-lies",
     "url": "https://apkmody.com/games/vendir-plague-of-lies",
     "wp_id": 13315,
@@ -31724,20 +32004,6 @@
     "title": "Famous Blox Fashion: Star Show"
   },
   {
-    "slug": "monster-diy-mix-beats",
-    "url": "https://apkmody.com/games/monster-diy-mix-beats",
-    "wp_id": 25534,
-    "modified": "2025-10-14T20:42:26",
-    "title": "Monster DIY: Mix Beats"
-  },
-  {
-    "slug": "hotties-merge",
-    "url": "https://apkmody.com/games/hotties-merge",
-    "wp_id": 25670,
-    "modified": "2025-10-14T15:00:59",
-    "title": "Hotties Merge"
-  },
-  {
     "slug": "dust-lands",
     "url": "https://apkmody.com/games/dust-lands",
     "wp_id": 24544,
@@ -31757,13 +32023,6 @@
     "wp_id": 8221,
     "modified": "2025-10-14T07:42:51",
     "title": "Sonic the Hedgehog Classic"
-  },
-  {
-    "slug": "draconian-conquest-of-dawnbird",
-    "url": "https://apkmody.com/games/draconian-conquest-of-dawnbird",
-    "wp_id": 26163,
-    "modified": "2025-10-13T21:38:37",
-    "title": "Draconian:Conquest of Dawnbird"
   },
   {
     "slug": "ai-art-generator",
@@ -31794,13 +32053,6 @@
     "title": "European War 4 : Napoleon"
   },
   {
-    "slug": "inside-out-thought-bubbles",
-    "url": "https://apkmody.com/games/inside-out-thought-bubbles",
-    "wp_id": 25826,
-    "modified": "2025-10-11T08:59:44",
-    "title": "Inside Out Thought Bubbles"
-  },
-  {
     "slug": "heavy-machines-construction",
     "url": "https://apkmody.com/games/heavy-machines-construction",
     "wp_id": 10691,
@@ -31813,13 +32065,6 @@
     "wp_id": 6523,
     "modified": "2025-10-10T08:11:16",
     "title": "Rallycross Track Racing"
-  },
-  {
-    "slug": "drivers-highway-hero",
-    "url": "https://apkmody.com/games/drivers-highway-hero",
-    "wp_id": 25874,
-    "modified": "2025-10-09T23:41:55",
-    "title": "Drivers: Highway Hero"
   },
   {
     "slug": "my-boy",
@@ -32025,13 +32270,6 @@
     "title": "OPlayer"
   },
   {
-    "slug": "street-fighter-iv-champion-edition",
-    "url": "https://apkmody.com/games/street-fighter-iv-champion-edition",
-    "wp_id": 25628,
-    "modified": "2025-09-16T17:22:09",
-    "title": "Street Fighter IV Champion Edition"
-  },
-  {
     "slug": "bug-heroes-2-premium",
     "url": "https://apkmody.com/games/bug-heroes-2-premium",
     "wp_id": 17433,
@@ -32116,13 +32354,6 @@
     "title": "Criminal Case: Travel in Time"
   },
   {
-    "slug": "criminal-case-supernatural",
-    "url": "https://apkmody.com/games/criminal-case-supernatural",
-    "wp_id": 25640,
-    "modified": "2025-08-30T10:31:50",
-    "title": "Criminal Case: Supernatural"
-  },
-  {
     "slug": "criminal-case-the-conspiracy",
     "url": "https://apkmody.com/games/criminal-case-the-conspiracy",
     "wp_id": 9755,
@@ -32142,13 +32373,6 @@
     "wp_id": 24597,
     "modified": "2025-08-29T20:23:48",
     "title": "Rusty Lake Paradise"
-  },
-  {
-    "slug": "zombie-highway-2",
-    "url": "https://apkmody.com/games/zombie-highway-2",
-    "wp_id": 25894,
-    "modified": "2025-08-29T06:33:59",
-    "title": "Zombie Highway 2"
   },
   {
     "slug": "payback-2",
@@ -32191,13 +32415,6 @@
     "wp_id": 18562,
     "modified": "2025-08-23T23:23:55",
     "title": "ReLens Camera"
-  },
-  {
-    "slug": "king-of-dragon-pass",
-    "url": "https://apkmody.com/games/king-of-dragon-pass",
-    "wp_id": 25696,
-    "modified": "2025-08-22T20:37:19",
-    "title": "King of Dragon Pass"
   },
   {
     "slug": "tasty-blue",
@@ -32389,25 +32606,11 @@
     "title": "Lovebrush Chronicles"
   },
   {
-    "slug": "suicide-guy-the-lost-dreams",
-    "url": "https://apkmody.com/games/suicide-guy-the-lost-dreams",
-    "wp_id": 26235,
-    "modified": "2025-07-17T09:06:43",
-    "title": "Suicide Guy: The Lost Dreams"
-  },
-  {
     "slug": "jorels-brother-the-game",
     "url": "https://apkmody.com/games/jorels-brother-the-game",
     "wp_id": 13448,
     "modified": "2025-07-15T20:45:56",
     "title": "Jorel’s Brother: The Game"
-  },
-  {
-    "slug": "cat-chaos-prankster",
-    "url": "https://apkmody.com/games/cat-chaos-prankster",
-    "wp_id": 25926,
-    "modified": "2025-07-15T17:51:18",
-    "title": "Cat Chaos: Prankster"
   },
   {
     "slug": "majesty-the-fantasy-kingdom",
@@ -32522,20 +32725,6 @@
     "title": "Craft The World"
   },
   {
-    "slug": "gunbrick-reloaded",
-    "url": "https://apkmody.com/games/gunbrick-reloaded",
-    "wp_id": 25706,
-    "modified": "2025-06-23T16:55:14",
-    "title": "Gunbrick: Reloaded"
-  },
-  {
-    "slug": "konsui-fighter",
-    "url": "https://apkmody.com/games/konsui-fighter",
-    "wp_id": 25875,
-    "modified": "2025-06-22T22:27:28",
-    "title": "KONSUI FIGHTER"
-  },
-  {
     "slug": "youtubers-life-2",
     "url": "https://apkmody.com/games/youtubers-life-2",
     "wp_id": 8809,
@@ -32583,13 +32772,6 @@
     "wp_id": 11376,
     "modified": "2025-06-05T08:20:54",
     "title": "Vange : Idle RPG"
-  },
-  {
-    "slug": "tile-tales-pirate",
-    "url": "https://apkmody.com/games/tile-tales-pirate",
-    "wp_id": 25919,
-    "modified": "2025-06-04T20:45:38",
-    "title": "Tile Tales: Pirate"
   },
   {
     "slug": "airship-knights",
@@ -32711,13 +32893,6 @@
     "title": "Hotel Fever Tycoon"
   },
   {
-    "slug": "muay-thai-fitness-workout",
-    "url": "https://apkmody.com/apps/muay-thai-fitness-workout",
-    "wp_id": 26109,
-    "modified": "2025-04-17T08:43:07",
-    "title": "Muay Thai Fitness &amp; Workout"
-  },
-  {
     "slug": "n0va-desktop",
     "url": "https://apkmody.com/apps/n0va-desktop",
     "wp_id": 16338,
@@ -32809,46 +32984,11 @@
     "title": "Bubble Level PRO"
   },
   {
-    "slug": "the-bards-tale",
-    "url": "https://apkmody.com/games/the-bards-tale",
-    "wp_id": 25863,
-    "modified": "2025-02-17T08:54:48",
-    "title": "The Bard&#8217;s Tale"
-  },
-  {
-    "slug": "kovoclak",
-    "url": "https://apkmody.com/games/kovoclak",
-    "wp_id": 26256,
-    "modified": "2025-02-04T10:27:01",
-    "title": "Kovoclak"
-  },
-  {
-    "slug": "dqm-the-dark-prince",
-    "url": "https://apkmody.com/games/dqm-the-dark-prince",
-    "wp_id": 26252,
-    "modified": "2025-02-04T10:09:50",
-    "title": "DQM: The Dark Prince"
-  },
-  {
     "slug": "escape-room-the-lost-files",
     "url": "https://apkmody.com/games/escape-room-the-lost-files",
     "wp_id": 23907,
     "modified": "2025-02-03T17:37:25",
     "title": "Escape Room: The Lost Files"
-  },
-  {
-    "slug": "paths-beatrices-adventure",
-    "url": "https://apkmody.com/games/paths-beatrices-adventure",
-    "wp_id": 25809,
-    "modified": "2025-02-02T13:56:48",
-    "title": "Paths: Beatrice&#8217;s Adventure"
-  },
-  {
-    "slug": "the-trail",
-    "url": "https://apkmody.com/games/the-trail",
-    "wp_id": 25651,
-    "modified": "2025-02-02T13:46:04",
-    "title": "The Trail"
   },
   {
     "slug": "fimo",
@@ -32879,13 +33019,6 @@
     "title": "Hide N Seek Adventure"
   },
   {
-    "slug": "isle-of-arrows",
-    "url": "https://apkmody.com/games/isle-of-arrows",
-    "wp_id": 26194,
-    "modified": "2025-01-24T09:10:44",
-    "title": "Isle of Arrows"
-  },
-  {
     "slug": "maybe-interactive-stories",
     "url": "https://apkmody.com/games/maybe-interactive-stories",
     "wp_id": 5547,
@@ -32907,60 +33040,11 @@
     "title": "Craft Build Block"
   },
   {
-    "slug": "hero-of-the-kingdom-tales-3",
-    "url": "https://apkmody.com/games/hero-of-the-kingdom-tales-3",
-    "wp_id": 26106,
-    "modified": "2025-01-17T15:58:33",
-    "title": "Hero of the Kingdom: Tales 3"
-  },
-  {
-    "slug": "hero-of-the-kingdom-tales-2",
-    "url": "https://apkmody.com/games/hero-of-the-kingdom-tales-2",
-    "wp_id": 26103,
-    "modified": "2025-01-17T11:13:39",
-    "title": "Hero of the Kingdom: Tales 2"
-  },
-  {
-    "slug": "hero-of-the-kingdom-tales-1",
-    "url": "https://apkmody.com/games/hero-of-the-kingdom-tales-1",
-    "wp_id": 26099,
-    "modified": "2025-01-17T10:15:34",
-    "title": "Hero of the Kingdom: Tales 1"
-  },
-  {
     "slug": "makeover-makeup-asmr",
     "url": "https://apkmody.com/games/makeover-makeup-asmr",
     "wp_id": 8934,
     "modified": "2025-01-16T19:35:43",
     "title": "Makeover &amp; Makeup ASMR"
-  },
-  {
-    "slug": "guitar-tuner",
-    "url": "https://apkmody.com/apps/guitar-tuner",
-    "wp_id": 26058,
-    "modified": "2025-01-16T09:25:16",
-    "title": "Guitar Tuner"
-  },
-  {
-    "slug": "turnip-boy-robs-a-bank",
-    "url": "https://apkmody.com/games/turnip-boy-robs-a-bank",
-    "wp_id": 26057,
-    "modified": "2025-01-16T09:13:05",
-    "title": "Turnip Boy Robs a Bank"
-  },
-  {
-    "slug": "siralim-ultimate",
-    "url": "https://apkmody.com/games/siralim-ultimate",
-    "wp_id": 25914,
-    "modified": "2025-01-10T09:50:53",
-    "title": "Siralim Ultimate"
-  },
-  {
-    "slug": "cat-quest",
-    "url": "https://apkmody.com/games/cat-quest",
-    "wp_id": 25911,
-    "modified": "2025-01-10T09:29:35",
-    "title": "Cat Quest"
   },
   {
     "slug": "booty-farm",
@@ -32975,62 +33059,6 @@
     "wp_id": 8657,
     "modified": "2025-01-08T20:04:06",
     "title": "Survival and Rise: Being Alive"
-  },
-  {
-    "slug": "gubbins",
-    "url": "https://apkmody.com/games/gubbins",
-    "wp_id": 25870,
-    "modified": "2025-01-08T15:25:30",
-    "title": "GUBBINS"
-  },
-  {
-    "slug": "crying-suns",
-    "url": "https://apkmody.com/games/crying-suns",
-    "wp_id": 25823,
-    "modified": "2025-01-06T15:44:46",
-    "title": "Crying Suns"
-  },
-  {
-    "slug": "among-gods",
-    "url": "https://apkmody.com/games/among-gods",
-    "wp_id": 25791,
-    "modified": "2025-01-04T10:40:08",
-    "title": "Among Gods!"
-  },
-  {
-    "slug": "unforeseen-incidents",
-    "url": "https://apkmody.com/games/unforeseen-incidents",
-    "wp_id": 25674,
-    "modified": "2024-12-28T16:48:25",
-    "title": "Unforeseen Incidents"
-  },
-  {
-    "slug": "the-counterfeit-bank-simulator",
-    "url": "https://apkmody.com/games/the-counterfeit-bank-simulator",
-    "wp_id": 25636,
-    "modified": "2024-12-28T08:16:23",
-    "title": "The Counterfeit Bank Simulator"
-  },
-  {
-    "slug": "sanitarium",
-    "url": "https://apkmody.com/games/sanitarium",
-    "wp_id": 25641,
-    "modified": "2024-12-27T09:30:04",
-    "title": "Sanitarium"
-  },
-  {
-    "slug": "train-crisis-plus",
-    "url": "https://apkmody.com/games/train-crisis-plus",
-    "wp_id": 25603,
-    "modified": "2024-12-25T11:36:27",
-    "title": "Train Crisis Plus"
-  },
-  {
-    "slug": "homo-machina",
-    "url": "https://apkmody.com/games/homo-machina",
-    "wp_id": 25595,
-    "modified": "2024-12-25T10:11:09",
-    "title": "Homo Machina"
   },
   {
     "slug": "love-vastards",
