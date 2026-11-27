@@ -1,5 +1,82 @@
 [
   {
+    "slug": "poster-maker",
+    "url": "https://apkmody.com/apps/poster-maker",
+    "wp_id": 23295,
+    "modified": "2026-11-27T16:11:34",
+    "title": "Poster Maker"
+  },
+  {
+    "slug": "hanzii",
+    "url": "https://apkmody.com/apps/hanzii",
+    "wp_id": 19184,
+    "modified": "2026-11-27T16:11:07",
+    "title": "Hanzii"
+  },
+  {
+    "slug": "money-lover",
+    "url": "https://apkmody.com/apps/money-lover",
+    "wp_id": 6444,
+    "modified": "2026-11-27T16:00:28",
+    "title": "Money Lover"
+  },
+  {
+    "slug": "vocabulary",
+    "url": "https://apkmody.com/apps/vocabulary",
+    "wp_id": 20889,
+    "modified": "2026-11-27T15:57:27",
+    "title": "Vocabulary"
+  },
+  {
+    "slug": "quetta-video-private-browser",
+    "url": "https://apkmody.com/apps/quetta-video-private-browser",
+    "wp_id": 119687,
+    "modified": "2026-11-27T15:56:57",
+    "title": "Quetta &#8211; Video Private Browser"
+  },
+  {
+    "slug": "motivation",
+    "url": "https://apkmody.com/apps/motivation",
+    "wp_id": 14316,
+    "modified": "2026-11-27T15:56:24",
+    "title": "Motivation"
+  },
+  {
+    "slug": "meme-generator-pro",
+    "url": "https://apkmody.com/apps/meme-generator-pro",
+    "wp_id": 5616,
+    "modified": "2026-11-27T15:55:54",
+    "title": "Meme Generator PRO"
+  },
+  {
+    "slug": "manga-translator-ai-mangu",
+    "url": "https://apkmody.com/apps/manga-translator-ai-mangu",
+    "wp_id": 120803,
+    "modified": "2026-11-27T15:55:23",
+    "title": "Manga Translator AI: Mangu"
+  },
+  {
+    "slug": "talking-translator-languages",
+    "url": "https://apkmody.com/apps/talking-translator-languages",
+    "wp_id": 120867,
+    "modified": "2026-11-27T15:54:49",
+    "title": "Talking Translator &#8211; Languages"
+  },
+  {
+    "slug": "boldvoice-accent-training",
+    "url": "https://apkmody.com/apps/boldvoice-accent-training",
+    "wp_id": 119721,
+    "modified": "2026-11-27T15:53:56",
+    "title": "BoldVoice &#8211; Accent Training"
+  },
+  {
+    "slug": "sketchar",
+    "url": "https://apkmody.com/apps/sketchar",
+    "wp_id": 230,
+    "modified": "2026-11-27T15:53:10",
+    "title": "SketchAR"
+  },
+  {
     "slug": "toontap",
     "url": "https://apkmody.com/apps/toontap",
     "wp_id": 25659,
@@ -1540,6 +1617,13 @@
     "title": "RapidTV"
   },
   {
+    "slug": "calengoo",
+    "url": "https://apkmody.com/apps/calengoo",
+    "wp_id": 465,
+    "modified": "2026-11-25T15:45:34",
+    "title": "CalenGoo"
+  },
+  {
     "slug": "oh-private-web-browser",
     "url": "https://apkmody.com/apps/oh-private-web-browser",
     "wp_id": 29880,
@@ -1883,13 +1967,6 @@
     "title": "Possessions"
   },
   {
-    "slug": "baldurs-gate-dark-alliance",
-    "url": "https://apkmody.com/games/baldurs-gate-dark-alliance",
-    "wp_id": 27315,
-    "modified": "2026-11-22T22:53:56",
-    "title": "Baldur&#8217;s Gate: Dark Alliance"
-  },
-  {
     "slug": "game-of-thrones-kingsroad",
     "url": "https://apkmody.com/games/game-of-thrones-kingsroad",
     "wp_id": 27498,
@@ -2091,13 +2168,6 @@
     "wp_id": 27537,
     "modified": "2026-11-22T22:05:20",
     "title": "Last Survivor: Survival Pro"
-  },
-  {
-    "slug": "kings-league-ii",
-    "url": "https://apkmody.com/games/kings-league-ii",
-    "wp_id": 27525,
-    "modified": "2026-11-22T22:04:37",
-    "title": "King&#8217;s League II"
   },
   {
     "slug": "seven-endgame",
@@ -8974,13 +9044,6 @@
     "title": "Daylio Journal"
   },
   {
-    "slug": "motivation",
-    "url": "https://apkmody.com/apps/motivation",
-    "wp_id": 14316,
-    "modified": "2026-11-15T02:38:17",
-    "title": "Motivation"
-  },
-  {
     "slug": "edjing-mix",
     "url": "https://apkmody.com/apps/edjing-mix",
     "wp_id": 22765,
@@ -9042,13 +9105,6 @@
     "wp_id": 121842,
     "modified": "2026-11-15T02:27:26",
     "title": "Tap To Translate Screen"
-  },
-  {
-    "slug": "vocabulary",
-    "url": "https://apkmody.com/apps/vocabulary",
-    "wp_id": 20889,
-    "modified": "2026-11-15T02:26:03",
-    "title": "Vocabulary"
   },
   {
     "slug": "youcam-perfect",
@@ -10848,6 +10904,13 @@
     "wp_id": 8460,
     "modified": "2026-11-11T16:50:46",
     "title": "JibJab"
+  },
+  {
+    "slug": "carinfo",
+    "url": "https://apkmody.com/apps/carinfo",
+    "wp_id": 16191,
+    "modified": "2026-11-11T16:50:14",
+    "title": "CarInfo"
   },
   {
     "slug": "lifesum",
@@ -12992,13 +13055,6 @@
     "title": "Sofascore"
   },
   {
-    "slug": "meme-generator-pro",
-    "url": "https://apkmody.com/apps/meme-generator-pro",
-    "wp_id": 5616,
-    "modified": "2026-11-06T18:42:20",
-    "title": "Meme Generator PRO"
-  },
-  {
     "slug": "my-talking-tom-friends",
     "url": "https://apkmody.com/games/my-talking-tom-friends",
     "wp_id": 862,
@@ -13811,13 +13867,6 @@
     "title": "My Town World"
   },
   {
-    "slug": "sketchar",
-    "url": "https://apkmody.com/apps/sketchar",
-    "wp_id": 230,
-    "modified": "2026-11-04T13:55:02",
-    "title": "SketchAR"
-  },
-  {
     "slug": "aptoide",
     "url": "https://apkmody.com/apps/aptoide",
     "wp_id": 268,
@@ -14574,18 +14623,18 @@
     "title": "RACE: Rocket Arena Car Extreme"
   },
   {
-    "slug": "quetta-video-private-browser",
-    "url": "https://apkmody.com/apps/quetta-video-private-browser",
-    "wp_id": 119687,
-    "modified": "2026-10-05T17:18:29",
-    "title": "Quetta &#8211; Video Private Browser"
-  },
-  {
     "slug": "lark-player",
     "url": "https://apkmody.com/apps/lark-player",
     "wp_id": 7921,
     "modified": "2026-10-05T17:14:29",
     "title": "Lark Player"
+  },
+  {
+    "slug": "downhill-racer",
+    "url": "https://apkmody.com/games/downhill-racer",
+    "wp_id": 121254,
+    "modified": "2026-10-05T17:10:15",
+    "title": "Downhill Racer"
   },
   {
     "slug": "always-on-display-xpath",
@@ -14859,13 +14908,6 @@
     "wp_id": 119456,
     "modified": "2026-10-02T17:43:29",
     "title": "Farm Land"
-  },
-  {
-    "slug": "boldvoice-accent-training",
-    "url": "https://apkmody.com/apps/boldvoice-accent-training",
-    "wp_id": 119721,
-    "modified": "2026-10-02T17:37:51",
-    "title": "BoldVoice &#8211; Accent Training"
   },
   {
     "slug": "moreshort-dramas-stories",
@@ -15146,13 +15188,6 @@
     "wp_id": 9695,
     "modified": "2026-09-29T17:19:23",
     "title": "TickTick"
-  },
-  {
-    "slug": "talking-translator-languages",
-    "url": "https://apkmody.com/apps/talking-translator-languages",
-    "wp_id": 120867,
-    "modified": "2026-09-29T17:18:55",
-    "title": "Talking Translator &#8211; Languages"
   },
   {
     "slug": "shadow-hunter-offline-games",
@@ -18998,13 +19033,6 @@
     "title": "Zueira’s Voice: Text to Speech"
   },
   {
-    "slug": "ai-enlarger-image-upscaler",
-    "url": "https://apkmody.com/apps/ai-enlarger-image-upscaler",
-    "wp_id": 121252,
-    "modified": "2026-09-22T10:32:30",
-    "title": "AI Enlarger: Image Upscaler"
-  },
-  {
     "slug": "alcogram-sober-alcohol-tracker",
     "url": "https://apkmody.com/apps/alcogram-sober-alcohol-tracker",
     "wp_id": 121258,
@@ -20846,6 +20874,13 @@
     "title": "Bio Ops 3D"
   },
   {
+    "slug": "talkie-soulful-ai",
+    "url": "https://apkmody.com/games/talkie-soulful-ai",
+    "wp_id": 14650,
+    "modified": "2026-09-18T23:25:20",
+    "title": "Talkie: Soulful AI"
+  },
+  {
     "slug": "storybeat",
     "url": "https://apkmody.com/apps/storybeat",
     "wp_id": 14598,
@@ -21754,13 +21789,6 @@
     "wp_id": 120805,
     "modified": "2026-09-18T01:13:03",
     "title": "My Earthquake Alerts &#8211; Map"
-  },
-  {
-    "slug": "manga-translator-ai-mangu",
-    "url": "https://apkmody.com/apps/manga-translator-ai-mangu",
-    "wp_id": 120803,
-    "modified": "2026-09-18T01:06:58",
-    "title": "Manga Translator AI: Mangu"
   },
   {
     "slug": "weather-forecast-live-radar",
@@ -24507,13 +24535,6 @@
     "title": "RiMusic"
   },
   {
-    "slug": "poster-maker",
-    "url": "https://apkmody.com/apps/poster-maker",
-    "wp_id": 23295,
-    "modified": "2026-09-12T23:35:43",
-    "title": "Poster Maker"
-  },
-  {
     "slug": "car-launcher-pro",
     "url": "https://apkmody.com/apps/car-launcher-pro",
     "wp_id": 23300,
@@ -24864,6 +24885,13 @@
     "title": "AR Ruler App: Tape Measure Cam"
   },
   {
+    "slug": "video-player-all-format",
+    "url": "https://apkmody.com/apps/video-player-all-format",
+    "wp_id": 119716,
+    "modified": "2026-09-10T21:49:20",
+    "title": "Video Player All Format"
+  },
+  {
     "slug": "clone-app-parallel-dual-space",
     "url": "https://apkmody.com/apps/clone-app-parallel-dual-space",
     "wp_id": 119724,
@@ -24883,13 +24911,6 @@
     "wp_id": 119733,
     "modified": "2026-09-10T21:36:57",
     "title": "Alarm clock"
-  },
-  {
-    "slug": "money-lover",
-    "url": "https://apkmody.com/apps/money-lover",
-    "wp_id": 6444,
-    "modified": "2026-09-10T20:14:51",
-    "title": "Money Lover"
   },
   {
     "slug": "csr-racing-2",
@@ -25235,13 +25256,6 @@
     "title": "My Supermarket Journey"
   },
   {
-    "slug": "rider-stunt-bike-racing",
-    "url": "https://apkmody.com/games/rider-stunt-bike-racing",
-    "wp_id": 118139,
-    "modified": "2026-09-06T23:44:10",
-    "title": "Rider – Stunt Bike Racing"
-  },
-  {
     "slug": "3d-pool-ball",
     "url": "https://apkmody.com/games/3d-pool-ball",
     "wp_id": 118151,
@@ -25492,6 +25506,13 @@
     "wp_id": 118967,
     "modified": "2026-09-05T00:15:29",
     "title": "Tadoku: Learn Japanese Reading"
+  },
+  {
+    "slug": "virtual-master-android-clone",
+    "url": "https://apkmody.com/apps/virtual-master-android-clone",
+    "wp_id": 119030,
+    "modified": "2026-09-05T00:11:47",
+    "title": "Virtual Master &#8211; Android Clone"
   },
   {
     "slug": "stretch-exercises-flex-fit",
@@ -26710,13 +26731,6 @@
     "wp_id": 5578,
     "modified": "2026-05-05T16:49:12",
     "title": "Tumblr"
-  },
-  {
-    "slug": "hanzii",
-    "url": "https://apkmody.com/apps/hanzii",
-    "wp_id": 19184,
-    "modified": "2026-05-05T16:33:39",
-    "title": "Hanzii"
   },
   {
     "slug": "star-trek-fleet-command",

@@ -1,12 +1,12 @@
 {
-  "merged_at": "2026-11-27T01:03:13.316Z",
+  "merged_at": "2026-11-27T09:40:49.954Z",
   "sources": {
     "an1": {
-      "ok": 12484,
+      "ok": 12729,
       "fail": 0,
       "skipped_not_app": 65,
       "fallback_wp": 0,
-      "lines": 12549
+      "lines": 12794
     },
     "apkmody-retry": {
       "ok": 1802,
@@ -16,53 +16,53 @@
       "lines": 1802
     },
     "apkmody": {
-      "ok": 10266,
+      "ok": 10332,
       "fail": 0,
       "skipped_not_app": 0,
-      "fallback_wp": 6063,
-      "lines": 10266
+      "fallback_wp": 6116,
+      "lines": 10332
     },
     "modyolo": {
-      "ok": 24319,
+      "ok": 24664,
       "fail": 2,
       "skipped_not_app": 0,
       "fallback_wp": 0,
-      "lines": 24321
+      "lines": 24666
     }
   },
-  "server_entries": 48871,
-  "merged_entries": 30862,
-  "duplicates_merged": 18009,
+  "server_entries": 49527,
+  "merged_entries": 30872,
+  "duplicates_merged": 18655,
   "skipped_invalid": [],
   "by_type": {
-    "game": 22833,
-    "app": 8029,
+    "game": 22844,
+    "app": 8028,
     "unknown": 0
   },
   "validation": {
-    "missing_version": 244,
-    "missing_size": 324,
-    "missing_package": 10744,
-    "missing_icon": 561,
+    "missing_version": 242,
+    "missing_size": 322,
+    "missing_package": 10746,
+    "missing_icon": 560,
     "needs_review": 977,
     "by_source_missing_version": {
-      "apkmody": 99,
+      "apkmody": 97,
       "modyolo": 158,
       "an1": 0
     },
     "by_source_missing_size": {
-      "apkmody": 101,
+      "apkmody": 99,
       "modyolo": 238,
       "an1": 0
     }
   },
   "by_sources": {
+    "an1+apkmody+modyolo": 7,
     "an1+apkmody": 880,
     "apkmody": 4727,
-    "an1": 3327,
-    "an1+modyolo": 19,
     "apkmody+modyolo": 71,
-    "modyolo": 21831,
-    "an1+apkmody+modyolo": 7
+    "modyolo": 21841,
+    "an1": 3327,
+    "an1+modyolo": 19
   }
 }
