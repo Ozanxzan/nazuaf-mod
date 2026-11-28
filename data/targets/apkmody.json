@@ -1,5 +1,131 @@
 [
   {
+    "slug": "float-tube",
+    "url": "https://apkmody.com/apps/float-tube",
+    "wp_id": 5790,
+    "modified": "2026-11-28T12:38:13",
+    "title": "Float Tube"
+  },
+  {
+    "slug": "block-blast-adventure-master",
+    "url": "https://apkmody.com/games/block-blast-adventure-master",
+    "wp_id": 9043,
+    "modified": "2026-11-28T12:36:09",
+    "title": "Block Blast!"
+  },
+  {
+    "slug": "garena-free-fire-max",
+    "url": "https://apkmody.com/games/garena-free-fire-max",
+    "wp_id": 1143,
+    "modified": "2026-11-28T12:35:08",
+    "title": "Garena Free Fire MAX"
+  },
+  {
+    "slug": "garena-free-fire",
+    "url": "https://apkmody.com/games/garena-free-fire",
+    "wp_id": 1069,
+    "modified": "2026-11-28T12:34:04",
+    "title": "Free Fire"
+  },
+  {
+    "slug": "autoresponder-for-wa",
+    "url": "https://apkmody.com/apps/autoresponder-for-wa",
+    "wp_id": 123196,
+    "modified": "2026-11-28T12:26:52",
+    "title": "AutoResponder for WA"
+  },
+  {
+    "slug": "bluetooth-keyboard-mouse-pro",
+    "url": "https://apkmody.com/apps/bluetooth-keyboard-mouse-pro",
+    "wp_id": 121325,
+    "modified": "2026-11-28T12:25:23",
+    "title": "Bluetooth Keyboard &#038; Mouse Pro"
+  },
+  {
+    "slug": "utool",
+    "url": "https://apkmody.com/apps/utool",
+    "wp_id": 22786,
+    "modified": "2026-11-28T12:24:56",
+    "title": "Utool"
+  },
+  {
+    "slug": "deepseek",
+    "url": "https://apkmody.com/apps/deepseek",
+    "wp_id": 26466,
+    "modified": "2026-11-28T12:23:55",
+    "title": "DeepSeek"
+  },
+  {
+    "slug": "investing-com",
+    "url": "https://apkmody.com/apps/investing-com",
+    "wp_id": 9103,
+    "modified": "2026-11-28T12:23:11",
+    "title": "Investing.com"
+  },
+  {
+    "slug": "wallet",
+    "url": "https://apkmody.com/apps/wallet",
+    "wp_id": 4920,
+    "modified": "2026-11-28T12:22:42",
+    "title": "Wallet"
+  },
+  {
+    "slug": "fitness-coach",
+    "url": "https://apkmody.com/apps/fitness-coach",
+    "wp_id": 11881,
+    "modified": "2026-11-28T12:20:02",
+    "title": "Fitness Coach"
+  },
+  {
+    "slug": "quizlet",
+    "url": "https://apkmody.com/apps/quizlet",
+    "wp_id": 27919,
+    "modified": "2026-11-28T12:19:11",
+    "title": "Quizlet"
+  },
+  {
+    "slug": "pixiv",
+    "url": "https://apkmody.com/apps/pixiv",
+    "wp_id": 7167,
+    "modified": "2026-11-28T12:18:40",
+    "title": "Pixiv"
+  },
+  {
+    "slug": "blockp",
+    "url": "https://apkmody.com/apps/blockp",
+    "wp_id": 13681,
+    "modified": "2026-11-28T12:16:51",
+    "title": "BlockP"
+  },
+  {
+    "slug": "speak-and-translate-languages",
+    "url": "https://apkmody.com/apps/speak-and-translate-languages",
+    "wp_id": 123280,
+    "modified": "2026-11-28T12:13:24",
+    "title": "Speak and Translate Languages"
+  },
+  {
+    "slug": "crimeradar-dispatch-alerts",
+    "url": "https://apkmody.com/apps/crimeradar-dispatch-alerts",
+    "wp_id": 120707,
+    "modified": "2026-11-28T12:12:20",
+    "title": "CrimeRadar: Dispatch Alerts"
+  },
+  {
+    "slug": "myfitnesspal",
+    "url": "https://apkmody.com/apps/myfitnesspal",
+    "wp_id": 6969,
+    "modified": "2026-11-28T12:11:41",
+    "title": "MyFitnessPal"
+  },
+  {
+    "slug": "imo",
+    "url": "https://apkmody.com/apps/imo",
+    "wp_id": 20925,
+    "modified": "2026-11-28T12:11:12",
+    "title": "imo"
+  },
+  {
     "slug": "royal-kingdom",
     "url": "https://apkmody.com/games/royal-kingdom",
     "wp_id": 25108,
@@ -1351,13 +1477,6 @@
     "title": "Ultimate Boxing Champion"
   },
   {
-    "slug": "deepseek",
-    "url": "https://apkmody.com/apps/deepseek",
-    "wp_id": 26466,
-    "modified": "2026-11-25T21:47:40",
-    "title": "DeepSeek"
-  },
-  {
     "slug": "cubes-empire-champions",
     "url": "https://apkmody.com/games/cubes-empire-champions",
     "wp_id": 26448,
@@ -1750,13 +1869,6 @@
     "title": "Good Coffee, Great Coffee"
   },
   {
-    "slug": "dredge",
-    "url": "https://apkmody.com/games/dredge",
-    "wp_id": 26879,
-    "modified": "2026-11-25T19:55:35",
-    "title": "DREDGE"
-  },
-  {
     "slug": "the-forest-quartet",
     "url": "https://apkmody.com/games/the-forest-quartet",
     "wp_id": 26864,
@@ -1993,13 +2105,6 @@
     "wp_id": 28736,
     "modified": "2026-11-23T15:03:18",
     "title": "Brain Rotted Mini Challenge"
-  },
-  {
-    "slug": "block-blast-adventure-master",
-    "url": "https://apkmody.com/games/block-blast-adventure-master",
-    "wp_id": 9043,
-    "modified": "2026-11-23T15:00:16",
-    "title": "Block Blast!"
   },
   {
     "slug": "spotify-2",
@@ -2714,13 +2819,6 @@
     "wp_id": 27963,
     "modified": "2026-11-22T20:52:13",
     "title": "Prince of Persia: Lost Crown"
-  },
-  {
-    "slug": "quizlet",
-    "url": "https://apkmody.com/apps/quizlet",
-    "wp_id": 27919,
-    "modified": "2026-11-22T20:51:54",
-    "title": "Quizlet"
   },
   {
     "slug": "lucky-defense",
@@ -3962,13 +4060,6 @@
     "title": "VPNLY"
   },
   {
-    "slug": "find-hidden-objects-spot-it",
-    "url": "https://apkmody.com/games/find-hidden-objects-spot-it",
-    "wp_id": 29091,
-    "modified": "2026-11-20T18:03:05",
-    "title": "Find Hidden Objects &#8211; Spot It!"
-  },
-  {
     "slug": "google-notebooklm",
     "url": "https://apkmody.com/apps/google-notebooklm",
     "wp_id": 29043,
@@ -4933,13 +5024,6 @@
     "wp_id": 30233,
     "modified": "2026-11-19T23:58:46",
     "title": "True Fear: Forsaken Souls 3"
-  },
-  {
-    "slug": "winkit",
-    "url": "https://apkmody.com/apps/winkit",
-    "wp_id": 30206,
-    "modified": "2026-11-19T23:58:02",
-    "title": "Winkit"
   },
   {
     "slug": "favela-kick-the-final-goal",
@@ -7966,13 +8050,6 @@
     "title": "Hidden Desire"
   },
   {
-    "slug": "gladihoppers",
-    "url": "https://apkmody.com/games/gladihoppers",
-    "wp_id": 76743,
-    "modified": "2026-11-17T17:04:14",
-    "title": "Gladihoppers"
-  },
-  {
     "slug": "hero-siege-pocket-edition",
     "url": "https://apkmody.com/games/hero-siege-pocket-edition",
     "wp_id": 76734,
@@ -9310,13 +9387,6 @@
     "title": "Twitch"
   },
   {
-    "slug": "bluetooth-keyboard-mouse-pro",
-    "url": "https://apkmody.com/apps/bluetooth-keyboard-mouse-pro",
-    "wp_id": 121325,
-    "modified": "2026-11-15T02:42:42",
-    "title": "Bluetooth Keyboard &#038; Mouse Pro"
-  },
-  {
     "slug": "3c-all-in-one-toolbox",
     "url": "https://apkmody.com/apps/3c-all-in-one-toolbox",
     "wp_id": 11986,
@@ -9415,6 +9485,13 @@
     "title": "PeakFinder"
   },
   {
+    "slug": "tapet-auto-wallpapers-4k",
+    "url": "https://apkmody.com/apps/tapet-auto-wallpapers-4k",
+    "wp_id": 119731,
+    "modified": "2026-11-15T02:29:17",
+    "title": "Tapet: Auto Wallpapers 4K"
+  },
+  {
     "slug": "tap-to-translate-screen",
     "url": "https://apkmody.com/apps/tap-to-translate-screen",
     "wp_id": 121842,
@@ -9504,13 +9581,6 @@
     "wp_id": 4926,
     "modified": "2026-11-13T20:36:31",
     "title": "Decisions"
-  },
-  {
-    "slug": "wallet",
-    "url": "https://apkmody.com/apps/wallet",
-    "wp_id": 4920,
-    "modified": "2026-11-13T20:34:22",
-    "title": "Wallet"
   },
   {
     "slug": "final-fantasy-ix",
@@ -12271,13 +12341,6 @@
     "title": "Any.do"
   },
   {
-    "slug": "blockp",
-    "url": "https://apkmody.com/apps/blockp",
-    "wp_id": 13681,
-    "modified": "2026-11-09T15:42:32",
-    "title": "BlockP"
-  },
-  {
     "slug": "adobe-acrobat-reader",
     "url": "https://apkmody.com/apps/adobe-acrobat-reader",
     "wp_id": 797,
@@ -13209,13 +13272,6 @@
     "title": "My Talking Angela"
   },
   {
-    "slug": "garena-free-fire-max",
-    "url": "https://apkmody.com/games/garena-free-fire-max",
-    "wp_id": 1143,
-    "modified": "2026-11-06T20:49:12",
-    "title": "Garena Free Fire MAX"
-  },
-  {
     "slug": "plant-vs-zombie-2",
     "url": "https://apkmody.com/games/plant-vs-zombie-2",
     "wp_id": 1128,
@@ -13279,13 +13335,6 @@
     "title": "Hungry Shark Evolution"
   },
   {
-    "slug": "garena-free-fire",
-    "url": "https://apkmody.com/games/garena-free-fire",
-    "wp_id": 1069,
-    "modified": "2026-11-06T20:30:33",
-    "title": "Free Fire"
-  },
-  {
     "slug": "60-seconds-reatomized",
     "url": "https://apkmody.com/games/60-seconds-reatomized",
     "wp_id": 1064,
@@ -13340,13 +13389,6 @@
     "wp_id": 21557,
     "modified": "2026-11-06T18:48:05",
     "title": "G1REC &#8211; Screen Recorder"
-  },
-  {
-    "slug": "pixiv",
-    "url": "https://apkmody.com/apps/pixiv",
-    "wp_id": 7167,
-    "modified": "2026-11-06T18:47:25",
-    "title": "Pixiv"
   },
   {
     "slug": "nebula",
@@ -14819,13 +14861,6 @@
     "title": "zFont 3 &#8211; Emoji &#038; Font Changer"
   },
   {
-    "slug": "speak-and-translate-languages",
-    "url": "https://apkmody.com/apps/speak-and-translate-languages",
-    "wp_id": 123280,
-    "modified": "2026-10-07T00:41:50",
-    "title": "Speak and Translate Languages"
-  },
-  {
     "slug": "magic-fluids",
     "url": "https://apkmody.com/apps/magic-fluids",
     "wp_id": 123278,
@@ -15244,13 +15279,6 @@
     "wp_id": 123198,
     "modified": "2026-10-01T23:34:20",
     "title": "Fast Scanner &#8211; PDF Scan App"
-  },
-  {
-    "slug": "autoresponder-for-wa",
-    "url": "https://apkmody.com/apps/autoresponder-for-wa",
-    "wp_id": 123196,
-    "modified": "2026-10-01T23:30:08",
-    "title": "AutoResponder for WA"
   },
   {
     "slug": "xodo-pdf",
@@ -15923,6 +15951,13 @@
     "wp_id": 121799,
     "modified": "2026-09-27T23:58:45",
     "title": "Photo Cleaner: Swipewipe"
+  },
+  {
+    "slug": "vibeshort-ai-dramas-reels",
+    "url": "https://apkmody.com/apps/vibeshort-ai-dramas-reels",
+    "wp_id": 121801,
+    "modified": "2026-09-27T23:57:27",
+    "title": "VibeShort: AI Dramas &#038; Reels"
   },
   {
     "slug": "traffic-racer-pro",
@@ -17682,13 +17717,6 @@
     "title": "UVX Player Pro"
   },
   {
-    "slug": "utool",
-    "url": "https://apkmody.com/apps/utool",
-    "wp_id": 22786,
-    "modified": "2026-09-24T14:34:06",
-    "title": "Utool"
-  },
-  {
     "slug": "ultrasurf-vpn",
     "url": "https://apkmody.com/apps/ultrasurf-vpn",
     "wp_id": 23801,
@@ -17988,13 +18016,6 @@
     "wp_id": 22056,
     "modified": "2026-09-24T00:21:40",
     "title": "Electronics Store Simulator 3D"
-  },
-  {
-    "slug": "neo-seoul-zombie-defense",
-    "url": "https://apkmody.com/games/neo-seoul-zombie-defense",
-    "wp_id": 22051,
-    "modified": "2026-09-24T00:20:53",
-    "title": "Neo Seoul : Zombie Defense"
   },
   {
     "slug": "homerun-clash-2-legends-derby",
@@ -18452,13 +18473,6 @@
     "title": "Locket Widget"
   },
   {
-    "slug": "investing-com",
-    "url": "https://apkmody.com/apps/investing-com",
-    "wp_id": 9103,
-    "modified": "2026-09-23T17:45:45",
-    "title": "Investing.com"
-  },
-  {
     "slug": "flickreels-ai-story-drama",
     "url": "https://apkmody.com/apps/flickreels-ai-story-drama",
     "wp_id": 121414,
@@ -18576,13 +18590,6 @@
     "wp_id": 20903,
     "modified": "2026-09-22T23:33:56",
     "title": "Racing in Car"
-  },
-  {
-    "slug": "imo",
-    "url": "https://apkmody.com/apps/imo",
-    "wp_id": 20925,
-    "modified": "2026-09-22T23:30:06",
-    "title": "imo"
   },
   {
     "slug": "home-workouts-no-equipment-pro",
@@ -19101,13 +19108,6 @@
     "wp_id": 16185,
     "modified": "2026-09-22T11:44:40",
     "title": "SnapBG"
-  },
-  {
-    "slug": "love-revolution",
-    "url": "https://apkmody.com/games/love-revolution",
-    "wp_id": 16194,
-    "modified": "2026-09-22T11:43:22",
-    "title": "Love Revolution"
   },
   {
     "slug": "unromantic-demon-queen",
@@ -20706,6 +20706,13 @@
     "title": "Chess"
   },
   {
+    "slug": "rysen-dawn",
+    "url": "https://apkmody.com/games/rysen-dawn",
+    "wp_id": 15163,
+    "modified": "2026-09-19T23:39:24",
+    "title": "Rysen Dawn"
+  },
+  {
     "slug": "knights-of-europe-4",
     "url": "https://apkmody.com/games/knights-of-europe-4",
     "wp_id": 15173,
@@ -21166,6 +21173,13 @@
     "wp_id": 14580,
     "modified": "2026-09-18T23:12:24",
     "title": "Voice Changer"
+  },
+  {
+    "slug": "vflat-scan",
+    "url": "https://apkmody.com/apps/vflat-scan",
+    "wp_id": 14590,
+    "modified": "2026-09-18T23:10:35",
+    "title": "vFlat Scan"
   },
   {
     "slug": "grimvalor",
@@ -22344,13 +22358,6 @@
     "title": "Learn German: DeutschAI"
   },
   {
-    "slug": "crimeradar-dispatch-alerts",
-    "url": "https://apkmody.com/apps/crimeradar-dispatch-alerts",
-    "wp_id": 120707,
-    "modified": "2026-09-17T14:06:40",
-    "title": "CrimeRadar: Dispatch Alerts"
-  },
-  {
     "slug": "chess-alarm-chess-puzzles",
     "url": "https://apkmody.com/apps/chess-alarm-chess-puzzles",
     "wp_id": 120705,
@@ -22629,13 +22636,6 @@
     "wp_id": 11324,
     "modified": "2026-09-16T23:04:39",
     "title": "Glory Ages &#8211; Samurais"
-  },
-  {
-    "slug": "the-house-of-da-vinci",
-    "url": "https://apkmody.com/games/the-house-of-da-vinci",
-    "wp_id": 11388,
-    "modified": "2026-09-16T23:03:29",
-    "title": "The House of Da Vinci"
   },
   {
     "slug": "lilys-cafe",
@@ -23121,18 +23121,18 @@
     "title": "Character AI"
   },
   {
-    "slug": "super-meat-boy-forever",
-    "url": "https://apkmody.com/games/super-meat-boy-forever",
-    "wp_id": 12131,
-    "modified": "2026-09-16T16:25:41",
-    "title": "Super Meat Boy Forever"
-  },
-  {
     "slug": "adguard-vpn",
     "url": "https://apkmody.com/apps/adguard-vpn",
     "wp_id": 12138,
     "modified": "2026-09-16T16:24:26",
     "title": "AdGuard VPN"
+  },
+  {
+    "slug": "backdrops",
+    "url": "https://apkmody.com/apps/backdrops",
+    "wp_id": 12082,
+    "modified": "2026-09-16T16:23:27",
+    "title": "Backdrops"
   },
   {
     "slug": "do-not-feed-the-monkeys",
@@ -25312,6 +25312,13 @@
     "title": "Auto Clicker"
   },
   {
+    "slug": "caravan-sandwitch",
+    "url": "https://apkmody.com/games/caravan-sandwitch",
+    "wp_id": 118235,
+    "modified": "2026-09-08T09:45:35",
+    "title": "Caravan SandWitch"
+  },
+  {
     "slug": "balatro",
     "url": "https://apkmody.com/games/balatro",
     "wp_id": 24274,
@@ -25830,13 +25837,6 @@
     "title": "Polish"
   },
   {
-    "slug": "fitness-coach",
-    "url": "https://apkmody.com/apps/fitness-coach",
-    "wp_id": 11881,
-    "modified": "2026-08-30T13:47:59",
-    "title": "Fitness Coach"
-  },
-  {
     "slug": "fishing-life",
     "url": "https://apkmody.com/games/fishing-life",
     "wp_id": 9170,
@@ -26003,13 +26003,6 @@
     "wp_id": 5122,
     "modified": "2026-08-22T22:18:20",
     "title": "TikTok Lite"
-  },
-  {
-    "slug": "myfitnesspal",
-    "url": "https://apkmody.com/apps/myfitnesspal",
-    "wp_id": 6969,
-    "modified": "2026-08-22T14:57:02",
-    "title": "MyFitnessPal"
   },
   {
     "slug": "my-little-universe",
@@ -28369,13 +28362,6 @@
     "wp_id": 16907,
     "modified": "2026-04-20T14:36:35",
     "title": "Lost Realm: Chronorift"
-  },
-  {
-    "slug": "float-tube",
-    "url": "https://apkmody.com/apps/float-tube",
-    "wp_id": 5790,
-    "modified": "2026-04-20T14:14:03",
-    "title": "Float Tube"
   },
   {
     "slug": "color-oasis",
